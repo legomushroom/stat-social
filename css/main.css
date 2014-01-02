@@ -1955,6 +1955,20 @@ a,
 .sidebar-menu-item-sub-b {
   padding-left: 45px;
   background-color: #1e394f;
+  position: relative;
+}
+.sidebar-menu-item-sub-b:before {
+  content: '';
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 28px;
+  background-color: #4a6c82;
+  position: absolute;
+  z-index: 0;
+}
+.sidebar-menu-item-sub-b:last-of-type:before {
+  height: 50%;
 }
 .sidebar-menu-item-sub-b:hover {
   background-color: #172c3d;
@@ -1962,17 +1976,26 @@ a,
 .sidebar-menu-item-sub-b > .icon-bl {
   border-width: 2px;
   border-style: solid;
-  border-color: #48667f;
+  border-color: #4a6c82;
 }
 .sidebar-menu-item-sub-b > .icon-bl .icon {
-  fill: #48667f;
+  fill: #4a6c82;
 }
 .sidebar-menu-item-sub-b > .text-bl {
-  color: #48667f;
+  color: #4a6c82;
 }
 .sidebar-menu-item-sub-b > .cross-icon-bh {
-  width: 14px;
-  height: 14px;
+  width: 9px;
+  height: 9px;
+  background-color: #4a6c82;
+  fill: #1e394f;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #4a6c82;
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  margin-top: -4px;
+  z-index: 1;
 }
 .tab-circle-b {
   width: 75px;

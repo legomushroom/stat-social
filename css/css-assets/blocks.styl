@@ -71,15 +71,30 @@ hightlightWidth = 4px
 		font-weight 300
 
 /* d7a0268c5d178625cbdfa5d991e4d1c0 */
+bgColor = #1e394f
 .sidebar-menu-item-sub-b
 	@extend .sidebar-menu-item-b
 	padding-left 45px
-	background-color #1e394f
+	background-color bgColor
+	position relative
+	blue1 = #4a6c82
+	&:before
+		content: ''
+		width 3px
+		height 100%
+		top 0
+		left 28px
+		background-color blue1
+		position absolute
+		z-index 0
+
+	&:last-of-type
+		&:before
+			height 50%
 
 	&:hover
 		background-color darken(#1e394f, 5)
 	
-	blue1 = #48667f
 	> .icon-bl 
 		border 2px solid blue1
 
@@ -90,8 +105,16 @@ hightlightWidth = 4px
 		color blue1
 
 	> .cross-icon-bh
-		rect 14px
-		
+		rect 9px
+		background-color blue1
+		fill bgColor
+		border-radius 50%
+		box-shadow 0 0 0 3px blue1
+		position absolute
+		left 25px
+		top 50%
+		margin-top - 4px
+		z-index 1
 
 
 	
