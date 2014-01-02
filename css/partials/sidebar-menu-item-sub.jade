@@ -1,0 +1,11 @@
+.sidebar-menu-item-sub-b(class="#{el.class}")	
+	.icon-bl 
+		- el.path = el.iconPath
+		include icon
+
+	.text-bl #{el.text}
+
+	- el = { path: 'cross-icon', class: 'cross-icon-bh' }
+	include icon
+
+

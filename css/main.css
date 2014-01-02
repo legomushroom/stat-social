@@ -1863,23 +1863,41 @@ a,
 .c-black10-bg-g {
   background-color: #fff;
 }
-.sidebar-menu-item-b {
+.sidebar-menu-item-b,
+.sidebar-menu-item-sub-b {
   height: 67px;
   padding: 12px 8px;
   position: relative;
   padding-right: 4px;
 /* 89a64cab9779a3f80167d765346da7dc */
 /* 2c93e10d29f23bbaa0844ef81feb5a51 */
-/* 89a64cab9779a3f80167d765346da7dc */
+/* 920b75c3286f0a753b6d5a2527f87848 */
+/* d1e432df9dd03b8786e08e00be1af00b */
+/* b037867e34073d50bc30c547ef697510 */
+/* 7895ef2ac47dc8930de8e801bf16631f */
+/* 94d4b3d2ffb0210adad361abff10ae9d */
 }
-.sidebar-menu-item-b:hover {
+.sidebar-menu-item-b:hover,
+.sidebar-menu-item-sub-b:hover {
   cursor: pointer;
   background-color: rgba(255,255,255,0.05);
 }
-.sidebar-menu-item-b.is-check:hover {
+.sidebar-menu-item-b.is-check,
+.sidebar-menu-item-sub-b.is-check {
+  background-color: rgba(255,255,255,0.05);
+}
+.sidebar-menu-item-b.is-check:hover,
+.sidebar-menu-item-sub-b.is-check:hover {
   cursor: default;
 }
-.sidebar-menu-item-b:after {
+.sidebar-menu-item-b.is-check > .icon-bl,
+.sidebar-menu-item-sub-b.is-check > .icon-bl {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+}
+.sidebar-menu-item-b:after,
+.sidebar-menu-item-sub-b:after {
   content: '';
   position: absolute;
   height: 100%;
@@ -1888,40 +1906,73 @@ a,
   right: 0;
 }
 .sidebar-menu-item-b.is-green-mark--oncheck.is-check:after,
-.sidebar-menu-item-b.is-green-mark--onhover:hover:after {
+.sidebar-menu-item-sub-b.is-green-mark--oncheck.is-check:after,
+.sidebar-menu-item-b.is-green-mark--onhover:hover:after,
+.sidebar-menu-item-sub-b.is-green-mark--onhover:hover:after {
   background: #29dcb8;
 }
 .sidebar-menu-item-b.is-blue-mark--oncheck.is-check:after,
-.sidebar-menu-item-b.is-blue-mark--onhover:hover:after {
+.sidebar-menu-item-sub-b.is-blue-mark--oncheck.is-check:after,
+.sidebar-menu-item-b.is-blue-mark--onhover:hover:after,
+.sidebar-menu-item-sub-b.is-blue-mark--onhover:hover:after {
   background: #2997c4;
 }
 .sidebar-menu-item-b.is-red-mark--oncheck.is-check:after,
-.sidebar-menu-item-b.is-red-mark--onhover:hover:after {
+.sidebar-menu-item-sub-b.is-red-mark--oncheck.is-check:after,
+.sidebar-menu-item-b.is-red-mark--onhover:hover:after,
+.sidebar-menu-item-sub-b.is-red-mark--onhover:hover:after {
   background: #ff6d6a;
 }
 .sidebar-menu-item-b.is-orange-mark--oncheck.is-check:after,
-.sidebar-menu-item-b.is-orange-mark--onhover:hover:after {
+.sidebar-menu-item-sub-b.is-orange-mark--oncheck.is-check:after,
+.sidebar-menu-item-b.is-orange-mark--onhover:hover:after,
+.sidebar-menu-item-sub-b.is-orange-mark--onhover:hover:after {
   background: #ffc778;
 }
-.sidebar-menu-item-b > .icon-bl {
+.sidebar-menu-item-b > .icon-bl,
+.sidebar-menu-item-sub-b > .icon-bl {
   float: left;
   border-width: 2px;
   border-style: solid;
-  border-color: #fff;
+  border-color: transparent;
   border-radius: 50%;
   padding: 6px;
 }
-.sidebar-menu-item-b > .icon-bl .icon {
+.sidebar-menu-item-b > .icon-bl .icon,
+.sidebar-menu-item-sub-b > .icon-bl .icon {
   width: 29px;
   height: 29px;
   fill: #fff;
 }
-.sidebar-menu-item-b > .text-bl {
+.sidebar-menu-item-b > .text-bl,
+.sidebar-menu-item-sub-b > .text-bl {
   margin-left: 53px;
   font-size: 20px;
   color: #a8afb8;
   margin-top: 14px;
   font-weight: 300;
+}
+.sidebar-menu-item-sub-b {
+  padding-left: 45px;
+  background-color: #1e394f;
+}
+.sidebar-menu-item-sub-b:hover {
+  background-color: #172c3d;
+}
+.sidebar-menu-item-sub-b > .icon-bl {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #48667f;
+}
+.sidebar-menu-item-sub-b > .icon-bl .icon {
+  fill: #48667f;
+}
+.sidebar-menu-item-sub-b > .text-bl {
+  color: #48667f;
+}
+.sidebar-menu-item-sub-b > .cross-icon-bh {
+  width: 14px;
+  height: 14px;
 }
 .tab-circle-b {
   width: 75px;
@@ -1994,13 +2045,19 @@ a,
   width: 2000px;
   left: 100%;
 }
-.header-tab-b .cross-icon-bh {
+.header-tab-b > .cross-icon-bh {
   width: 20px;
   height: 20px;
   fill: #fff;
   position: absolute;
   right: 14px;
   bottom: 8px;
+}
+.sidebar-menu-section-l {
+  background: rgba(18,37,61,0.7);
+}
+.sidebar-menu-section-l + .sidebar-menu-section-l {
+  border-top: 1px solid #828e95;
 }
 .fork-l > .fork-item-l {
   float: left;
