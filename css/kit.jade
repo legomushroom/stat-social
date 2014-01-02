@@ -153,17 +153,30 @@ html
 			.section-kl
 				.header-ke Blocks
 				.hash-e 5e50955e8ae19f7e87c097ef0840e455
-				.header-tab-b.c-red-bg-g
-					
-					.header-text-be IDENTIFIED AUDIENCE
-					
-					- el = { class: 'is-number', text: '94%' }
-					include partials/tab-circle
+				- el = { class: 'c-red-bg-g', headerText: 'IDENTIFIED AUDIENCE', bottomText: 'Consumers', circleText:'94%' }
+				include partials/header-tab
 
-					- el = { path: 'cross-icon', class: 'cross-icon-bh' }
-					include partials/icon
+				.hash-e 5e50955e8ae19f7e87c097ef0840e455
+				- el = { class: 'c-orange-bg-g', headerText: 'INDIRECT CONNECTIONS', bottomText: 'Per tweeter', circleText:'400' }
+				include partials/header-tab
 
-					.bottom-text-be Consumers
+				.hash-e 5e50955e8ae19f7e87c097ef0840e455
+				- el = { class: 'c-green-bg-g', headerText: 'POTENTIAL REACH', bottomText: 'People', circleText:'10k' }
+				include partials/header-tab
+
+				.hash-e bd29d58273a1753588c87babd35aace2
+				.fork-l.cf
+					- el = { class: 'fork-item-l one-of-3-l c-red-bg-g', headerText: 'IDENTIFIED AUDIENCE', bottomText: 'Consumers', circleText:'94%' }
+					include partials/header-tab
+
+					- el = { class: 'fork-item-l one-of-3-l c-orange-bg-g', headerText: 'INDIRECT CONNECTIONS', bottomText: 'Per tweeter', circleText:'400' }
+					include partials/header-tab
+
+					- el = { class: 'fork-item-l one-of-3-l c-green-bg-g', headerText: 'POTENTIAL REACH', bottomText: 'People', circleText:'10k' }
+					include partials/header-tab
+
+
+
 
 
 

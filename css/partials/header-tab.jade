@@ -1,0 +1,11 @@
+.header-tab-b(class='#{el.class}')
+	.header-text-be #{el.headerText}
+
+	.bottom-text-be #{el.bottomText}
+
+	- el = { class: 'is-number', text: el.circleText }
+	include tab-circle
+
+	- el = { path: 'cross-icon', class: 'cross-icon-bh ' }
+	include icon
+
