@@ -1,6 +1,67 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+/* 7f2ec201ce0694f22a08f2e065c4b735 */
+hightlightWidth = 4px
+.sidebar-menu-item-b
+	height 67px
+	padding  12px 8px
+	position relative
+	padding-right hightlightWidth
+
+	&:hover
+		cursor pointer
+		background-color rgba(255,255,255,.05)
+
+	/* 89a64cab9779a3f80167d765346da7dc */
+	&.is-check
+		&:hover
+			cursor default
+
+	&:after
+		content ''
+		position absolute
+		height 100%
+		width  hightlightWidth
+		top 0
+		right 0
+
+	/* 2c93e10d29f23bbaa0844ef81feb5a51 */
+	&.is-green-mark--oncheck.is-check, &.is-green-mark--onhover:hover
+		&:after
+			background c-green
+	
+	/* 89a64cab9779a3f80167d765346da7dc */
+	&.is-blue-mark--oncheck.is-check, &.is-blue-mark--onhover:hover
+		&:after
+			background c-blue4
+
+	&.is-red-mark--oncheck.is-check, &.is-red-mark--onhover:hover
+		&:after
+			background c-red
+
+	&.is-orange-mark--oncheck.is-check, &.is-orange-mark--onhover:hover
+		&:after
+			background c-orange
+
+	> .icon-bl 
+		float left
+		border 2px solid white
+		border-radius 50%
+		padding 6px
+
+		.icon
+			rect 29px
+			fill white
+
+	> .text-bl
+		margin-left 53px
+		font-size 20px
+		color #a8afb8
+		margin-top 14px
+		font-weight 300
+
+
 /* b7fd66c98927030c63e5bc85e79603cf */
 .tab-circle-b
 	rect 75px

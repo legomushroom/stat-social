@@ -2,7 +2,7 @@
 html
 	head
 		meta(charset='UTF-8')
-		title Social stats UI kit
+		title stat social
 		link(rel="stylesheet", type="text/css", href="main.css")
 		link(rel="stylesheet", type="text/css", href="assets/kit.css")
 		link(href='http://fonts.googleapis.com/css?family=PT+Sans', rel='stylesheet', type='text/css')
@@ -174,6 +174,29 @@ html
 
 					- el = { class: 'fork-item-l one-of-3-l c-green-bg-g', headerText: 'POTENTIAL REACH', bottomText: 'People', circleText:'10k' }
 					include partials/header-tab
+
+				.hash-e 7f2ec201ce0694f22a08f2e065c4b735
+				- el = { class: '', iconPath: 'demographics-icon', text: 'Demographics'}
+				include partials/sidebar-menu-item
+
+				.hash-e 2c93e10d29f23bbaa0844ef81feb5a51
+				- el = { class: 'is-green-mark--onhover', iconPath: 'demographics-icon', text: 'Demographics'}
+				include partials/sidebar-menu-item
+
+				.hash-e 89a64cab9779a3f80167d765346da7dc
+				- el = { class: 'is-green-mark--oncheck is-check', iconPath: 'demographics-icon', text: 'Demographics'}
+				include partials/sidebar-menu-item
+
+				.hash-e 2c93e10d29f23bbaa0844ef81feb5a51
+				- el = { class: 'is-red-mark--onhover', iconPath: 'demographics-icon', text: 'Demographics'}
+				include partials/sidebar-menu-item
+
+				.hash-e 89a64cab9779a3f80167d765346da7dc
+				- el = { class: 'is-red-mark--oncheck is-check', iconPath: 'demographics-icon', text: 'Demographics'}
+				include partials/sidebar-menu-item
+
+
+
 
 
 
