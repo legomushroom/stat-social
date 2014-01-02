@@ -1,4 +1,4 @@
-gs = 8px
+gs = 10px
 br = 3px
 
 retina(path, size= 100%, color= white)
@@ -8,19 +8,14 @@ retina(path, size= 100%, color= white)
 		background color url(path+'-@2x.png') no-repeat center center
 		background-size size
 
-downShadow()
-	box-shadow 0 (gs/2) 0 rgba(rgb(c-grey1), .25)
+ptSans()
+	font-family: 'PT Sans', sans-serif;
 
-downRightShadow(size = (gs/2))
-	box-shadow size size 0 rgba(rgb(c-grey1), .25)
+openSans()
+	font-family: 'Open Sans', sans-serif;
 
 brad(amount = br)
 	border-radius amount
-
-fontOfControl()
-	font-family 'dense'
-	font-size 20px
-	letter-spacing 1px
 
 t(position)
 	top position

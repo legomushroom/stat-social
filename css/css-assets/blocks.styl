@@ -1,2 +1,72 @@
 // BLOCKS
 @import '../assets/imports.styl'
+
+/* b7fd66c98927030c63e5bc85e79603cf */
+.tab-circle-b
+	rect 75px
+	border 1px solid white
+	border-radius 50%
+	text-align center
+	color white
+	background url('http://lorempixel.com/75/75/people') no-repeat center center
+
+	/* 91f28e51a4cffb32caebcda1cbff41fe */
+	&.is-number
+		background transparent
+		rect 65px
+		font-size 18px
+		line-height 60px
+		openSans()
+
+
+/* 5e50955e8ae19f7e87c097ef0840e455 */
+.header-tab-b
+	height 93px
+	overflow hidden
+	position relative
+	font-size 18px
+	text-align center
+
+	> .header-text-be
+		position absolute
+		top 12px
+		width 100%
+		color #274057
+
+	> .bottom-text-be
+		color white
+		position absolute
+		bottom 13px
+		width 100%
+		openSans()
+		font-weight 200
+	
+	marginLeft = 11px
+	.tab-circle-b
+		float left
+		margin-top 15px
+		margin-left marginLeft
+		position relative
+
+		&:after, &:before
+			content ''
+			height 1px 
+			background white
+			position absolute
+			top 50%
+			margin-top - 1px
+
+		&:before
+			left - marginLeft - 1px
+			width  marginLeft
+
+		&:after
+			width 2000px
+			left 100%
+
+	.cross-icon-bh
+		rect 20px
+		fill white
+		position absolute
+		right  14px
+		bottom 8px

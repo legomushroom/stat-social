@@ -5,46 +5,165 @@ html
 		title Social stats UI kit
 		link(rel="stylesheet", type="text/css", href="main.css")
 		link(rel="stylesheet", type="text/css", href="assets/kit.css")
-		link(rel="stylesheet", href="css-assets/font/stylesheet.css", type="text/css", charset="utf-8")
+		link(href='http://fonts.googleapis.com/css?family=PT+Sans', rel='stylesheet', type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700', rel='stylesheet', type='text/css')
 	body
 		include icons.svg
 		.main-kl
 			.section-kl
 				.header-ke Colors
 				.cf 
+					.color-sample-ke.c-black1-bg-g
+					.color-sample-ke.c-black2-bg-g
+					.color-sample-ke.c-black3-bg-g
+					.color-sample-ke.c-black4-bg-g
+					.color-sample-ke.c-black5-bg-g
+					.color-sample-ke.c-black6-bg-g
+					.color-sample-ke.c-black7-bg-g
+					.color-sample-ke.c-black8-bg-g
+					.color-sample-ke.c-black9-bg-g
+					.color-sample-ke.c-black10-bg-g
+
+				.cf
+					.color-sample-ke.c-blue1-bg-g
+					.color-sample-ke.c-blue2-bg-g
+					.color-sample-ke.c-blue3-bg-g
+					.color-sample-ke.c-blue4-bg-g
+
+				.cf
 					.color-sample-ke.c-grey1-bg-g
 					.color-sample-ke.c-grey2-bg-g
-					.color-sample-ke.c-grey3-bg-g
-					.color-sample-ke.c-grey4-bg-g
-					.color-sample-ke.c-grey5-bg-g
-					.color-sample-ke.c-grey6-bg-g
-					.color-sample-ke.c-grey7-bg-g
-					.color-sample-ke.c-grey8-bg-g
-					.color-sample-ke.c-grey9-bg-g
-					.color-sample-ke.c-grey10-bg-g
 
 				.cf
 					.color-sample-ke.c-red-bg-g
-					.color-sample-ke.c-orange1-bg-g
-					.color-sample-ke.c-orange2-bg-g
-					.color-sample-ke.c-bg-bg-g
+					.color-sample-ke.c-orange-bg-g
+					.color-sample-ke.c-green-bg-g
 
-			- var data = {}
+			- var el = {}
 
 			.section-kl
 				.header-ke Icons
 				.cf 
 					.icon-sample-kl
-						.hash-e 7a570084fcf17dfd19f27128300c8648
-						//- - var data = { path: 'old-pen-icon' }
-						//- include partials/icon
+						.hash-e e8927b78df844bde0a5122e14d346032
+						- el = { path: 'youtube-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 710766b0b43d5a5f681e63f32fbf9771
+						- el = { path: 'twitter-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 93a0906c869a433ee6ca046cca750a28
+						- el = { path: 'instagram-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 93e854b40b0a3bc639eb835cb4c93264
+						- el = { path: 'fb-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 8e208b58ad3e76d4e8f319c20a462c3b
+						- el = { path: 'automotive-icon' }
+						include partials/icon
+
+
+					.icon-sample-kl
+						.hash-e fb36ac24f835eeda24e4b26cacd10279
+						- el = { path: 'tv-icon' }
+						include partials/icon
+
+
+					.icon-sample-kl
+						.hash-e bd0843afe4d69813738a8c03e0371a6f
+						- el = { path: 'social-icon' }
+						include partials/icon
+
+
+					.icon-sample-kl
+						.hash-e 7b89519965ce54ec236609b45b1dd9c1
+						- el = { path: 'celebrities-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 5f313810199d5e0533364ed26e3dc408
+						- el = { path: 'interests-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 85c6c30c97bad48f711fffdce2b2abd2
+						- el = { path: 'geo-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 7c476e368012a516986f85008a5e9e28
+						- el = { path: 'entertainment-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 43519269e87d6cec5c247dc3198d7742
+						- el = { path: 'energy-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 82b863d15f890174e85894750fdbab95
+						- el = { path: 'demographics-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 2e8a10e14ae84a0df9da0bce26cf86c1
+						- el = { path: 'education-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 161c7338edb325811dfb829b19110dbc
+						- el = { path: 'cross-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 8b784c6f17cd3e41cc83db9772ff71cd
+						- el = { path: 'brands-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e cf9350838fc85aeb1cfa6c7f0d128d5e
+						- el = { path: 'book-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 8eb4c1f48d6cbfca0cdd16a477b2a889
+						- el = { path: 'search-icon' }
+						include partials/icon
+
+
 
 
 			.section-kl
 				.header-ke Elements
-				.hash-e b69a1e4a33a526ed9af2af493cfb4cb1
-				
+				.hash-e b7fd66c98927030c63e5bc85e79603cf
+				- el = { class: '', text: '' }
+				include partials/tab-circle
 
+				.hash-e 91f28e51a4cffb32caebcda1cbff41fe
+				- el = { class: 'is-number', text: '94%' }
+				include partials/tab-circle
+
+			.section-kl
+				.header-ke Blocks
+				.hash-e 5e50955e8ae19f7e87c097ef0840e455
+				.header-tab-b.c-red-bg-g
+					
+					.header-text-be IDENTIFIED AUDIENCE
+					
+					- el = { class: 'is-number', text: '94%' }
+					include partials/tab-circle
+
+					- el = { path: 'cross-icon', class: 'cross-icon-bh' }
+					include partials/icon
+
+					.bottom-text-be Consumers
 
 
 

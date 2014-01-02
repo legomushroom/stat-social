@@ -12,8 +12,10 @@ body, html
 
 body
 	background-color c-bg
-	font-family 'infinity', monospace
+	font-family: 'PT Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	letter-spacing 1px
+	background c-black8
 
 @css{
 	::selection{
@@ -108,8 +110,8 @@ metrics()
 
 
 colors()
-	colors 		=   c-bg    c-red   c-orange1   c-orange2   c-grey1   c-grey2   c-grey3   c-grey4   c-grey5    c-grey6  c-grey7  c-grey8  c-grey9  c-grey10
-	colorsNames = 'c-bg' 'c-red' 'c-orange1' 'c-orange2' 'c-grey1' 'c-grey2' 'c-grey3' 'c-grey4' 'c-grey5' 'c-grey6'  'c-grey7' 'c-grey8' 'c-grey9' 'c-grey10'
+	colors 			=   c-grey2 	  c-grey1  	c-blue4   c-blue3 	 c-blue2   c-blue1    c-green    c-red   c-orange   c-black1   c-black2   c-black3   c-black4   c-black5    c-black6  c-black7  c-black8  c-black9  c-black10
+	colorsNames = 	'c-grey2'  'c-grey1' 	'c-blue' 'c-blue3' 'c-blue2' 'c-blue1'  'c-green' 'c-red' 'c-orange'  'c-black1' 'c-black2' 'c-black3' 'c-black4' 'c-black5' 'c-black6'  'c-black7' 'c-black8' 'c-black9' 'c-black10'
 	for color, i in colors
 		.{colorsNames[i]}-bg-g
 			background-color color
