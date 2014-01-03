@@ -1,0 +1,17 @@
+.sidebar-menu-item-b(class="#{el.itemClass}")
+	.sidebar-menu-header-sub-b(class="#{el.class}")	
+		.icon-bl 
+			- el.path = el.iconPath
+			include icon
+
+		.text-bl #{el.text}
+
+		- el = { path: 'cross2-icon', class: 'cross-icon-bh plus-minus-bh' }
+		include icon
+
+		- el = { path: 'minus-icon', class: 'minus-icon-bh plus-minus-bh' }
+		include icon
+	.content-bl
+		block
+
+

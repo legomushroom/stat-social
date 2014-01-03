@@ -1,0 +1,12 @@
+.sidebar-menu-item-b(class="#{el.itemClass}")
+	.sidebar-menu-header-b(class="#{el.class}")	
+		.icon-bl 
+			- el.path = el.iconPath
+			include icon
+
+		.text-bl #{el.text}
+
+	.content-bl
+		block
+
+
