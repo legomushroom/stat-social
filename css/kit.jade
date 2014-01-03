@@ -142,6 +142,10 @@ html
 						- el = { path: 'cross2-icon' }
 						include partials/icon
 
+					.icon-sample-kl
+						.hash-e 37e98bf79b411f4b4d1470f90db0898d
+						- el = { path: 'minus-icon' }
+						include partials/icon
 
 
 
@@ -217,7 +221,6 @@ html
 				include partials/sidebar-menu-item
 
 
-
 				.hash-e 4ac89d84f8813a1b3b341bbfe8cf212c
 				.sidebar-menu-section-l
 					- el = { class: 'is-green-mark--onhover', iconPath: 'demographics-icon', text: 'Demographics'}
@@ -241,37 +244,75 @@ html
 
 
 				.hash-e d7a0268c5d178625cbdfa5d991e4d1c0
-				- el = { class: 'is-green-mark--onhover', iconPath: 'automotive-icon', text: 'Automotive'}
-				include partials/sidebar-menu-item-sub
+				div
+					- el = { class: 'is-green-mark--onhover', iconPath: 'automotive-icon', text: 'Automotive'}
+					include partials/sidebar-menu-item-sub
 
-				- el = { class: 'is-green-mark--onhover', iconPath: 'education-icon', text: 'Education'}
-				include partials/sidebar-menu-item-sub
+					- el = { class: 'is-green-mark--oncheck is-check', iconPath: 'education-icon', text: 'Education'}
+					include partials/sidebar-menu-item-sub
 
-				- el = { class: 'is-green-mark--onhover', iconPath: 'energy-icon', text: 'Energy, Utilities & Waste'}
-				include partials/sidebar-menu-item-sub
+					- el = { class: 'is-green-mark--onhover', iconPath: 'energy-icon', text: 'Energy, Utilities & Waste'}
+					include partials/sidebar-menu-item-sub
 
-				- el = { class: 'is-green-mark--onhover', iconPath: 'entertainment-icon', text: 'Entertainment'}
-				include partials/sidebar-menu-item-sub
+					- el = { class: 'is-green-mark--onhover', iconPath: 'entertainment-icon', text: 'Entertainment'}
+					include partials/sidebar-menu-item-sub
 
 				.hash-e d84c296da7e868f14576fd70abc03cee
-				- el = { class: 'is-green-mark--onhover is-sub2', iconPath: 'automotive-icon', text: 'Art & Culture'}
-				include partials/sidebar-menu-item-sub
+				div
+					- el = { class: 'is-green-mark--onhover is-sub2', iconPath: 'automotive-icon', text: 'Art & Culture'}
+					include partials/sidebar-menu-item-sub
 
-				- el = { class: 'is-green-mark--onhover is-sub2', iconPath: 'automotive-icon', text: 'Dance'}
-				include partials/sidebar-menu-item-sub
+					- el = { class: 'is-green-mark--oncheck is-sub2 is-check', iconPath: 'automotive-icon', text: 'Dance'}
+					include partials/sidebar-menu-item-sub
 
-				- el = { class: 'is-green-mark--onhover is-sub2', iconPath: 'automotive-icon', text: 'Movie Theatres'}
-				include partials/sidebar-menu-item-sub
+					- el = { class: 'is-green-mark--onhover is-sub2', iconPath: 'automotive-icon', text: 'Movie Theatres'}
+					include partials/sidebar-menu-item-sub
 
 				.hash-e f718f3c840abc57ca063892cf84b6aeb
-				- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Art & Culture'}
-				include partials/sidebar-menu-item-sub
+				div
+					- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Art & Culture'}
+					include partials/sidebar-menu-item-sub
 
-				- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Dance'}
-				include partials/sidebar-menu-item-sub
+					- el = { class: 'is-green-mark--oncheck is-sub3 is-check', iconPath: 'automotive-icon', text: 'Dance'}
+					include partials/sidebar-menu-item-sub
 
-				- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Movie Theatres'}
-				include partials/sidebar-menu-item-sub
+					- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Movie Theatres'}
+					include partials/sidebar-menu-item-sub
+
+				.hash-e 109b716872ae18401f5c74a7ce2db813
+				.sidebar-menu-section-l
+					- el = { class: 'is-green-mark--onhover', iconPath: 'demographics-icon', text: 'Demographics'}
+					include partials/sidebar-menu-item
+					- el = { class: 'is-red-mark--onhover', iconPath: 'geo-icon', text: 'Geo-Location'}
+					include partials/sidebar-menu-item
+					- el = { class: 'is-orange-mark--onhover', iconPath: 'education-icon', text: 'Career/Education'}
+					include partials/sidebar-menu-item
+					- el = { class: 'is-blue-mark--onhover', iconPath: 'social-icon', text: 'Social Media Use'}
+					include partials/sidebar-menu-item
+
+				.sidebar-menu-section-l
+					- el = { class: 'is-green-mark--onhover', iconPath: 'interests-icon', text: 'Interests'}
+					include partials/sidebar-menu-item
+					- el = { class: 'is-red-mark--oncheck is-check', iconPath: 'brands-icon', text: 'Brands'}
+					include partials/sidebar-menu-item
+
+					- el = { class: 'is-green-mark--onhover', iconPath: 'automotive-icon', text: 'Automotive'}
+					include partials/sidebar-menu-item-sub
+
+					- el = { class: 'is-green-mark--oncheck', iconPath: 'education-icon', text: 'Education'}
+					include partials/sidebar-menu-item-sub
+
+					- el = { class: 'is-green-mark--onhover', iconPath: 'energy-icon', text: 'Energy, Utilities & Waste'}
+					include partials/sidebar-menu-item-sub
+
+					- el = { class: 'is-green-mark--onhover is-check', iconPath: 'entertainment-icon', text: 'Entertainment'}
+					include partials/sidebar-menu-item-sub
+
+
+					- el = { class: 'is-orange-mark--onhover', iconPath: 'celebrities-icon', text: 'Celebrities'}
+					include partials/sidebar-menu-item
+					- el = { class: 'is-blue-mark--onhover', iconPath: 'tv-icon', text: 'TV Shows'}
+					include partials/sidebar-menu-item
 
 
 

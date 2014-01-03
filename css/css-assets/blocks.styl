@@ -16,9 +16,12 @@ hightlightWidth = 4px
 
 	/* 89a64cab9779a3f80167d765346da7dc */
 	&.is-check
-		background-color rgba(255,255,255,.05)
+		// background-color rgba(255,255,255,.05)
 		&:hover
 			cursor default
+
+		> .text-bl
+			color white
 
 		> .icon-bl 
 			border 2px solid white
@@ -77,6 +80,26 @@ bgColor = #1e394f
 	padding-left 45px
 	background-color bgColor
 	position relative
+
+	&:first-of-type
+		&:before
+			box-shadow 0 -12px 0 white
+
+	&.is-check
+		&:before
+			background-color white
+		> .text-bl
+			color white
+		> .plus-minus-bh
+			background-color white
+			box-shadow 0 0 0 3px white
+		> .minus-icon-bh
+			display block
+		> .icon-bl 
+			// 4!
+			.icon
+				fill white
+
 	blue1 = #4a6c82
 	&:before
 		content: ''
@@ -104,7 +127,7 @@ bgColor = #1e394f
 	> .text-bl
 		color blue1
 
-	> .cross-icon-bh
+	> .plus-minus-bh
 		rect 9px
 		background-color blue1
 		fill bgColor
@@ -115,6 +138,9 @@ bgColor = #1e394f
 		top 50%
 		margin-top - 4px
 		z-index 1
+
+	> .minus-icon-bh
+		display none
 
 	/* d7a0268c5d178625cbdfa5d991e4d1c0 */
 	&.is-sub2, &.is-sub3
@@ -132,12 +158,17 @@ bgColor = #1e394f
 			margin-top 	0
 			font-size 16px
 			
-		> .cross-icon-bh
+		> .plus-minus-bh
 			left 63px
 			margin-top - 5px
 
 	/* f718f3c840abc57ca063892cf84b6aeb */
 	&.is-sub3
+		
+		&.is-check
+			> .plus-minus-bh
+				box-shadow 0 0 0 1px white
+
 		&:before
 			left 104px
 
@@ -145,7 +176,7 @@ bgColor = #1e394f
 			margin-left 121px
 			margin-top 1px
 			
-		> .cross-icon-bh
+		> .plus-minus-bh
 			left 101px
 			box-shadow 0 0 0 1px blue1
 

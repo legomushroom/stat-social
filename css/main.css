@@ -1882,13 +1882,13 @@ a,
   cursor: pointer;
   background-color: rgba(255,255,255,0.05);
 }
-.sidebar-menu-item-b.is-check,
-.sidebar-menu-item-sub-b.is-check {
-  background-color: rgba(255,255,255,0.05);
-}
 .sidebar-menu-item-b.is-check:hover,
 .sidebar-menu-item-sub-b.is-check:hover {
   cursor: default;
+}
+.sidebar-menu-item-b.is-check > .text-bl,
+.sidebar-menu-item-sub-b.is-check > .text-bl {
+  color: #fff;
 }
 .sidebar-menu-item-b.is-check > .icon-bl,
 .sidebar-menu-item-sub-b.is-check > .icon-bl {
@@ -1959,6 +1959,25 @@ a,
 /* d7a0268c5d178625cbdfa5d991e4d1c0 */
 /* f718f3c840abc57ca063892cf84b6aeb */
 }
+.sidebar-menu-item-sub-b:first-of-type:before {
+  box-shadow: 0 -12px 0 #fff;
+}
+.sidebar-menu-item-sub-b.is-check:before {
+  background-color: #fff;
+}
+.sidebar-menu-item-sub-b.is-check > .text-bl {
+  color: #fff;
+}
+.sidebar-menu-item-sub-b.is-check > .plus-minus-bh {
+  background-color: #fff;
+  box-shadow: 0 0 0 3px #fff;
+}
+.sidebar-menu-item-sub-b.is-check > .minus-icon-bh {
+  display: block;
+}
+.sidebar-menu-item-sub-b.is-check > .icon-bl .icon {
+  fill: #fff;
+}
 .sidebar-menu-item-sub-b:before {
   content: '';
   width: 3px;
@@ -1986,7 +2005,7 @@ a,
 .sidebar-menu-item-sub-b > .text-bl {
   color: #4a6c82;
 }
-.sidebar-menu-item-sub-b > .cross-icon-bh {
+.sidebar-menu-item-sub-b > .plus-minus-bh {
   width: 9px;
   height: 9px;
   background-color: #4a6c82;
@@ -1998,6 +2017,9 @@ a,
   top: 50%;
   margin-top: -4px;
   z-index: 1;
+}
+.sidebar-menu-item-sub-b > .minus-icon-bh {
+  display: none;
 }
 .sidebar-menu-item-sub-b.is-sub2,
 .sidebar-menu-item-sub-b.is-sub3 {
@@ -2018,10 +2040,13 @@ a,
   margin-top: 0;
   font-size: 16px;
 }
-.sidebar-menu-item-sub-b.is-sub2 > .cross-icon-bh,
-.sidebar-menu-item-sub-b.is-sub3 > .cross-icon-bh {
+.sidebar-menu-item-sub-b.is-sub2 > .plus-minus-bh,
+.sidebar-menu-item-sub-b.is-sub3 > .plus-minus-bh {
   left: 63px;
   margin-top: -5px;
+}
+.sidebar-menu-item-sub-b.is-sub3.is-check > .plus-minus-bh {
+  box-shadow: 0 0 0 1px #fff;
 }
 .sidebar-menu-item-sub-b.is-sub3:before {
   left: 104px;
@@ -2030,11 +2055,11 @@ a,
   margin-left: 121px;
   margin-top: 1px;
 }
-.sidebar-menu-item-sub-b.is-sub3 > .cross-icon-bh {
+.sidebar-menu-item-sub-b.is-sub3 > .plus-minus-bh {
   left: 101px;
   box-shadow: 0 0 0 1px #4a6c82;
 }
-.sidebar-menu-item-sub-b.is-sub3 > .cross-icon-bh svg {
+.sidebar-menu-item-sub-b.is-sub3 > .plus-minus-bh svg {
   display: none;
 }
 .tab-circle-b {
