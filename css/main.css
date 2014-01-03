@@ -1956,6 +1956,8 @@ a,
   padding-left: 45px;
   background-color: #1e394f;
   position: relative;
+/* d7a0268c5d178625cbdfa5d991e4d1c0 */
+/* f718f3c840abc57ca063892cf84b6aeb */
 }
 .sidebar-menu-item-sub-b:before {
   content: '';
@@ -1997,6 +1999,44 @@ a,
   margin-top: -4px;
   z-index: 1;
 }
+.sidebar-menu-item-sub-b.is-sub2,
+.sidebar-menu-item-sub-b.is-sub3 {
+  height: 38px;
+  padding: 8px 0;
+}
+.sidebar-menu-item-sub-b.is-sub2:before,
+.sidebar-menu-item-sub-b.is-sub3:before {
+  left: 66px;
+}
+.sidebar-menu-item-sub-b.is-sub2 > .icon-bl,
+.sidebar-menu-item-sub-b.is-sub3 > .icon-bl {
+  display: none;
+}
+.sidebar-menu-item-sub-b.is-sub2 > .text-bl,
+.sidebar-menu-item-sub-b.is-sub3 > .text-bl {
+  margin-left: 83px;
+  margin-top: 0;
+  font-size: 16px;
+}
+.sidebar-menu-item-sub-b.is-sub2 > .cross-icon-bh,
+.sidebar-menu-item-sub-b.is-sub3 > .cross-icon-bh {
+  left: 63px;
+  margin-top: -5px;
+}
+.sidebar-menu-item-sub-b.is-sub3:before {
+  left: 104px;
+}
+.sidebar-menu-item-sub-b.is-sub3 > .text-bl {
+  margin-left: 121px;
+  margin-top: 1px;
+}
+.sidebar-menu-item-sub-b.is-sub3 > .cross-icon-bh {
+  left: 101px;
+  box-shadow: 0 0 0 1px #4a6c82;
+}
+.sidebar-menu-item-sub-b.is-sub3 > .cross-icon-bh svg {
+  display: none;
+}
 .tab-circle-b {
   width: 75px;
   height: 75px;
@@ -2006,7 +2046,7 @@ a,
   border-radius: 50%;
   text-align: center;
   color: #fff;
-  background: url("http://lorempixel.com/75/75/people") no-repeat center center;
+  background: url("http://placekitten.com/75/75") no-repeat center center;
 /* 91f28e51a4cffb32caebcda1cbff41fe */
 }
 .tab-circle-b.is-number {

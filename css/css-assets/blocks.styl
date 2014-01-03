@@ -116,8 +116,41 @@ bgColor = #1e394f
 		margin-top - 4px
 		z-index 1
 
+	/* d7a0268c5d178625cbdfa5d991e4d1c0 */
+	&.is-sub2, &.is-sub3
+		height 38px
+		padding 8px 0
+		
+		&:before
+			left 66px
 
-	
+		> .icon-bl 
+			display none
+
+		> .text-bl
+			margin-left 83px
+			margin-top 	0
+			font-size 16px
+			
+		> .cross-icon-bh
+			left 63px
+			margin-top - 5px
+
+	/* f718f3c840abc57ca063892cf84b6aeb */
+	&.is-sub3
+		&:before
+			left 104px
+
+		> .text-bl
+			margin-left 121px
+			margin-top 1px
+			
+		> .cross-icon-bh
+			left 101px
+			box-shadow 0 0 0 1px blue1
+
+			svg
+				display none
 
 /* b7fd66c98927030c63e5bc85e79603cf */
 .tab-circle-b
@@ -126,7 +159,7 @@ bgColor = #1e394f
 	border-radius 50%
 	text-align center
 	color white
-	background url('http://lorempixel.com/75/75/people') no-repeat center center
+	background url('http://placekitten.com/75/75') no-repeat center center
 
 	/* 91f28e51a4cffb32caebcda1cbff41fe */
 	&.is-number
