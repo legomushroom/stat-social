@@ -1,6 +1,35 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+/* 98563fbea95348eb229352f8427d95a1 */
+.footer-copyright-b
+	color white
+	font-size 15px
+	font-weight 600
+
+/* f934d17cc3f0e13f69feaa928d6fbd22 */
+.footer-about-b
+	color white
+	font-size 16px
+	> .header-be
+		font-weight 700
+		margin-bottom 12px
+
+	> .item-be
+		display block
+		font-weight 100
+		+ .item-be
+			margin-top 4px
+
+/* 18ec867773b0af97d00745d5be079931 */
+.social-share-b
+	display inline-block
+	.icon
+		rect 24px
+		float left
+		+ .icon
+			margin-left 24px
+
 /* 217c0a46b063374e01ce9556998a9325 */
 .sidebar-menu-item-b
 	&:first-of-type
@@ -34,7 +63,7 @@ hightlightWidth = 4px
 
 	&:hover
 		cursor pointer
-		background rgba(c-blue1,.65)
+		background rgba(c-blue1,.675)
 
 	/* 89a64cab9779a3f80167d765346da7dc */
 	&.is-check
@@ -214,7 +243,6 @@ bgColor = #1e394f
 		font-weight 600
 		openSans()
 
-
 /* 5e50955e8ae19f7e87c097ef0840e455 */
 .header-tab-b
 	height 93px
@@ -228,11 +256,12 @@ bgColor = #1e394f
 		width 100%
 
 	> .header-text-be
-		top 12px
+		top 14px
 		color #274057
 		letter-spacing 0
 		padding-left 66px
 		font-weight 300
+		ptSans()
 
 	> .bottom-text-be
 		color white
@@ -240,8 +269,7 @@ bgColor = #1e394f
 		font-weight 200
 		padding-left 40px
 		font-size 19px
-		openSans()
-
+	
 	marginLeft = 11px
 	.tab-circle-b
 		float left
@@ -251,7 +279,7 @@ bgColor = #1e394f
 
 		&:after, &:before
 			content ''
-			height 1px 
+			height 1px
 			background white
 			position absolute
 			top 50%
@@ -271,3 +299,39 @@ bgColor = #1e394f
 		position absolute
 		right  14px
 		bottom 8px
+
+/* 766dfcc19fb177a6f7f8cca6aa9c33d5 */
+.header-tab-user-b
+	@extend .header-tab-b
+	padding-left 0
+	text-align left
+
+	> .header-text-be
+		color white
+		font-weight 200
+		padding-left 90px
+	> .bottom-text-be
+		padding-left 90px
+		font-size 18px
+		bottom 11px
+		font-weight 100
+		letter-spacing 0
+		ptSans()
+
+	.tab-circle-b
+		margin-top 10px
+		margin-left 9px
+
+		&:before
+			display none
+
+
+
+
+
+
+
+
+
+
+	
