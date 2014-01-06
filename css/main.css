@@ -2098,6 +2098,18 @@ a,
   background: url("i/average-circle.svg") repeat-y top center;
   background-size: 9px 9px;
 }
+.table-line-b.is-brands2 > .score-bl,
+.table-line-header-b.is-brands2 > .score-bl {
+  width: 38%;
+}
+.table-line-b.is-brands2 > .progressbars-bl,
+.table-line-header-b.is-brands2 > .progressbars-bl {
+  width: 28.5%;
+}
+.table-line-b.is-brands2 > .multiply-bl,
+.table-line-header-b.is-brands2 > .multiply-bl {
+  width: 33.5%;
+}
 .table-line-b .column-bh,
 .table-line-header-b .column-bh {
   float: left;
