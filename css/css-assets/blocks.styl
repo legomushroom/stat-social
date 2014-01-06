@@ -1,8 +1,18 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
-/* e69ecf7ab9dee0358c04a4ad1c3932f7 */
+/* 0ef89de3f0aed9ba26dc5b2d0ffd9361 */
+.lableled-filter-b
+	position relative
+	.filter-l
+		position absolute
 
+	.header-label-e
+		margin-left 73px
+		margin-top 10px
+		
+
+/* e69ecf7ab9dee0358c04a4ad1c3932f7 */
 .table-body-b
 	position relative
 	averageWidth = 10px
@@ -14,21 +24,12 @@
 		position absolute
 		t 0
 		l 100*.5215%
-		// dotColor = #586575
-		// dotSize = 2px
 		background url('i/average-circle.svg') repeat-y top center
 		background-size 9px 9px
-		// background-color rgba(pink,.2)
-		// background-image: -webkit-repeating-radial-gradient(center center, dotColor, dotColor dotSize, transparent dotSize, transparent 100%);
-		// background-image: -moz-repeating-radial-gradient(center center, dotColor, dotColor dotSize, transparent dotSize, transparent 100%);
-		// background-image: -ms-repeating-radial-gradient(center center, dotColor, dotColor dotSize, transparent dotSize, transparent 100%);
-		// background-image: repeating-radial-gradient(center center, dotColor, dotColor dotSize, transparent dotSize, transparent 100%);
-		// background-size: 10px 10px
-		// background-position 0 0
+
 
 /* 90ef8d2448cfbc7e97abb0e374db4870 */
 .table-line-b
-	
 	> .score-bl
 			padding-top  39px
 			padding-left 19px
@@ -58,6 +59,7 @@
 	.column-bh
 		float left
 		text-align center
+		min-height 1px
 
 
 /* 90ef8d2448cfbc7e97abb0e374db4870 */
@@ -65,15 +67,38 @@
 	background-color rgba(#e7e7e7, .36)
 	height 124px
 
+	/* ac663d1953ac4a7a79d75f8fe63ced45 */
+	&.is-header
+		background-color transparent
+		height 20px
+		color #44596e
+		font-size 24px
+		letter-spacing 0
+		ptSans()
+
+		.column-bh
+			padding 0
+			// 4!
+			&.is-check
+				color white
+
+		> .progressbars-bl
+			text-align left
+
+		// > .score-bl
+			
+
 	&:nth-of-type(odd)
 		background-color rgba(#f1f1f1, .62)
+
+		.score-circle-e
+			color  #c9d4d8
 
 /* d9d692570bbad4dc7dea4e95e8a18527 */
 .progressbar-b
 	background-color c-blue4
 	height 30px
 	line-height 32px
-	padding-left 9px
 	text-align left
 
 	/* 1daa735ce39ed3b9367a5cd3415bc138 */
@@ -103,6 +128,7 @@
 		font-size 20px
 		letter-spacing 0
 		font-weight 300
+		padding-left 9px
 
 		&:after
 			content 'average'

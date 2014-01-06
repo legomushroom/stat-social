@@ -187,6 +187,49 @@ html
 				.hash-e 19f71a51c0d5bed322aa620bdba5e4cc
 				.multiply-e.is-blue 0.6x
 
+				.hash-e 03527a628e0b98800ec8e54c277c2537
+				.filter-input-btn-e.is-hoverable
+					- el = { path: 'search-icon'}
+					include partials/icon
+
+				.hash-e 5801e7f09d0f8e4dbde8b9f1d4978dff
+				input.is-hoverable.is-focusable.filter-input-e(placeholder="enter brand name...")
+				
+				.hash-e 1cbc1220e27421d2e68a567e40c562c6
+				.filter-l.cf
+					input.filter-input-e.is-hoverable.is-focusable(placeholder="enter brand name...")
+					.filter-input-btn-e.is-hoverable
+						- el = { path: 'search-icon'}
+						include partials/icon
+
+				.hash-e	e50b6b0661c5b836b19ce0b7ad3599fc
+				- el = { class: '', text: 'all brands' }
+				include partials/header-label
+
+				.hash-e	2f59ddffa7cf1041a9c817881c99e026
+				- el = { class: 'is-hoverable', text: 'all brands' }
+				include partials/header-label
+
+				.hash-e	4fe69c9509a14eccc99613a57d237109
+				- el = { class: 'is-hoverable is-check ', text: 'all brands' }
+				include partials/header-label
+
+				.hash-e	a0d45e1d55926db1a43c3ac0529a9e76
+				- el = { class: 'is-hoverable is-filter is-check', text: 'all brands' }
+				include partials/header-label
+
+				.hash-e 0ef89de3f0aed9ba26dc5b2d0ffd9361
+				.lableled-filter-b
+					.filter-l.cf
+						input#filter-input.filter-input-e.is-hoverable.is-focusable(placeholder="enter brand name...")
+						.filter-input-btn-e.is-hoverable
+							- el = { path: 'search-icon'}
+							include partials/icon
+
+					- el = { htmlEl: 'label', forAttribute: 'filter-input', class: 'is-hoverable is-filter is-check', text: 'all brands' }
+					include partials/header-label
+
+
 			.section-kl
 				.header-ke Blocks
 				.hash-e 5e50955e8ae19f7e87c097ef0840e455
@@ -601,6 +644,22 @@ html
 								- el = { class: '', text: 'Bp'}
 								include partials/tag
 
+
+
+			.hash-e ac663d1953ac4a7a79d75f8fe63ced45
+			.table-line-b.is-header
+				.score-bl.column-bh.is-check 	
+					- el = { class: 'is-hoverable is-check is-filter', text: 'all brands' }
+					include partials/header-label
+				.progressbars-bl.column-bh 		
+					- el = { class: 'is-hoverable', text: 'followers vs. baseline' }
+					include partials/header-label
+				.multiply-bl.column-bh
+					- el = { class: 'is-hoverable', text: 'muliply' }
+					include partials/header-label
+				.tags-bl.column-bh 
+					- el = { class: 'is-hoverable', text: 'top three' }
+					include partials/header-label
 
 
 

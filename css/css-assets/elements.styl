@@ -1,6 +1,83 @@
 // ELEMENTS
 @import '../assets/imports.styl'
 
+/* e50b6b0661c5b836b19ce0b7ad3599fc */
+headerLabelColor = #44596e
+.header-label-e
+	height 20px
+	color headerLabelColor
+	font-size 24px
+	letter-spacing 0
+	display inline-block
+	ptSans()
+	
+	/* 2f59ddffa7cf1041a9c817881c99e026 */
+	&.is-hoverable
+		&:hover
+			cursor pointer
+			color darken(headerLabelColor, 10)
+	
+	/* 4fe69c9509a14eccc99613a57d237109 */
+	&.is-check
+		color white
+		cursor default
+		&:hover
+			color white
+			cursor default
+
+		/* a0d45e1d55926db1a43c3ac0529a9e76 */
+		&.is-filter
+			cursor pointer
+	
+
+/* 03527a628e0b98800ec8e54c277c2537 */
+.filter-input-btn-e
+	background-color c-red
+	rect  48px
+	width 46px
+	padding-top 11px
+	padding-left 9px
+
+	&.is-hoverable
+		&:hover
+			background-color c-red-hover
+			cursor pointer
+
+	.icon
+		rect 28px
+		fill white
+		
+
+
+/* 5801e7f09d0f8e4dbde8b9f1d4978dff */
+.filter-input-e
+	background-color c-red
+	color white
+	outline 0
+	box-shadow none
+	border 0
+	height 48px
+	display block
+	font-size 18px
+	font-weight 100
+	padding 0
+	placeholder-mixin(white)
+	ptSans()
+
+	&:focus
+		padding-left 40px
+
+	&.is-hoverable
+		&:hover
+			background-color c-red-hover
+			cursor pointer
+
+	&.is-focusable
+		&:focus
+			background-color c-red-hover
+			cursor pointer
+		
+
 /* 6c129f16dd96d06fdb801cdce1eed660 */
 .multiply-e
 	font-size 26px
