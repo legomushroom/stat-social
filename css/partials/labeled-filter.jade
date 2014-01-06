@@ -1,0 +1,6 @@
+.lableled-filter-b
+	- el = { inputId: el.inputId }
+	include filter
+
+	- el = { htmlEl: 'label', forAttribute: 'filter-input', class: 'is-hoverable is-filter is-check', text: 'all brands' }
+	include header-label

@@ -188,19 +188,15 @@ html
 				.multiply-e.is-blue 0.6x
 
 				.hash-e 03527a628e0b98800ec8e54c277c2537
-				.filter-input-btn-e.is-hoverable
-					- el = { path: 'search-icon'}
-					include partials/icon
+				- el = {class: 'is-hoverable' }
+				include partials/filter-input-btn
 
 				.hash-e 5801e7f09d0f8e4dbde8b9f1d4978dff
-				input.is-hoverable.is-focusable.filter-input-e(placeholder="enter brand name...")
+				- el = { class: 'is-hoverable is-focusable', placeholder: "enter brand name...", id: ''}
+				include partials/filter-input
 				
 				.hash-e 1cbc1220e27421d2e68a567e40c562c6
-				.filter-l.cf
-					input.filter-input-e.is-hoverable.is-focusable(placeholder="enter brand name...")
-					.filter-input-btn-e.is-hoverable
-						- el = { path: 'search-icon'}
-						include partials/icon
+				include partials/filter
 
 				.hash-e	e50b6b0661c5b836b19ce0b7ad3599fc
 				- el = { class: '', text: 'all brands' }
@@ -219,16 +215,7 @@ html
 				include partials/header-label
 
 				.hash-e 0ef89de3f0aed9ba26dc5b2d0ffd9361
-				.lableled-filter-b
-					.filter-l.cf
-						input#filter-input.filter-input-e.is-hoverable.is-focusable(placeholder="enter brand name...")
-						.filter-input-btn-e.is-hoverable
-							- el = { path: 'search-icon'}
-							include partials/icon
-
-					- el = { htmlEl: 'label', forAttribute: 'filter-input', class: 'is-hoverable is-filter is-check', text: 'all brands' }
-					include partials/header-label
-
+				include partials/labeled-filter
 
 			.section-kl
 				.header-ke Blocks
@@ -644,13 +631,11 @@ html
 								- el = { class: '', text: 'Bp'}
 								include partials/tag
 
-
-
 			.hash-e ac663d1953ac4a7a79d75f8fe63ced45
-			.table-line-b.is-header
-				.score-bl.column-bh.is-check 	
-					- el = { class: 'is-hoverable is-check is-filter', text: 'all brands' }
-					include partials/header-label
+			.table-line-header-b
+				.score-bl.column-bh
+					- el = { inputId: '' }
+					include partials/labeled-filter
 				.progressbars-bl.column-bh 		
 					- el = { class: 'is-hoverable', text: 'followers vs. baseline' }
 					include partials/header-label
@@ -660,6 +645,166 @@ html
 				.tags-bl.column-bh 
 					- el = { class: 'is-hoverable', text: 'top three' }
 					include partials/header-label
+
+			.hash-e 31203fd954da2559c78f15a3c01de3b2
+			.table-b
+				.table-line-header-b
+					.score-bl.column-bh
+						- el = { inputId: 'filter-input' }
+						include partials/labeled-filter
+					.progressbars-bl.column-bh 		
+						- el = { class: 'is-hoverable', text: 'followers vs. baseline' }
+						include partials/header-label
+					.multiply-bl.column-bh
+						- el = { class: 'is-hoverable', text: 'muliply' }
+						include partials/header-label
+					.tags-bl.column-bh 
+						- el = { class: 'is-hoverable', text: 'top three' }
+						include partials/header-label
+
+
+				.table-body-b
+					.table-line-b.cf
+						.score-bl.column-bh
+							- el = { class:'', number: '790', text: 'automotive' }
+							include partials/score
+
+						.progressbars-bl.column-bh
+							.progressbar-pile-l
+								.progressbars-l.cf
+									.left-ll
+										- el = { class:'', text: '20%' }
+										include partials/progressbar					
+									.right-ll(style="width: 35%")
+										- el = { class:'is-striped', text: '' }
+										include partials/progressbar			
+
+								.progressbars-l.cf
+									.left-ll
+										- el = { class:'is-grey is-average', text: '16%' }
+										include partials/progressbar
+
+						.multiply-bl.column-bh
+							.multiply-e 0.6x
+
+						.tags-bl.column-bh
+							.tags-l
+								.tag-cell-ll
+									- el = { class: '', text: 'Toyota'}
+									include partials/tag
+								.tag-cell-ll
+									- el = { class: '', text: 'Ford'}
+									include partials/tag
+								.tag-cell-ll
+									- el = { class: '', text: 'Lexus'}
+									include partials/tag
+
+					.table-line-b.cf
+						.score-bl.column-bh
+							- el = { class:'', number: '280', text: 'education' }
+							include partials/score
+
+						.progressbars-bl.column-bh
+							.progressbar-pile-l
+								.progressbars-l.cf
+									.left-ll
+										- el = { class:'', text: '55%' }
+										include partials/progressbar					
+									.right-ll(style="width: 35%")
+										- el = { class:'is-striped', text: '' }
+										include partials/progressbar			
+
+								.progressbars-l.cf
+									.left-ll
+										- el = { class:'is-grey is-average', text: '29%' }
+										include partials/progressbar
+
+						.multiply-bl.column-bh
+							.multiply-e.is-blue 4.5x
+
+						.tags-bl.column-bh
+							.tags-l
+								.tag-cell-ll
+									- el = { class: '', text: 'Harvard'}
+									include partials/tag
+								.tag-cell-ll
+									- el = { class: '', text: 'Upenn'}
+									include partials/tag
+								.tag-cell-ll
+									- el = { class: '', text: 'MIT'}
+									include partials/tag
+
+					.table-line-b.cf
+						.score-bl.column-bh
+							- el = { class:'', number: '560', text: 'entertainment' }
+							include partials/score
+
+						.progressbars-bl.column-bh
+							.progressbar-pile-l
+								.progressbars-l.cf
+									.left-ll
+										- el = { class:'', text: '20%' }
+										include partials/progressbar					
+									.right-ll(style="width: 35%")
+										- el = { class:'is-striped', text: '' }
+										include partials/progressbar			
+
+								.progressbars-l.cf
+									.left-ll
+										- el = { class:'is-grey is-average', text: '16%' }
+										include partials/progressbar
+
+						.multiply-bl.column-bh
+							.multiply-e.is-blue 1.6x
+
+						.tags-bl.column-bh
+							.tags-l
+								.tag-cell-ll
+									- el = { class: '', text: 'Youtube'}
+									include partials/tag
+								.tag-cell-ll
+									- el = { class: '', text: 'CNN'}
+									include partials/tag
+								.tag-cell-ll
+									- el = { class: '', text: 'TVo'}
+									include partials/tag
+
+
+					.table-line-b.cf
+						.score-bl.column-bh
+							- el = { class:'', number: '790', text: 'energy & utilities' }
+							include partials/score
+
+						.progressbars-bl.column-bh
+							.progressbar-pile-l
+								.progressbars-l.cf
+									.left-ll
+										- el = { class:'', text: '20%' }
+										include partials/progressbar					
+									.right-ll(style="width: 35%")
+										- el = { class:'is-striped', text: '' }
+										include partials/progressbar			
+
+								.progressbars-l.cf
+									.left-ll
+										- el = { class:'is-grey is-average', text: '16%' }
+										include partials/progressbar
+
+						.multiply-bl.column-bh
+							.multiply-e.is-blue 9.6x
+
+						.tags-bl.column-bh
+							.tags-l
+								.tag-cell-ll
+									- el = { class: '', text: 'ConEd'}
+									include partials/tag
+								.tag-cell-ll
+									- el = { class: '', text: 'Shell'}
+									include partials/tag
+								.tag-cell-ll
+									- el = { class: '', text: 'Bp'}
+									include partials/tag
+
 
 
 

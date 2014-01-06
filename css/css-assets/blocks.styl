@@ -30,69 +30,73 @@
 
 /* 90ef8d2448cfbc7e97abb0e374db4870 */
 .table-line-b
-	> .score-bl
-			padding-top  39px
-			padding-left 19px
-
-	> .progressbars-bl
-		padding-top 27px
-
-	> .multiply-bl
-		padding-top 46px
-
-	> .tags-bl
-		padding-top 	11px
-		padding-right 20px
-
-	scoreNProgress = 2*(100/3)%
-	> .score-bl
-		width scoreNProgress*.565
-	> .progressbars-bl
-		width scoreNProgress*.435
-		
-	multyNTags = (100/3)%
-	> .multiply-bl
-		width multyNTags*.465
-	> .tags-bl
-		width multyNTags*.535
-
 	.column-bh
 		float left
 		text-align center
 		min-height 1px
+
+		> .header-label-e
+			margin-top 10px
+
+	scoreNProgress = 2*(100/3)%
+	> .score-bl
+		width scoreNProgress*.565
+		text-align left
+		padding-top  39px
+		padding-left 19px
+
+	> .progressbars-bl
+		width scoreNProgress*.435
+		padding-top 27px
+
+	multyNTags = (100/3)%
+	> .multiply-bl
+		width multyNTags*.465
+		padding-top 46px
+
+	> .tags-bl
+		width multyNTags*.535
+		padding-top 	11px
+		padding-right 20px
+
 
 
 /* 90ef8d2448cfbc7e97abb0e374db4870 */
 .table-line-b
 	background-color rgba(#e7e7e7, .36)
 	height 124px
-
-	/* ac663d1953ac4a7a79d75f8fe63ced45 */
-	&.is-header
-		background-color transparent
-		height 20px
-		color #44596e
-		font-size 24px
-		letter-spacing 0
-		ptSans()
-
-		.column-bh
-			padding 0
-			// 4!
-			&.is-check
-				color white
-
-		> .progressbars-bl
-			text-align left
-
-		// > .score-bl
 			
-
 	&:nth-of-type(odd)
 		background-color rgba(#f1f1f1, .62)
 
 		.score-circle-e
 			color  #c9d4d8
+
+.table-line-header-b
+	@extend .table-line-b
+	background-color transparent
+	color #44596e
+	font-size 24px
+	letter-spacing 0
+	height 101px
+	ptSans()
+
+	&:nth-of-type(odd)
+		background-color transparent
+
+	.column-bh
+		padding 0
+		// 4!
+		&.is-check
+			color white
+
+	> .progressbars-bl
+		text-align left
+
+	> .tags-bl
+		text-align right
+		padding-right 20px
+
 
 /* d9d692570bbad4dc7dea4e95e8a18527 */
 .progressbar-b
