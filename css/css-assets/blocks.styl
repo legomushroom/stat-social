@@ -1,12 +1,28 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+
 /* d9d692570bbad4dc7dea4e95e8a18527 */
 .progressbar-b
 	background-color c-blue4
 	height 30px
 	line-height 32px
 	padding-left 9px
+
+	/* 1daa735ce39ed3b9367a5cd3415bc138 */
+	color = rgba(255,255,255,.6)
+	&.is-striped
+		background-image: -webkit-linear-gradient(135deg,transparent 45%,color 50%,transparent 55%);
+		background-image: -moz-linear-gradient(135deg,transparent 45%,color 50%,transparent 55%);
+		background-image: -o-linear-gradient(135deg,transparent 45%,color 50%,transparent 55%);
+		background-image: -ms-linear-gradient(135deg,transparent 45%,color 50%,transparent 55%);
+		background-image: linear-gradient(135deg,transparent 45%,color 50%,transparent 55%);
+		background-size 10px 10px
+
+	
+	/* ba39589ca648fcd17017c8fe7d998684 */
+	&.is-grey
+		background-color #8ea2a8
 
 	/* 7dc4c922c1ff5acf6bee4602fd6b2656 */
 	&.is-average

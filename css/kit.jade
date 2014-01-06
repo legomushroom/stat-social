@@ -165,8 +165,23 @@ html
 				.hash-e 75265e958b07e0885d471fb3734cb272
 				.tag-e Toyota
 
+				.hash-e 4666827a7e2b3e760808931f1179d353
+				.tags-l
+					.tag-cell-ll
+						.tag-e Toyota
+					.tag-cell-ll
+						.tag-e Ford
+					.tag-cell-ll
+						.tag-e Lexus
+
 				.hash-e 06b475a811e4d94a28535a071cb4c83e
 				.score-circle-e 790
+
+				.hash-e 6c129f16dd96d06fdb801cdce1eed660
+				.multiply-e 0.6x
+
+				.hash-e 19f71a51c0d5bed322aa620bdba5e4cc
+				.multiply-e.is-blue 0.6x
 
 			.section-kl
 				.header-ke Blocks
@@ -366,12 +381,48 @@ html
 				.text-be automotive
 
 			.hash-e	d9d692570bbad4dc7dea4e95e8a18527
-			.progressbar-b
-				.text-be 20%
+			- el = { class:'', text: '20%' }
+			include partials/progressbar
+			
 
 			.hash-e	7dc4c922c1ff5acf6bee4602fd6b2656
-			.progressbar-b.is-average
-				.text-be 20%
+			- el = { class:'is-average', text: '20%' }
+			include partials/progressbar
+
+			.hash-e	ba39589ca648fcd17017c8fe7d998684
+			- el = { class:'is-grey is-average', text: '20%' }
+			include partials/progressbar
+
+			.hash-e	1daa735ce39ed3b9367a5cd3415bc138
+			- el = { class:'is-striped', text: '' }
+			include partials/progressbar
+
+			.hash-e 6429dbfbb7c20e73e549c48a40c3fc3f
+			.progressbars-l.cf
+				.left-ll
+					- el = { class:'', text: '20%' }
+					include partials/progressbar					
+				.right-ll
+					- el = { class:'is-striped', text: '' }
+					include partials/progressbar			
+
+			.hash-e 2267092b2d5496cfce2d1accf804b5e9
+			.progressbar-pile-l
+				.progressbars-l.cf
+					.left-ll
+						- el = { class:'', text: '20%' }
+						include partials/progressbar					
+					.right-ll
+						- el = { class:'is-striped', text: '' }
+						include partials/progressbar			
+
+				.progressbars-l.cf
+					.left-ll
+						- el = { class:'is-grey is-average', text: '16%' }
+						include partials/progressbar					
+
+
+
 
 
 

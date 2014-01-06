@@ -1886,6 +1886,16 @@ a,
 .c-black10-bg-g {
   background-color: #fff;
 }
+.multiply-e {
+  font-size: 26px;
+  color: #44596e;
+  font-weight: 200;
+  letter-spacing: 0;
+/* 19f71a51c0d5bed322aa620bdba5e4cc */
+}
+.multiply-e.is-blue {
+  color: #2997c4;
+}
 .score-circle-e {
   background-color: #526779;
   border-radius: 50%;
@@ -1926,7 +1936,20 @@ a,
   height: 30px;
   line-height: 32px;
   padding-left: 9px;
+/* 1daa735ce39ed3b9367a5cd3415bc138 */
+/* ba39589ca648fcd17017c8fe7d998684 */
 /* 7dc4c922c1ff5acf6bee4602fd6b2656 */
+}
+.progressbar-b.is-striped {
+  background-image: -webkit-linear-gradient(135deg, transparent 45%, rgba(255,255,255,0.6) 50%, transparent 55%);
+  background-image: -moz-linear-gradient(135deg, transparent 45%, rgba(255,255,255,0.6) 50%, transparent 55%);
+  background-image: -o-linear-gradient(135deg, transparent 45%, rgba(255,255,255,0.6) 50%, transparent 55%);
+  background-image: -ms-linear-gradient(135deg, transparent 45%, rgba(255,255,255,0.6) 50%, transparent 55%);
+  background-image: linear-gradient(135deg, transparent 45%, rgba(255,255,255,0.6) 50%, transparent 55%);
+  background-size: 10px 10px;
+}
+.progressbar-b.is-grey {
+  background-color: #8ea2a8;
 }
 .progressbar-b.is-average > .text-be:after {
   display: inline;
@@ -2320,6 +2343,20 @@ a,
 }
 .header-tab-user-b .tab-circle-b:before {
   display: none;
+}
+.progressbar-pile-l .progressbars-l + .progressbars-l {
+  margin-top: 8px;
+}
+.tags-l {
+  text-align: right;
+}
+.tags-l .tag-cell-ll + .tag-cell-ll {
+  margin-top: 9px;
+}
+.progressbars-l .left-ll,
+.progressbars-l .right-ll {
+  width: 50%;
+  float: left;
 }
 .footer-l {
   text-align: center;
