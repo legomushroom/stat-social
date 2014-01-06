@@ -1931,11 +1931,63 @@ a,
   font-weight: 100;
   letter-spacing: 0;
 }
+.table-body-b {
+  position: relative;
+}
+.table-body-b:after {
+  content: '';
+  width: 10px;
+  margin-left: -5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 52.15%;
+  background: url("i/average-circle.svg") repeat-y top center;
+  background-size: 9px 9px;
+}
+.table-line-b > .score-bl {
+  padding-top: 39px;
+  padding-left: 19px;
+}
+.table-line-b > .progressbars-bl {
+  padding-top: 27px;
+}
+.table-line-b > .multiply-bl {
+  padding-top: 46px;
+}
+.table-line-b > .tags-bl {
+  padding-top: 11px;
+  padding-right: 20px;
+}
+.table-line-b > .score-bl {
+  width: 37.666666666666664%;
+}
+.table-line-b > .progressbars-bl {
+  width: 29.000000000000004%;
+}
+.table-line-b > .multiply-bl {
+  width: 15.500000000000002%;
+}
+.table-line-b > .tags-bl {
+  width: 17.833333333333336%;
+}
+.table-line-b .column-bh {
+  float: left;
+  text-align: center;
+}
+.table-line-b {
+  background-color: rgba(231,231,231,0.36);
+  height: 124px;
+}
+.table-line-b:nth-of-type(odd) {
+  background-color: rgba(241,241,241,0.62);
+}
 .progressbar-b {
   background-color: #2997c4;
   height: 30px;
   line-height: 32px;
   padding-left: 9px;
+  text-align: left;
 /* 1daa735ce39ed3b9367a5cd3415bc138 */
 /* ba39589ca648fcd17017c8fe7d998684 */
 /* 7dc4c922c1ff5acf6bee4602fd6b2656 */
@@ -1972,6 +2024,7 @@ a,
 }
 .score-b {
   padding-top: 1px;
+  text-align: left;
 /* 28e600295c499dc709c3b1061c506e47 */
 }
 .score-b .score-circle-e {

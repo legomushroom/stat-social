@@ -163,16 +163,20 @@ html
 				.sidebar-logo-e STAT SOCIAL
 
 				.hash-e 75265e958b07e0885d471fb3734cb272
-				.tag-e Toyota
+				- el = { class: '', text: 'Toyota'}
+				include partials/tag
 
 				.hash-e 4666827a7e2b3e760808931f1179d353
 				.tags-l
 					.tag-cell-ll
-						.tag-e Toyota
+						- el = { class: '', text: 'Toyota'}
+						include partials/tag
 					.tag-cell-ll
-						.tag-e Ford
+						- el = { class: '', text: 'Ford'}
+						include partials/tag
 					.tag-cell-ll
-						.tag-e Lexus
+						- el = { class: '', text: 'Lexus'}
+						include partials/tag
 
 				.hash-e 06b475a811e4d94a28535a071cb4c83e
 				.score-circle-e 790
@@ -371,19 +375,16 @@ html
 			include partials/footer
 
 			.hash-e eac9a691442f03ebe1084a0a6eb30f5a
-			.score-b.cf
-				.score-circle-e 790
-				.text-be automotive
+			- el = { number: '790', text: 'automotive' }
+			include partials/score
 
 			.hash-e 28e600295c499dc709c3b1061c506e47
-			.score-b.cf.is-plain-text
-				.score-circle-e 790
-				.text-be automotive
+			- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+			include partials/score
 
 			.hash-e	d9d692570bbad4dc7dea4e95e8a18527
 			- el = { class:'', text: '20%' }
 			include partials/progressbar
-			
 
 			.hash-e	7dc4c922c1ff5acf6bee4602fd6b2656
 			- el = { class:'is-average', text: '20%' }
@@ -419,7 +420,193 @@ html
 				.progressbars-l.cf
 					.left-ll
 						- el = { class:'is-grey is-average', text: '16%' }
-						include partials/progressbar					
+						include partials/progressbar		
+
+			.hash-e 90ef8d2448cfbc7e97abb0e374db4870
+			.table-line-b.cf
+				.score-bl.column-bh
+					- el = { class:'', number: '790', text: 'automotive' }
+					include partials/score
+
+				.progressbars-bl.column-bh
+					.progressbar-pile-l
+						.progressbars-l.cf
+							.left-ll
+								- el = { class:'', text: '20%' }
+								include partials/progressbar					
+							.right-ll(style="width: 35%")
+								- el = { class:'is-striped', text: '' }
+								include partials/progressbar			
+
+						.progressbars-l.cf
+							.left-ll
+								- el = { class:'is-grey is-average', text: '16%' }
+								include partials/progressbar
+
+				.multiply-bl.column-bh
+					.multiply-e 0.6x
+
+				.tags-bl.column-bh
+					.tags-l
+						.tag-cell-ll
+							- el = { class: '', text: 'Toyota'}
+							include partials/tag
+						.tag-cell-ll
+							- el = { class: '', text: 'Ford'}
+							include partials/tag
+						.tag-cell-ll
+							- el = { class: '', text: 'Lexus'}
+							include partials/tag
+
+			.hash-e e69ecf7ab9dee0358c04a4ad1c3932f7
+			.table-body-b
+				.table-line-b.cf
+					.score-bl.column-bh
+						- el = { class:'', number: '790', text: 'automotive' }
+						include partials/score
+
+					.progressbars-bl.column-bh
+						.progressbar-pile-l
+							.progressbars-l.cf
+								.left-ll
+									- el = { class:'', text: '20%' }
+									include partials/progressbar					
+								.right-ll(style="width: 35%")
+									- el = { class:'is-striped', text: '' }
+									include partials/progressbar			
+
+							.progressbars-l.cf
+								.left-ll
+									- el = { class:'is-grey is-average', text: '16%' }
+									include partials/progressbar
+
+					.multiply-bl.column-bh
+						.multiply-e 0.6x
+
+					.tags-bl.column-bh
+						.tags-l
+							.tag-cell-ll
+								- el = { class: '', text: 'Toyota'}
+								include partials/tag
+							.tag-cell-ll
+								- el = { class: '', text: 'Ford'}
+								include partials/tag
+							.tag-cell-ll
+								- el = { class: '', text: 'Lexus'}
+								include partials/tag
+
+				.table-line-b.cf
+					.score-bl.column-bh
+						- el = { class:'', number: '280', text: 'education' }
+						include partials/score
+
+					.progressbars-bl.column-bh
+						.progressbar-pile-l
+							.progressbars-l.cf
+								.left-ll
+									- el = { class:'', text: '55%' }
+									include partials/progressbar					
+								.right-ll(style="width: 35%")
+									- el = { class:'is-striped', text: '' }
+									include partials/progressbar			
+
+							.progressbars-l.cf
+								.left-ll
+									- el = { class:'is-grey is-average', text: '29%' }
+									include partials/progressbar
+
+					.multiply-bl.column-bh
+						.multiply-e.is-blue 4.5x
+
+					.tags-bl.column-bh
+						.tags-l
+							.tag-cell-ll
+								- el = { class: '', text: 'Harvard'}
+								include partials/tag
+							.tag-cell-ll
+								- el = { class: '', text: 'Upenn'}
+								include partials/tag
+							.tag-cell-ll
+								- el = { class: '', text: 'MIT'}
+								include partials/tag
+
+				.table-line-b.cf
+					.score-bl.column-bh
+						- el = { class:'', number: '560', text: 'entertainment' }
+						include partials/score
+
+					.progressbars-bl.column-bh
+						.progressbar-pile-l
+							.progressbars-l.cf
+								.left-ll
+									- el = { class:'', text: '20%' }
+									include partials/progressbar					
+								.right-ll(style="width: 35%")
+									- el = { class:'is-striped', text: '' }
+									include partials/progressbar			
+
+							.progressbars-l.cf
+								.left-ll
+									- el = { class:'is-grey is-average', text: '16%' }
+									include partials/progressbar
+
+					.multiply-bl.column-bh
+						.multiply-e.is-blue 1.6x
+
+					.tags-bl.column-bh
+						.tags-l
+							.tag-cell-ll
+								- el = { class: '', text: 'Youtube'}
+								include partials/tag
+							.tag-cell-ll
+								- el = { class: '', text: 'CNN'}
+								include partials/tag
+							.tag-cell-ll
+								- el = { class: '', text: 'TVo'}
+								include partials/tag
+
+
+				.table-line-b.cf
+					.score-bl.column-bh
+						- el = { class:'', number: '790', text: 'energy & utilities' }
+						include partials/score
+
+					.progressbars-bl.column-bh
+						.progressbar-pile-l
+							.progressbars-l.cf
+								.left-ll
+									- el = { class:'', text: '20%' }
+									include partials/progressbar					
+								.right-ll(style="width: 35%")
+									- el = { class:'is-striped', text: '' }
+									include partials/progressbar			
+
+							.progressbars-l.cf
+								.left-ll
+									- el = { class:'is-grey is-average', text: '16%' }
+									include partials/progressbar
+
+					.multiply-bl.column-bh
+						.multiply-e.is-blue 9.6x
+
+					.tags-bl.column-bh
+						.tags-l
+							.tag-cell-ll
+								- el = { class: '', text: 'ConEd'}
+								include partials/tag
+							.tag-cell-ll
+								- el = { class: '', text: 'Shell'}
+								include partials/tag
+							.tag-cell-ll
+								- el = { class: '', text: 'Bp'}
+								include partials/tag
+
+
+
+
+
+
+
 
 
 

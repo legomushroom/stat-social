@@ -1,6 +1,72 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+/* e69ecf7ab9dee0358c04a4ad1c3932f7 */
+
+.table-body-b
+	position relative
+	averageWidth = 10px
+	&:after
+		content ''
+		width averageWidth
+		margin-left -(averageWidth/2)
+		height 100%
+		position absolute
+		t 0
+		l 100*.5215%
+		// dotColor = #586575
+		// dotSize = 2px
+		background url('i/average-circle.svg') repeat-y top center
+		background-size 9px 9px
+		// background-color rgba(pink,.2)
+		// background-image: -webkit-repeating-radial-gradient(center center, dotColor, dotColor dotSize, transparent dotSize, transparent 100%);
+		// background-image: -moz-repeating-radial-gradient(center center, dotColor, dotColor dotSize, transparent dotSize, transparent 100%);
+		// background-image: -ms-repeating-radial-gradient(center center, dotColor, dotColor dotSize, transparent dotSize, transparent 100%);
+		// background-image: repeating-radial-gradient(center center, dotColor, dotColor dotSize, transparent dotSize, transparent 100%);
+		// background-size: 10px 10px
+		// background-position 0 0
+
+/* 90ef8d2448cfbc7e97abb0e374db4870 */
+.table-line-b
+	
+	> .score-bl
+			padding-top  39px
+			padding-left 19px
+
+	> .progressbars-bl
+		padding-top 27px
+
+	> .multiply-bl
+		padding-top 46px
+
+	> .tags-bl
+		padding-top 	11px
+		padding-right 20px
+
+	scoreNProgress = 2*(100/3)%
+	> .score-bl
+		width scoreNProgress*.565
+	> .progressbars-bl
+		width scoreNProgress*.435
+		
+	multyNTags = (100/3)%
+	> .multiply-bl
+		width multyNTags*.465
+	> .tags-bl
+		width multyNTags*.535
+
+	.column-bh
+		float left
+		text-align center
+
+
+/* 90ef8d2448cfbc7e97abb0e374db4870 */
+.table-line-b
+	background-color rgba(#e7e7e7, .36)
+	height 124px
+
+	&:nth-of-type(odd)
+		background-color rgba(#f1f1f1, .62)
 
 /* d9d692570bbad4dc7dea4e95e8a18527 */
 .progressbar-b
@@ -8,6 +74,7 @@
 	height 30px
 	line-height 32px
 	padding-left 9px
+	text-align left
 
 	/* 1daa735ce39ed3b9367a5cd3415bc138 */
 	color = rgba(255,255,255,.6)
@@ -50,6 +117,8 @@
 /* eac9a691442f03ebe1084a0a6eb30f5a */
 .score-b
 	padding-top 1px
+	text-align left
+
 	.score-circle-e
 		float left
 
