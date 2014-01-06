@@ -1,6 +1,57 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+/* d9d692570bbad4dc7dea4e95e8a18527 */
+.progressbar-b
+	background-color c-blue4
+	height 30px
+	line-height 32px
+	padding-left 9px
+
+	/* 7dc4c922c1ff5acf6bee4602fd6b2656 */
+	&.is-average
+		> .text-be
+			// 4!
+			&:after
+				display inline
+
+	> .text-be
+		color white
+		font-size 20px
+		letter-spacing 0
+		font-weight 300
+
+		&:after
+			content 'average'
+			font-size 14px
+			padding-left 9px
+			position relative
+			letter-spacing 0
+			font-weight 300
+			top -3px
+			display none
+
+/* eac9a691442f03ebe1084a0a6eb30f5a */
+.score-b
+	padding-top 1px
+	.score-circle-e
+		float left
+
+	> .text-be
+		font-size 20px
+		font-weight 600
+		color #44596e
+		margin-left 59px
+		margin-top 10px
+		letter-spacing 0
+
+	/* 28e600295c499dc709c3b1061c506e47 */
+	&.is-plain-text
+		.score-circle-e
+			opacity 0
+		
+		
+
 /* 98563fbea95348eb229352f8427d95a1 */
 .footer-copyright-b
 	color white
