@@ -147,6 +147,11 @@ html
 						- el = { path: 'minus-icon' }
 						include partials/icon
 
+					.icon-sample-kl
+						.hash-e 90937ea30a91f0fd95afaf3dc1b400e9
+						- el = { path: 'level-up-icon' }
+						include partials/icon
+
 
 
 			.section-kl
@@ -166,16 +171,20 @@ html
 				- el = { class: '', text: 'Toyota'}
 				include partials/tag
 
+				.hash-e 15fcd56a987540e02de37396809fa400
+				- el = { class: 'is-hoverable', text: 'Toyota'}
+				include partials/tag
+
 				.hash-e 4666827a7e2b3e760808931f1179d353
 				.tags-l
 					.tag-cell-ll
-						- el = { class: '', text: 'Toyota'}
+						- el = { class: 'is-hoverable', text: 'Toyota'}
 						include partials/tag
 					.tag-cell-ll
-						- el = { class: '', text: 'Ford'}
+						- el = { class: 'is-hoverable', text: 'Ford'}
 						include partials/tag
 					.tag-cell-ll
-						- el = { class: '', text: 'Lexus'}
+						- el = { class: 'is-hoverable', text: 'Lexus'}
 						include partials/tag
 
 				.hash-e 06b475a811e4d94a28535a071cb4c83e
@@ -215,35 +224,53 @@ html
 				include partials/header-label
 
 				.hash-e 0ef89de3f0aed9ba26dc5b2d0ffd9361
+				- el = { class: '' }
 				include partials/labeled-filter
+
+				.hash-e dea5e1ed0f2bb0093c5164c8f2869d08
+				include partials/level-up-btn
+
+				.hash-e 7cd6892560eb91e00cb49a245ef6d2a2
+				- el = { text: 'all brands', class: '', labelClass: 'is-hoverable is-filter is-check', labelTag: '', labelFor: '' }
+				include partials/header-label-n-button
+
+				.hash-e 076b9e32d8a245d767dae9cfe883ee02
+				- el = { text: 'all brands', class: 'is-level-up', labelClass: 'is-hoverable is-filter is-check', labelTag: '', labelFor: '' }
+				include partials/header-label-n-button
+
+
 
 			.section-kl
 				.header-ke Blocks
 				.hash-e 5e50955e8ae19f7e87c097ef0840e455
-				- el = { class: 'c-red-bg-g', headerText: 'IDENTIFIED AUDIENCE', bottomText: 'consumers', circleText:'94%' }
+				- el = { class: '', headerText: 'IDENTIFIED FOLLOWERS', bottomText: 'consumers', circleText:'94%' }
 				include partials/header-tab
 
-				.hash-e 5e50955e8ae19f7e87c097ef0840e455
-				- el = { class: 'c-orange-bg-g', headerText: 'INDIRECT CONNECTIONS', bottomText: 'per tweeter', circleText:'400' }
+				.hash-e a838c27d872842d7de9d925c5d9579db
+				- el = { class: 'is-check', headerText: 'IDENTIFIED FOLLOWERS', bottomText: 'consumers', circleText:'94%' }
 				include partials/header-tab
 
-				.hash-e 5e50955e8ae19f7e87c097ef0840e455
-				- el = { class: 'c-green-bg-g', headerText: 'POTENTIAL REACH', bottomText: 'people', circleText:'10k' }
+				.hash-e aa986cb9908637840d10b761512bbf3a
+				- el = { class: 'is-orange', headerText: 'INDIRECT CONNECTIONS', bottomText: 'per tweeter', circleText:'400' }
+				include partials/header-tab
+
+				.hash-e 12776eaaa51ff13155eb6900f62d084c
+				- el = { class: 'is-green', headerText: 'POTENTIAL REACH', bottomText: 'people', circleText:'10k' }
 				include partials/header-tab
 
 				.hash-e bd29d58273a1753588c87babd35aace2
 				.fork-l.cf
-					- el = { class: 'fork-item-l one-of-3-l c-red-bg-g', headerText: 'IDENTIFIED AUDIENCE', bottomText: 'Consumers', circleText:'94%' }
+					- el = { class: 'fork-item-l one-of-3-l', headerText: 'IDENTIFIED FOLLOWERS', bottomText: 'Consumers', circleText:'94%' }
 					include partials/header-tab
 
-					- el = { class: 'fork-item-l one-of-3-l c-orange-bg-g', headerText: 'INDIRECT CONNECTIONS', bottomText: 'Per tweeter', circleText:'400' }
+					- el = { class: 'fork-item-l one-of-3-l is-orange', headerText: 'INDIRECT CONNECTIONS', bottomText: 'Per tweeter', circleText:'400' }
 					include partials/header-tab
 
-					- el = { class: 'fork-item-l one-of-3-l c-green-bg-g', headerText: 'POTENTIAL REACH', bottomText: 'People', circleText:'10k' }
+					- el = { class: 'fork-item-l one-of-3-l is-green', headerText: 'POTENTIAL REACH', bottomText: 'People', circleText:'10k' }
 					include partials/header-tab
 
 				.hash-e 766dfcc19fb177a6f7f8cca6aa9c33d5
-				- el = { class: 'c-blue-bg-g', headerText: '@Sergey_Valiukh', bottomText: 'Sergey Valiukh', bottomTextCnt: '121' }
+				- el = { class: 'is-blue', headerText: '@Sergey_Valiukh', bottomText: 'Sergey Valiukh', bottomTextCnt: '121' }
 				include partials/header-tab-user
 				
 				.hash-e 7f2ec201ce0694f22a08f2e065c4b735
@@ -479,13 +506,13 @@ html
 				.tags-bl.column-bh
 					.tags-l
 						.tag-cell-ll
-							- el = { class: '', text: 'Toyota'}
+							- el = { class: 'is-hoverable', text: 'Toyota'}
 							include partials/tag
 						.tag-cell-ll
-							- el = { class: '', text: 'Ford'}
+							- el = { class: 'is-hoverable', text: 'Ford'}
 							include partials/tag
 						.tag-cell-ll
-							- el = { class: '', text: 'Lexus'}
+							- el = { class: 'is-hoverable', text: 'Lexus'}
 							include partials/tag
 
 			.hash-e e69ecf7ab9dee0358c04a4ad1c3932f7
@@ -516,13 +543,13 @@ html
 					.tags-bl.column-bh
 						.tags-l
 							.tag-cell-ll
-								- el = { class: '', text: 'Toyota'}
+								- el = { class: 'is-hoverable', text: 'Toyota'}
 								include partials/tag
 							.tag-cell-ll
-								- el = { class: '', text: 'Ford'}
+								- el = { class: 'is-hoverable', text: 'Ford'}
 								include partials/tag
 							.tag-cell-ll
-								- el = { class: '', text: 'Lexus'}
+								- el = { class: 'is-hoverable', text: 'Lexus'}
 								include partials/tag
 
 				.table-line-b.cf
@@ -551,13 +578,13 @@ html
 					.tags-bl.column-bh
 						.tags-l
 							.tag-cell-ll
-								- el = { class: '', text: 'Harvard'}
+								- el = { class: 'is-hoverable', text: 'Harvard'}
 								include partials/tag
 							.tag-cell-ll
-								- el = { class: '', text: 'Upenn'}
+								- el = { class: 'is-hoverable', text: 'Upenn'}
 								include partials/tag
 							.tag-cell-ll
-								- el = { class: '', text: 'MIT'}
+								- el = { class: 'is-hoverable', text: 'MIT'}
 								include partials/tag
 
 				.table-line-b.cf
@@ -586,13 +613,13 @@ html
 					.tags-bl.column-bh
 						.tags-l
 							.tag-cell-ll
-								- el = { class: '', text: 'Youtube'}
+								- el = { class: 'is-hoverable', text: 'Youtube'}
 								include partials/tag
 							.tag-cell-ll
-								- el = { class: '', text: 'CNN'}
+								- el = { class: 'is-hoverable', text: 'CNN'}
 								include partials/tag
 							.tag-cell-ll
-								- el = { class: '', text: 'TVo'}
+								- el = { class: 'is-hoverable', text: 'TVo'}
 								include partials/tag
 
 
@@ -622,13 +649,13 @@ html
 					.tags-bl.column-bh
 						.tags-l
 							.tag-cell-ll
-								- el = { class: '', text: 'ConEd'}
+								- el = { class: 'is-hoverable', text: 'ConEd'}
 								include partials/tag
 							.tag-cell-ll
-								- el = { class: '', text: 'Shell'}
+								- el = { class: 'is-hoverable', text: 'Shell'}
 								include partials/tag
 							.tag-cell-ll
-								- el = { class: '', text: 'Bp'}
+								- el = { class: 'is-hoverable', text: 'Bp'}
 								include partials/tag
 
 			.hash-e ac663d1953ac4a7a79d75f8fe63ced45
@@ -690,13 +717,13 @@ html
 						.tags-bl.column-bh
 							.tags-l
 								.tag-cell-ll
-									- el = { class: '', text: 'Toyota'}
+									- el = { class: 'is-hoverable', text: 'Toyota'}
 									include partials/tag
 								.tag-cell-ll
-									- el = { class: '', text: 'Ford'}
+									- el = { class: 'is-hoverable', text: 'Ford'}
 									include partials/tag
 								.tag-cell-ll
-									- el = { class: '', text: 'Lexus'}
+									- el = { class: 'is-hoverable', text: 'Lexus'}
 									include partials/tag
 
 					.table-line-b.cf
@@ -725,13 +752,13 @@ html
 						.tags-bl.column-bh
 							.tags-l
 								.tag-cell-ll
-									- el = { class: '', text: 'Harvard'}
+									- el = { class: 'is-hoverable', text: 'Harvard'}
 									include partials/tag
 								.tag-cell-ll
-									- el = { class: '', text: 'Upenn'}
+									- el = { class: 'is-hoverable', text: 'Upenn'}
 									include partials/tag
 								.tag-cell-ll
-									- el = { class: '', text: 'MIT'}
+									- el = { class: 'is-hoverable', text: 'MIT'}
 									include partials/tag
 
 					.table-line-b.cf
@@ -760,13 +787,13 @@ html
 						.tags-bl.column-bh
 							.tags-l
 								.tag-cell-ll
-									- el = { class: '', text: 'Youtube'}
+									- el = { class: 'is-hoverable', text: 'Youtube'}
 									include partials/tag
 								.tag-cell-ll
-									- el = { class: '', text: 'CNN'}
+									- el = { class: 'is-hoverable', text: 'CNN'}
 									include partials/tag
 								.tag-cell-ll
-									- el = { class: '', text: 'TVo'}
+									- el = { class: 'is-hoverable', text: 'TVo'}
 									include partials/tag
 
 
@@ -796,13 +823,13 @@ html
 						.tags-bl.column-bh
 							.tags-l
 								.tag-cell-ll
-									- el = { class: '', text: 'ConEd'}
+									- el = { class: 'is-hoverable', text: 'ConEd'}
 									include partials/tag
 								.tag-cell-ll
-									- el = { class: '', text: 'Shell'}
+									- el = { class: 'is-hoverable', text: 'Shell'}
 									include partials/tag
 								.tag-cell-ll
-									- el = { class: '', text: 'Bp'}
+									- el = { class: 'is-hoverable', text: 'Bp'}
 									include partials/tag
 
 			.hash-e f89ac00fd8a6fc9768c4cb39cc7375ca
@@ -841,7 +868,7 @@ html
 					.multiply-bl.column-bh
 						- el = { class: 'is-hoverable', text: 'muliply' }
 						include partials/header-label
-						
+
 				.table-body-b
 					.table-line-b.cf.is-brands2
 						.score-bl.column-bh

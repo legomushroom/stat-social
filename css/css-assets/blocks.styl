@@ -4,13 +4,13 @@
 /* 0ef89de3f0aed9ba26dc5b2d0ffd9361 */
 .lableled-filter-b
 	position relative
+	padding-top 1px
 	.filter-l
 		position absolute
 
-	.header-label-e
+	.header-label-n-button-l
 		margin-left 73px
-		margin-top 10px
-		
+		margin-top 3px
 
 /* e69ecf7ab9dee0358c04a4ad1c3932f7 */
 .table-body-b
@@ -46,26 +46,35 @@
 		> .header-label-e
 			margin-top 10px
 
+		> .score-b
+			margin-left 19px
+			margin-top 	39px
+
+		> .progressbar-pile-l
+			margin-top 27px
+
+		> .multiply-e
+			margin-top 46px
+
+		> .tags-l
+			margin-top 	11px
+			margin-right 20px
+			
 	scoreNProgress = 2*(100/3)%
 	> .score-bl
 		width scoreNProgress*.565
 		text-align left
-		padding-top  39px
-		padding-left 19px
 
 	> .progressbars-bl
 		width scoreNProgress*.435
-		padding-top 27px
 
 	multyNTags = (100/3)%
 	> .multiply-bl
 		width multyNTags*.465
-		padding-top 46px
 
 	> .tags-bl
 		width multyNTags*.535
-		padding-top 	11px
-		padding-right 20px
+		
 
 
 
@@ -420,10 +429,50 @@ bgColor = #1e394f
 /* 5e50955e8ae19f7e87c097ef0840e455 */
 .header-tab-b
 	height 93px
-	overflow hidden
 	position relative
 	font-size 18px
 	text-align center
+	background-color c-red
+	box-shadow 0 1px 0 rgba(0,0,0,.1)
+	
+	/* a838c27d872842d7de9d925c5d9579db */
+	&.is-check
+		> .arrow-be
+			bottom  -18px
+		> .cross-icon-bh
+			crossTransform rotate(45deg)
+
+
+	/* aa986cb9908637840d10b761512bbf3a */
+	&.is-orange
+		background-color c-orange
+
+		> .arrow-be
+			border-top-color c-orange
+
+		.tab-circle-b
+			background-color c-orange
+
+	/* 12776eaaa51ff13155eb6900f62d084c */
+	&.is-green
+		background-color c-green
+
+		> .arrow-be
+			border-top-color c-green
+
+		.tab-circle-b
+			background-color c-green
+
+	/* 766dfcc19fb177a6f7f8cca6aa9c33d5 */
+	&.is-blue
+		background-color c-blue4
+
+		> .arrow-be
+			border-top-color c-blue4
+
+		.tab-circle-b
+			background-color c-blue
+
 
 	> .header-text-be, > .bottom-text-be
 		position absolute
@@ -442,30 +491,34 @@ bgColor = #1e394f
 		bottom 12px
 		font-weight 200
 		padding-left 40px
-		font-size 19px
+		font-size 20px
+
+	> .arrow-be
+		rect 0 
+		position absolute
+		border 9px solid transparent
+		border-top-color c-red
+		left 50px
+		bottom -9px
+		crossTransition bottom .17s ease-out
+
+	> .line-thrue-be
+		background-color white
+		position absolute
+		top 50%
+		height 1px 
+		width 100%
+		margin-top -1px
+		z-index 0
 	
 	marginLeft = 11px
 	.tab-circle-b
+		background-color c-red
 		float left
-		margin-top 15px
+		margin-top 14px
 		margin-left marginLeft
 		position relative
-
-		&:after, &:before
-			content ''
-			height 1px
-			background white
-			position absolute
-			top 50%
-			margin-top - 1px
-
-		&:before
-			left - marginLeft - 1px
-			width  marginLeft
-
-		&:after
-			width 2000px
-			left 100%
+		z-index 1
 
 	> .cross-icon-bh
 		rect 20px
@@ -473,12 +526,14 @@ bgColor = #1e394f
 		position absolute
 		right  14px
 		bottom 8px
+		crossTransition all .17s ease-out
 
 /* 766dfcc19fb177a6f7f8cca6aa9c33d5 */
 .header-tab-user-b
 	@extend .header-tab-b
 	padding-left 0
 	text-align left
+	overflow hidden
 
 	> .header-text-be
 		color white
@@ -498,6 +553,10 @@ bgColor = #1e394f
 
 		&:before
 			display none
+
+	> .line-thrue-be
+		left 20px
+
 
 
 

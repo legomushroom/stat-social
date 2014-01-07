@@ -1,6 +1,14 @@
-.lableled-filter-b
-	- el = { inputId: el.inputId }
+.lableled-filter-b(class="#{el.class}")
+	//- - el = { inputId: el.inputId }
 	include filter
 
-	- el = { htmlEl: 'label', forAttribute: 'filter-input', class: 'is-hoverable is-filter is-check', text: 'all brands' }
-	include header-label
+
+	- el = { text: 'all brands', class: 'is-level-up', labelClass: 'is-hoverable is-filter is-check', labelTag: '', labelFor: '' }
+	include header-label-n-button
+	//- .header-label-n-button-l					
+	//- 	- el = { htmlEl: 'label', forAttribute: 'filter-input', class: 'is-hoverable is-filter is-check', text: 'all brands' }
+	//- 	include header-label
+		
+	//- 	include level-up-btn
+
+	//- //- include header-label

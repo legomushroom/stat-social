@@ -1,0 +1,5 @@
+.header-label-n-button-l(class="#{el.class}")	
+	- el = { class: el.labelClass, text: el.text, htmlEl: el.labelTag, forAttribute: el.labelFor, }
+	include header-label
+	
+	include level-up-btn
