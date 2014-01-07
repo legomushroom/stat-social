@@ -1,6 +1,22 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+/* de6575b1d4aa31323fdc22d108a1cd70 */
+.report-block-header-b
+	.icon 
+		fill white
+		float left
+		rect 47px
+
+	.text-be
+		color white
+		font-size 36px
+		font-weight 100
+		margin-left 100px
+		margin-top 6px
+		ptSans()
+
+
 /* 1312a4cb67c1fced95de038209e0811f */
 .followers-header-b
 	background-color rgba(#445469, .37)
@@ -123,6 +139,9 @@
 		width scoreNProgress*.565
 		text-align left
 
+		&.is-left-padding
+			padding-left 77px
+
 	> .progressbars-bl
 		width scoreNProgress*.435
 
@@ -158,6 +177,9 @@
 
 	&:nth-of-type(odd)
 		background-color transparent
+
+	&.is-small-height
+		height 67px
 
 	.column-bh
 		padding 0

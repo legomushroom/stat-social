@@ -133,6 +133,16 @@ html
 						include partials/icon
 
 					.icon-sample-kl
+						.hash-e 270032ce90a6e8fb0576e8fbd82c82a5
+						- el = { path: 'career-icon' }
+						include partials/icon
+
+					.icon-sample-kl
+						.hash-e 36c8d51a05ab98a2234880611738577e
+						- el = { path: 'income-icon' }
+						include partials/icon
+
+					.icon-sample-kl
 						.hash-e 8eb4c1f48d6cbfca0cdd16a477b2a889
 						- el = { path: 'search-icon' }
 						include partials/icon
@@ -264,8 +274,14 @@ html
 						include partials/dropdown
 
 
+
 			.section-kl
 				.header-ke Blocks
+				
+				.hash-e de6575b1d4aa31323fdc22d108a1cd70
+				- el = { class: '', iconPath: 'income-icon' }
+				include partials/report-block-header
+
 				.hash-e 1312a4cb67c1fced95de038209e0811f
 				.followers-header-b
 					- el = { class: 'export-bh is-hoverable', text: 'Export' }
@@ -281,9 +297,6 @@ html
 						.dropdown-bl
 							- el = { class: 'is-hoverable', text: 'Twitter', headerBtnClass: 'is-thin' }
 							include partials/dropdown
-
-
-
 
 
 				.hash-e 5e50955e8ae19f7e87c097ef0840e455
@@ -1034,6 +1047,139 @@ html
 							.multiply-e 0.6x
 
 
+			.hash-e 67580467bd5a1d2bbef32dd764a7d1bd
+			.table-n-header-l
+				.header-ll
+					- el = { class: '', iconPath: 'income-icon' }
+					include partials/report-block-header
+				.table-ll
+					.table-b
+						.table-line-header-b.is-small-height.is-brands2
+							.score-bl.is-left-padding.column-bh
+								- el = { class: 'is-hoverable', text: 'bracket' }
+								include partials/header-label
+							.progressbars-bl.column-bh 		
+								- el = { class: 'is-hoverable', text: 'followers vs. baseline' }
+								include partials/header-label
+							.multiply-bl.column-bh
+								- el = { class: 'is-hoverable', text: 'muliply' }
+								include partials/header-label
+
+						.table-body-b
+							.table-line-b.cf.is-brands2
+								.score-bl.column-bh
+									- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+									include partials/score
+
+								.progressbars-bl.column-bh
+									.progressbar-pile-l
+										.progressbars-l.cf
+											.left-ll
+												- el = { class:'', text: '20%' }
+												include partials/progressbar					
+											.right-ll(style="width: 35%")
+												- el = { class:'is-striped', text: '' }
+												include partials/progressbar			
+
+										.progressbars-l.cf
+											.left-ll
+												- el = { class:'is-grey is-average', text: '16%' }
+												include partials/progressbar
+
+								.multiply-bl.column-bh
+									.multiply-e 0.6x
+
+							.table-line-b.cf.is-brands2
+								.score-bl.column-bh
+									- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+									include partials/score
+
+								.progressbars-bl.column-bh
+									.progressbar-pile-l
+										.progressbars-l.cf
+											.left-ll
+												- el = { class:'', text: '20%' }
+												include partials/progressbar					
+											.right-ll(style="width: 35%")
+												- el = { class:'is-striped', text: '' }
+												include partials/progressbar			
+
+										.progressbars-l.cf
+											.left-ll
+												- el = { class:'is-grey is-average', text: '16%' }
+												include partials/progressbar
+
+								.multiply-bl.column-bh
+									.multiply-e 0.6x
+
+							.table-line-b.cf.is-brands2
+								.score-bl.column-bh
+									- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+									include partials/score
+
+								.progressbars-bl.column-bh
+									.progressbar-pile-l
+										.progressbars-l.cf
+											.left-ll
+												- el = { class:'', text: '20%' }
+												include partials/progressbar					
+											.right-ll(style="width: 35%")
+												- el = { class:'is-striped', text: '' }
+												include partials/progressbar			
+
+										.progressbars-l.cf
+											.left-ll
+												- el = { class:'is-grey is-average', text: '16%' }
+												include partials/progressbar
+
+								.multiply-bl.column-bh
+									.multiply-e 0.6x
+
+							.table-line-b.cf.is-brands2
+								.score-bl.column-bh
+									- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+									include partials/score
+
+								.progressbars-bl.column-bh
+									.progressbar-pile-l
+										.progressbars-l.cf
+											.left-ll
+												- el = { class:'', text: '20%' }
+												include partials/progressbar					
+											.right-ll(style="width: 35%")
+												- el = { class:'is-striped', text: '' }
+												include partials/progressbar			
+
+										.progressbars-l.cf
+											.left-ll
+												- el = { class:'is-grey is-average', text: '16%' }
+												include partials/progressbar
+
+								.multiply-bl.column-bh
+									.multiply-e 0.6x
+
+							.table-line-b.cf.is-brands2
+								.score-bl.column-bh
+									- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+									include partials/score
+
+								.progressbars-bl.column-bh
+									.progressbar-pile-l
+										.progressbars-l.cf
+											.left-ll
+												- el = { class:'', text: '20%' }
+												include partials/progressbar					
+											.right-ll(style="width: 35%")
+												- el = { class:'is-striped', text: '' }
+												include partials/progressbar			
+
+										.progressbars-l.cf
+											.left-ll
+												- el = { class:'is-grey is-average', text: '16%' }
+												include partials/progressbar
+
+								.multiply-bl.column-bh
+									.multiply-e 0.6x
 
 
 
@@ -1041,28 +1187,6 @@ html
 
 
 
-
-
-
-
-
-					
-
-
-
-
-
-
-
-
-
-
-					
-
-
-
-
-				
 
 
 

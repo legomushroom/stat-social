@@ -2111,6 +2111,20 @@ a,
   background-color: #fff;
   cursor: pointer;
 }
+.report-block-header-b .icon {
+  fill: #fff;
+  float: left;
+  width: 47px;
+  height: 47px;
+}
+.report-block-header-b .text-be {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 100;
+  margin-left: 100px;
+  margin-top: 6px;
+  font-family: 'PT Sans', sans-serif;
+}
 .followers-header-b {
   background-color: rgba(68,84,105,0.37);
   height: 81px;
@@ -2239,6 +2253,10 @@ a,
   width: 37.666666666666664%;
   text-align: left;
 }
+.table-line-b > .score-bl.is-left-padding,
+.table-line-header-b > .score-bl.is-left-padding {
+  padding-left: 77px;
+}
 .table-line-b > .progressbars-bl,
 .table-line-header-b > .progressbars-bl {
   width: 29.000000000000004%;
@@ -2274,6 +2292,9 @@ a,
 }
 .table-line-header-b:nth-of-type(odd) {
   background-color: transparent;
+}
+.table-line-header-b.is-small-height {
+  height: 67px;
 }
 .table-line-header-b .column-bh {
   padding: 0;
@@ -2782,6 +2803,10 @@ a,
 }
 .header-tab-user-b > .line-thrue-be {
   left: 20px;
+}
+.table-n-header-l > .header-ll {
+  margin-bottom: 42px;
+  padding-left: 102px;
 }
 .header-label-n-button-l {
   height: 36px;
