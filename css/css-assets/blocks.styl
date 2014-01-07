@@ -1,20 +1,48 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+/* 3648c6de7617651f11ac6af054f02c2d */
+.college-footer-b
+	background-color rgba(#e7e7e7, .34)
+	padding 23px 41px
+	color #44596e
+	font-size 20px
+	line-height 24px
+	font-weight 200
+	letter-spacing 0
+
+	.aterics-bh
+		position relative
+		&:before
+			content '*'
+			position absolute
+			left - 17px
+
 /* de6575b1d4aa31323fdc22d108a1cd70 */
 .report-block-header-b
+	text-align left
 	.icon 
 		fill white
 		float left
 		rect 47px
-
 	.text-be
-		color white
+		// color white
+		color #445469
 		font-size 36px
 		font-weight 100
-		margin-left 100px
+		margin-left 53px
 		margin-top 6px
+		display inline-block
+		border-bottom 1px solid transparent
 		ptSans()
+
+		&.is-check
+			color white
+
+		&.is-hoverable
+			&:hover
+				cursor pointer
+				border-bottom 1px solid
 
 
 /* 1312a4cb67c1fced95de038209e0811f */

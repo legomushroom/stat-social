@@ -2067,9 +2067,13 @@ a,
   font-weight: 200;
   letter-spacing: 0;
 /* 19f71a51c0d5bed322aa620bdba5e4cc */
+/*  */
 }
 .multiply-e.is-blue {
   color: #2997c4;
+}
+.multiply-e.is-yellow {
+  color: #de9e43;
 }
 .score-circle-e {
   background-color: #526779;
@@ -2111,6 +2115,26 @@ a,
   background-color: #fff;
   cursor: pointer;
 }
+.college-footer-b {
+  background-color: rgba(231,231,231,0.34);
+  padding: 23px 41px;
+  color: #44596e;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 200;
+  letter-spacing: 0;
+}
+.college-footer-b .aterics-bh {
+  position: relative;
+}
+.college-footer-b .aterics-bh:before {
+  content: '*';
+  position: absolute;
+  left: -17px;
+}
+.report-block-header-b {
+  text-align: left;
+}
 .report-block-header-b .icon {
   fill: #fff;
   float: left;
@@ -2118,12 +2142,21 @@ a,
   height: 47px;
 }
 .report-block-header-b .text-be {
-  color: #fff;
+  color: #445469;
   font-size: 36px;
   font-weight: 100;
-  margin-left: 100px;
+  margin-left: 53px;
   margin-top: 6px;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
   font-family: 'PT Sans', sans-serif;
+}
+.report-block-header-b .text-be.is-check {
+  color: #fff;
+}
+.report-block-header-b .text-be.is-hoverable:hover {
+  cursor: pointer;
+  border-bottom: 1px solid;
 }
 .followers-header-b {
   background-color: rgba(68,84,105,0.37);
