@@ -1,12 +1,70 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+/* 1312a4cb67c1fced95de038209e0811f */
+.followers-header-b
+	background-color rgba(#445469, .37)
+	height 81px
+	padding-top 30px
+	position relative
+
+	.baseline-bh
+		position absolute
+		left (100/3)%
+		top 50%
+		margin-top - 11px
+	
+	.date-bh
+		margin-left 40px
+
+	.export-bh
+		float right
+		margin-right 40px
+
+
+/* 1627a810777655d87836a18e1ad993ed */
+.named-dropdown-b
+	> .name-bl, > .dropdown-bl
+		display inline-block
+
+	> .dropdown-bl
+		margin-left 10px
+
+/* e8a3335f585a152361961c90778b20c0 */
+.dropdown-b
+	text-align left
+	border-bottom 1px solid transparent
+	display inline-block
+
+	> .text-bl, > .arrow-be
+		display inline-block
+		vertical-align top
+
+	// > .text-bl 
+	// 	text-decoration inherit
+	
+	> .arrow-be
+		border 1px solid white
+		border-top-color 		transparent
+		border-left-color transparent
+		crossTransform rotate(45deg)
+		rect 10px
+		margin-top 2px
+		margin-left 2px
+	
+	/* 3e991cfe97376df1d09bc63782c7363c */
+	&.is-hoverable
+		&:hover
+			cursor pointer
+			border-bottom 1px solid white
+
 /* 0ef89de3f0aed9ba26dc5b2d0ffd9361 */
 .lableled-filter-b
 	position relative
 	padding-top 1px
 	.filter-l
 		position absolute
+		z-index 1
 
 	.header-label-n-button-l
 		margin-left 73px
@@ -176,11 +234,19 @@
 		margin-left 59px
 		margin-top 10px
 		letter-spacing 0
+		text-decoration inherit
+		cursor inherit
 
 	/* 28e600295c499dc709c3b1061c506e47 */
 	&.is-plain-text
 		.score-circle-e
 			opacity 0
+	
+	/* b0f99a28beadd654f34d55311e88d2da */
+	&.is-hoverable
+		&:hover
+			text-decoration underline
+			cursor pointer
 		
 		
 
@@ -532,20 +598,24 @@ bgColor = #1e394f
 .header-tab-user-b
 	@extend .header-tab-b
 	padding-left 0
-	text-align left
 	overflow hidden
+	box-shadow none
 
 	> .header-text-be
 		color white
 		font-weight 200
-		padding-left 90px
+		padding-left 70px
+		font-size 20px
+		top 12px
 	> .bottom-text-be
-		padding-left 90px
-		font-size 18px
-		bottom 11px
+		padding-left 70px
+		bottom 13px
 		font-weight 100
 		letter-spacing 0
 		ptSans()
+		&:before
+			content: '@'
+			opacity 0
 
 	.tab-circle-b
 		margin-top 10px

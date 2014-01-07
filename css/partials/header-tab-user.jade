@@ -2,14 +2,11 @@
 .header-tab-user-b(class='#{el.class}')
 	.header-text-be #{el.headerText}
 
-	.bottom-text-be 
-		| #{el.bottomText}
-		.i-g.b-g.open-sans-g.f-s-20-g #{el.bottomTextCnt} 
-		.i-g.f-s-14-g.m-t-de-1-g Followers
+	.bottom-text-be #{el.bottomText}
 
 	- el = { class: '', text: el.circleText }
 	include tab-circle
 
 	.line-thrue-be
-	
+
 

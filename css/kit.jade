@@ -238,10 +238,54 @@ html
 				- el = { text: 'all brands', class: 'is-level-up', labelClass: 'is-hoverable is-filter is-check', labelTag: '', labelFor: '' }
 				include partials/header-label-n-button
 
+				.hash-e 5aade023ce947703de824de6dc03e734
+				- el = { class: '', text: 'date: 04/01/2013' }
+				include partials/header-btn
+
+				.hash-e a8dfa0dd565e655fe888df703af6da13
+				- el = { class: 'is-hoverable', text: 'date: 04/01/2013' }
+				include partials/header-btn
+
+				.hash-e e8a3335f585a152361961c90778b20c0
+				- el = { class: '', text: 'Twitter', headerBtnClass: 'is-thin' }
+				include partials/dropdown
+
+				.hash-e 3e991cfe97376df1d09bc63782c7363c
+				- el = { class: 'is-hoverable', text: 'Twitter', headerBtnClass: 'is-thin' }
+				include partials/dropdown
+
+				.hash-e 1627a810777655d87836a18e1ad993ed
+				.named-dropdown-b
+					.name-bl
+						- el = { class: '', text: 'baseline:' }
+						include partials/header-btn
+					.dropdown-bl
+						- el = { class: 'is-hoverable', text: 'Twitter', headerBtnClass: 'is-thin' }
+						include partials/dropdown
 
 
 			.section-kl
 				.header-ke Blocks
+				.hash-e 1312a4cb67c1fced95de038209e0811f
+				.followers-header-b
+					- el = { class: 'export-bh is-hoverable', text: 'Export' }
+					include partials/header-btn
+
+					- el = { class: 'date-bh is-hoverable', text: 'date: 04/01/2013' }
+					include partials/header-btn
+
+					.named-dropdown-b.baseline-bh
+						.name-bl
+							- el = { class: '', text: 'baseline:' }
+							include partials/header-btn
+						.dropdown-bl
+							- el = { class: 'is-hoverable', text: 'Twitter', headerBtnClass: 'is-thin' }
+							include partials/dropdown
+
+
+
+
+
 				.hash-e 5e50955e8ae19f7e87c097ef0840e455
 				- el = { class: '', headerText: 'IDENTIFIED FOLLOWERS', bottomText: 'consumers', circleText:'94%' }
 				include partials/header-tab
@@ -251,11 +295,11 @@ html
 				include partials/header-tab
 
 				.hash-e aa986cb9908637840d10b761512bbf3a
-				- el = { class: 'is-orange', headerText: 'INDIRECT CONNECTIONS', bottomText: 'per tweeter', circleText:'400' }
+				- el = { class: 'is-orange', headerText: 'FOLLOWERS', bottomText: 'per tweeter', circleText:'400' }
 				include partials/header-tab
 
 				.hash-e 12776eaaa51ff13155eb6900f62d084c
-				- el = { class: 'is-green', headerText: 'POTENTIAL REACH', bottomText: 'people', circleText:'10k' }
+				- el = { class: 'is-green', headerText: 'TWITTER PULL', bottomText: 'people', circleText:'10k' }
 				include partials/header-tab
 
 				.hash-e bd29d58273a1753588c87babd35aace2
@@ -263,14 +307,14 @@ html
 					- el = { class: 'fork-item-l one-of-3-l', headerText: 'IDENTIFIED FOLLOWERS', bottomText: 'Consumers', circleText:'94%' }
 					include partials/header-tab
 
-					- el = { class: 'fork-item-l one-of-3-l is-orange', headerText: 'INDIRECT CONNECTIONS', bottomText: 'Per tweeter', circleText:'400' }
+					- el = { class: 'fork-item-l one-of-3-l is-orange', headerText: 'FOLLOWERS', bottomText: 'Per tweeter', circleText:'400' }
 					include partials/header-tab
 
-					- el = { class: 'fork-item-l one-of-3-l is-green', headerText: 'POTENTIAL REACH', bottomText: 'People', circleText:'10k' }
+					- el = { class: 'fork-item-l one-of-3-l is-green', headerText: 'TWITTER PULL', bottomText: 'People', circleText:'10k' }
 					include partials/header-tab
 
 				.hash-e 766dfcc19fb177a6f7f8cca6aa9c33d5
-				- el = { class: 'is-blue', headerText: '@Sergey_Valiukh', bottomText: 'Sergey Valiukh', bottomTextCnt: '121' }
+				- el = { class: 'is-blue', headerText: '@Sergey_Valiukh', bottomText: 'Sergey Valiukh' }
 				include partials/header-tab-user
 				
 				.hash-e 7f2ec201ce0694f22a08f2e065c4b735
@@ -432,7 +476,11 @@ html
 			include partials/footer
 
 			.hash-e eac9a691442f03ebe1084a0a6eb30f5a
-			- el = { number: '790', text: 'automotive' }
+			- el = { class: '', number: '790', text: 'automotive' }
+			include partials/score
+
+			.hash-e b0f99a28beadd654f34d55311e88d2da
+			- el = { class: 'is-hoverable', number: '790', text: 'automotive' }
 			include partials/score
 
 			.hash-e 28e600295c499dc709c3b1061c506e47
