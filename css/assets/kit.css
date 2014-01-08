@@ -25,6 +25,9 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.deprecated-kg {
+  opacity: 0.2;
+}
 .icon-sample-kl {
   float: left;
   margin: 20px;

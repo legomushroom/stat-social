@@ -1,6 +1,68 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+.svg-bargraph-b
+	position relative
+	height 30px
+	fill #2997c4
+
+	> .progress-bl, > .extra-bl
+		display block
+		height 30px
+
+	> .progress-bl
+		position relative
+		z-index 2
+
+		> .text-ble
+			position absolute
+			t 6px
+			color white
+			font-size 20px
+			letter-spacing 0
+			font-weight 300
+			padding-left 9px
+
+	> .extra-bl
+		position absolute
+		width 100%
+		z-index 1
+		nw 0
+	
+	/* 3b75ff5b211c22a36dc9c88995cf9cf2 */
+	&.is-grey
+		fill #8ea2a8
+	
+	/* 8d291bad4675df8002e34cece6c51302 */
+	&.is-average
+		&:after
+			content 'average'
+			position absolute
+			t 8px
+			r 8px
+			z-index 3
+			color white
+			font-size 14px
+			padding-left 9px
+			letter-spacing 0
+			font-weight 300
+
+
+/* 16339d00bcc3f425453ba86e56bec4d6 */
+.header-btn-n-icon-b
+	padding-top 1px
+	display inline-block
+	
+	> .icon-bl
+		display inline-block
+		vertical-align top
+		margin-left 6px
+		position relative
+		top -5px
+
+		.icon
+			rect 25px
+
 /* acd8c9c668e57ee90593410adec4b8c6 */
 .terms-block-b
 	background-color #273d55
@@ -189,6 +251,7 @@
 		l 100*.5215%
 		background url('i/average-circle.svg') repeat-y top center
 		background-size 9px 9px
+		z-index 5
 
 
 /* 90ef8d2448cfbc7e97abb0e374db4870 */
@@ -294,6 +357,8 @@
 		padding-right 20px
 
 
+//- DEPRECATED ------------------------------------------------------
+
 /* d9d692570bbad4dc7dea4e95e8a18527 */
 .progressbar-b
 	background-color c-blue4
@@ -339,6 +404,8 @@
 			font-weight 300
 			top -3px
 			display none
+
+//- DEPRECATED ------------------------------------------------------
 
 /* eac9a691442f03ebe1084a0a6eb30f5a */
 .score-b

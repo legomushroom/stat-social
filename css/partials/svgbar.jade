@@ -1,0 +1,9 @@
+.svg-bargraph-b(class="#{el.class}")
+	.progress-bl
+		.text-ble #{el.text}
+		svg(height="30", width="100%")
+			rect(width="#{el.percent || '100%'}", height="30")
+	.extra-bl
+		svg(height="30", width="#{el.percent || '0'}")
+			rect(width="100%", height="30")
+			rect(width="100%", height="30", fill="url(#striped-pattern)")

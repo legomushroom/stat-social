@@ -2140,6 +2140,68 @@ a,
   background-color: #fff;
   cursor: pointer;
 }
+.svg-bargraph-b {
+  position: relative;
+  height: 30px;
+  fill: #2997c4;
+/* 3b75ff5b211c22a36dc9c88995cf9cf2 */
+/* 8d291bad4675df8002e34cece6c51302 */
+}
+.svg-bargraph-b > .progress-bl,
+.svg-bargraph-b > .extra-bl {
+  display: block;
+  height: 30px;
+}
+.svg-bargraph-b > .progress-bl {
+  position: relative;
+  z-index: 2;
+}
+.svg-bargraph-b > .progress-bl > .text-ble {
+  position: absolute;
+  top: 6px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 0;
+  font-weight: 300;
+  padding-left: 9px;
+}
+.svg-bargraph-b > .extra-bl {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.svg-bargraph-b.is-grey {
+  fill: #8ea2a8;
+}
+.svg-bargraph-b.is-average:after {
+  content: 'average';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 3;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 9px;
+  letter-spacing: 0;
+  font-weight: 300;
+}
+.header-btn-n-icon-b {
+  padding-top: 1px;
+  display: inline-block;
+}
+.header-btn-n-icon-b > .icon-bl {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 6px;
+  position: relative;
+  top: -5px;
+}
+.header-btn-n-icon-b > .icon-bl .icon {
+  width: 25px;
+  height: 25px;
+}
 .terms-block-b {
   background-color: #273d55;
   text-align: center;
@@ -2317,6 +2379,7 @@ a,
   left: 52.15%;
   background: url("i/average-circle.svg") repeat-y top center;
   background-size: 9px 9px;
+  z-index: 5;
 }
 .table-line-b.is-brands2 > .score-bl,
 .table-line-header-b.is-brands2 > .score-bl {
@@ -2992,7 +3055,10 @@ a,
   width: 62px;
   padding-left: 16px;
 }
-.progressbar-pile-l .progressbars-l + .progressbars-l {
+.progressbar-pile-l {
+  width: 50%;
+}
+.progressbar-pile-l > .progressbar-ll + .progressbar-ll {
   margin-top: 8px;
 }
 .tags-l {

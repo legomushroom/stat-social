@@ -232,6 +232,11 @@ html
 						- el = { path: 'blogging-icon' }
 						include partials/icon
 
+					.icon-sample-kl
+						.hash-e 1f3919b51d3daee741a55a1f4097d3c1
+						- el = { path: 'calendar-icon' }
+						include partials/icon
+
 
 
 
@@ -364,6 +369,16 @@ html
 				- el = { class: 'is-hoverable', text: 'date: 04/01/2013' }
 				include partials/header-btn
 
+				.hash-e 16339d00bcc3f425453ba86e56bec4d6
+				.header-btn-n-icon-b
+					- el = { class: 'is-hoverable', text: 'date: 04/01/2013' }
+					include partials/header-btn
+					.icon-bl
+						- el = { class: 'is-white is-hoverable', path: 'calendar-icon' }
+						include partials/icon
+
+
+
 				.hash-e e8a3335f585a152361961c90778b20c0
 				- el = { class: '', text: 'Twitter', headerBtnClass: 'is-thin' }
 				include partials/dropdown
@@ -427,67 +442,6 @@ html
 						- el = { class: '', text: '@disney' } 
 						include partials/term
 
-						- el = { class: '', text: '#coke' } 
-						include partials/term
-
-						- el = { class: '', text: 'AND' } 
-						include partials/term
-
-						- el = { class: '', text: '#pepsi' } 
-						include partials/term
-
-						- el = { class: '', text: 'OR' } 
-						include partials/term
-
-						- el = { class: '', text: '@disney' } 
-						include partials/term
-
-
-						- el = { class: '', text: '#coke' } 
-						include partials/term
-
-						- el = { class: '', text: 'AND' } 
-						include partials/term
-
-						- el = { class: '', text: '#pepsi' } 
-						include partials/term
-
-						- el = { class: '', text: 'OR' } 
-						include partials/term
-
-						- el = { class: '', text: '@disney' } 
-						include partials/term
-
-
-						- el = { class: '', text: '#coke' } 
-						include partials/term
-
-						- el = { class: '', text: 'AND' } 
-						include partials/term
-
-						- el = { class: '', text: '#pepsi' } 
-						include partials/term
-
-						- el = { class: '', text: 'OR' } 
-						include partials/term
-
-						- el = { class: '', text: '@disney' } 
-						include partials/term
-
-						- el = { class: '', text: '#coke' } 
-						include partials/term
-
-						- el = { class: '', text: 'AND' } 
-						include partials/term
-
-						- el = { class: '', text: '#pepsi' } 
-						include partials/term
-
-						- el = { class: '', text: 'OR' } 
-						include partials/term
-
-						- el = { class: '', text: '@disney' } 
-						include partials/term
 				
 				.hash-e de6575b1d4aa31323fdc22d108a1cd70
 				- el = { class: '', iconPath: 'income-icon' }
@@ -508,8 +462,12 @@ html
 					- el = { class: 'export-bh is-hoverable', text: 'Export' }
 					include partials/header-btn
 
-					- el = { class: 'date-bh is-hoverable', text: 'date: 04/01/2013' }
-					include partials/header-btn
+					.header-btn-n-icon-b.date-bh
+						- el = { class: 'is-hoverable', text: 'date: 04/01/2013' }
+						include partials/header-btn
+						.icon-bl
+							- el = { class: 'is-white is-hoverable', path: 'calendar-icon' }
+							include partials/icon
 
 					.named-dropdown-b.baseline-bh
 						.name-bl
@@ -741,32 +699,46 @@ html
 			include partials/score
 
 			.hash-e	d9d692570bbad4dc7dea4e95e8a18527
-			- el = { class:'', text: '20%' }
-			include partials/progressbar
+			div(style="width:200px")
+				- el = { text: '20%', percent: '150%' }
+				include partials/svgbar
 
-			.hash-e	7dc4c922c1ff5acf6bee4602fd6b2656
-			- el = { class:'is-average', text: '20%' }
-			include partials/progressbar
+			.hash-e	8d291bad4675df8002e34cece6c51302
+			div(style="width:200px")
+				- el = { text: '20%', percent: '150%', class: 'is-average' }
+				include partials/svgbar
 
-			.hash-e	ba39589ca648fcd17017c8fe7d998684
-			- el = { class:'is-grey is-average', text: '20%' }
-			include partials/progressbar
+			.hash-e	3b75ff5b211c22a36dc9c88995cf9cf2
+			div(style="width:200px")
+				- el = { text: '20%', percent: '150%', class: 'is-grey' }
+				include partials/svgbar
 
-			.hash-e	1daa735ce39ed3b9367a5cd3415bc138
-			- el = { class:'is-striped', text: '' }
-			include partials/progressbar
+			.hash-e	193c04bc08d7974d02c9a8b4c855ddc0
+			- el = { class: '' }
+			- svgbar1 = { text: '30%', percent: '150%', class: '' }
+			- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+			include partials/svgbars
+			
 
-			.hash-e 6429dbfbb7c20e73e549c48a40c3fc3f
-			.progressbars-l.cf
-				.left-ll
-					- el = { class:'', text: '20%' }
-					include partials/progressbar					
-				.right-ll
-					- el = { class:'is-striped', text: '' }
-					include partials/progressbar			
+			//- DEPRECATED ------------------------------------------------------
+			.deprecated-kg
+				.hash-e	d9d692570bbad4dc7dea4e95e8a18527
+				- el = { class:'', text: '20%' }
+				include partials/progressbar
 
-			.hash-e 2267092b2d5496cfce2d1accf804b5e9
-			.progressbar-pile-l
+				.hash-e	7dc4c922c1ff5acf6bee4602fd6b2656
+				- el = { class:'is-average', text: '20%' }
+				include partials/progressbar
+
+				.hash-e	ba39589ca648fcd17017c8fe7d998684
+				- el = { class:'is-grey is-average', text: '20%' }
+				include partials/progressbar
+
+				.hash-e	1daa735ce39ed3b9367a5cd3415bc138
+				- el = { class:'is-striped', text: '' }
+				include partials/progressbar
+
+				.hash-e 6429dbfbb7c20e73e549c48a40c3fc3f
 				.progressbars-l.cf
 					.left-ll
 						- el = { class:'', text: '20%' }
@@ -775,10 +747,22 @@ html
 						- el = { class:'is-striped', text: '' }
 						include partials/progressbar			
 
-				.progressbars-l.cf
-					.left-ll
-						- el = { class:'is-grey is-average', text: '16%' }
-						include partials/progressbar		
+				.hash-e 2267092b2d5496cfce2d1accf804b5e9
+				.progressbar-pile-l
+					.progressbars-l.cf
+						.left-ll
+							- el = { class:'', text: '20%' }
+							include partials/progressbar					
+						.right-ll
+							- el = { class:'is-striped', text: '' }
+							include partials/progressbar			
+
+					.progressbars-l.cf
+						.left-ll
+							- el = { class:'is-grey is-average', text: '16%' }
+							include partials/progressbar		
+			
+			//- DEPRECATED ------------------------------------------------------
 
 			.hash-e 90ef8d2448cfbc7e97abb0e374db4870
 			.table-line-b.cf
@@ -787,19 +771,10 @@ html
 					include partials/score
 
 				.progressbars-bl.column-bh
-					.progressbar-pile-l
-						.progressbars-l.cf
-							.left-ll
-								- el = { class:'', text: '20%' }
-								include partials/progressbar					
-							.right-ll(style="width: 35%")
-								- el = { class:'is-striped', text: '' }
-								include partials/progressbar			
-
-						.progressbars-l.cf
-							.left-ll
-								- el = { class:'is-grey is-average', text: '16%' }
-								include partials/progressbar
+					- el = { class: '' }
+					- svgbar1 = { text: '30%', percent: '150%', class: '' }
+					- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+					include partials/svgbars
 
 				.multiply-bl.column-bh
 					.multiply-e 0.6x
@@ -824,19 +799,10 @@ html
 						include partials/score
 
 					.progressbars-bl.column-bh
-						.progressbar-pile-l
-							.progressbars-l.cf
-								.left-ll
-									- el = { class:'', text: '20%' }
-									include partials/progressbar					
-								.right-ll(style="width: 35%")
-									- el = { class:'is-striped', text: '' }
-									include partials/progressbar			
-
-							.progressbars-l.cf
-								.left-ll
-									- el = { class:'is-grey is-average', text: '16%' }
-									include partials/progressbar
+						- el = { class: '' }
+						- svgbar1 = { text: '30%', percent: '150%', class: '' }
+						- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+						include partials/svgbars
 
 					.multiply-bl.column-bh
 						.multiply-e 0.6x
@@ -859,19 +825,10 @@ html
 						include partials/score
 
 					.progressbars-bl.column-bh
-						.progressbar-pile-l
-							.progressbars-l.cf
-								.left-ll
-									- el = { class:'', text: '55%' }
-									include partials/progressbar					
-								.right-ll(style="width: 35%")
-									- el = { class:'is-striped', text: '' }
-									include partials/progressbar			
-
-							.progressbars-l.cf
-								.left-ll
-									- el = { class:'is-grey is-average', text: '29%' }
-									include partials/progressbar
+						- el = { class: '' }
+						- svgbar1 = { text: '30%', percent: '150%', class: '' }
+						- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+						include partials/svgbars
 
 					.multiply-bl.column-bh
 						.multiply-e.is-blue 4.5x
@@ -894,19 +851,10 @@ html
 						include partials/score
 
 					.progressbars-bl.column-bh
-						.progressbar-pile-l
-							.progressbars-l.cf
-								.left-ll
-									- el = { class:'', text: '20%' }
-									include partials/progressbar					
-								.right-ll(style="width: 35%")
-									- el = { class:'is-striped', text: '' }
-									include partials/progressbar			
-
-							.progressbars-l.cf
-								.left-ll
-									- el = { class:'is-grey is-average', text: '16%' }
-									include partials/progressbar
+						- el = { class: '' }
+						- svgbar1 = { text: '30%', percent: '150%', class: '' }
+						- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+						include partials/svgbars
 
 					.multiply-bl.column-bh
 						.multiply-e.is-yellow 1.6x
@@ -930,19 +878,10 @@ html
 						include partials/score
 
 					.progressbars-bl.column-bh
-						.progressbar-pile-l
-							.progressbars-l.cf
-								.left-ll
-									- el = { class:'', text: '20%' }
-									include partials/progressbar					
-								.right-ll(style="width: 35%")
-									- el = { class:'is-striped', text: '' }
-									include partials/progressbar			
-
-							.progressbars-l.cf
-								.left-ll
-									- el = { class:'is-grey is-average', text: '16%' }
-									include partials/progressbar
+						- el = { class: '' }
+						- svgbar1 = { text: '30%', percent: '150%', class: '' }
+						- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+						include partials/svgbars
 
 					.multiply-bl.column-bh
 						.multiply-e.is-blue 9.6x
@@ -998,19 +937,10 @@ html
 							include partials/score
 
 						.progressbars-bl.column-bh
-							.progressbar-pile-l
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'', text: '20%' }
-										include partials/progressbar					
-									.right-ll(style="width: 35%")
-										- el = { class:'is-striped', text: '' }
-										include partials/progressbar			
-
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'is-grey is-average', text: '16%' }
-										include partials/progressbar
+							- el = { class: '' }
+							- svgbar1 = { text: '30%', percent: '150%', class: '' }
+							- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+							include partials/svgbars
 
 						.multiply-bl.column-bh
 							.multiply-e 0.6x
@@ -1033,19 +963,10 @@ html
 							include partials/score
 
 						.progressbars-bl.column-bh
-							.progressbar-pile-l
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'', text: '55%' }
-										include partials/progressbar					
-									.right-ll(style="width: 35%")
-										- el = { class:'is-striped', text: '' }
-										include partials/progressbar			
-
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'is-grey is-average', text: '29%' }
-										include partials/progressbar
+							- el = { class: '' }
+							- svgbar1 = { text: '30%', percent: '150%', class: '' }
+							- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+							include partials/svgbars
 
 						.multiply-bl.column-bh
 							.multiply-e.is-blue 4.5x
@@ -1068,19 +989,10 @@ html
 							include partials/score
 
 						.progressbars-bl.column-bh
-							.progressbar-pile-l
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'', text: '20%' }
-										include partials/progressbar					
-									.right-ll(style="width: 35%")
-										- el = { class:'is-striped', text: '' }
-										include partials/progressbar			
-
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'is-grey is-average', text: '16%' }
-										include partials/progressbar
+								- el = { class: '' }
+								- svgbar1 = { text: '30%', percent: '150%', class: '' }
+								- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+								include partials/svgbars
 
 						.multiply-bl.column-bh
 							.multiply-e.is-blue 1.6x
@@ -1104,19 +1016,10 @@ html
 							include partials/score
 
 						.progressbars-bl.column-bh
-							.progressbar-pile-l
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'', text: '20%' }
-										include partials/progressbar					
-									.right-ll(style="width: 35%")
-										- el = { class:'is-striped', text: '' }
-										include partials/progressbar			
-
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'is-grey is-average', text: '16%' }
-										include partials/progressbar
+								- el = { class: '' }
+								- svgbar1 = { text: '30%', percent: '150%', class: '' }
+								- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+								include partials/svgbars
 
 						.multiply-bl.column-bh
 							.multiply-e.is-blue 9.6x
@@ -1140,19 +1043,10 @@ html
 					include partials/score
 
 				.progressbars-bl.column-bh
-					.progressbar-pile-l
-						.progressbars-l.cf
-							.left-ll
-								- el = { class:'', text: '20%' }
-								include partials/progressbar					
-							.right-ll(style="width: 35%")
-								- el = { class:'is-striped', text: '' }
-								include partials/progressbar			
-
-						.progressbars-l.cf
-							.left-ll
-								- el = { class:'is-grey is-average', text: '16%' }
-								include partials/progressbar
+					- el = { class: '' }
+					- svgbar1 = { text: '30%', percent: '150%', class: '' }
+					- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+					include partials/svgbars
 
 				.multiply-bl.column-bh
 					.multiply-e 0.6x
@@ -1168,19 +1062,10 @@ html
 						include partials/icon
 
 				.progressbars-bl.column-bh
-					.progressbar-pile-l
-						.progressbars-l.cf
-							.left-ll
-								- el = { class:'', text: '20%' }
-								include partials/progressbar					
-							.right-ll(style="width: 35%")
-								- el = { class:'is-striped', text: '' }
-								include partials/progressbar			
-
-						.progressbars-l.cf
-							.left-ll
-								- el = { class:'is-grey is-average', text: '16%' }
-								include partials/progressbar
+					- el = { class: '' }
+					- svgbar1 = { text: '30%', percent: '150%', class: '' }
+					- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+					include partials/svgbars
 
 				.multiply-bl.column-bh
 					.multiply-e 0.6x
@@ -1205,19 +1090,10 @@ html
 							include partials/score
 
 						.progressbars-bl.column-bh
-							.progressbar-pile-l
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'', text: '20%' }
-										include partials/progressbar					
-									.right-ll(style="width: 35%")
-										- el = { class:'is-striped', text: '' }
-										include partials/progressbar			
-
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'is-grey is-average', text: '16%' }
-										include partials/progressbar
+								- el = { class: '' }
+								- svgbar1 = { text: '30%', percent: '150%', class: '' }
+								- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+								include partials/svgbars
 
 						.multiply-bl.column-bh
 							.multiply-e 0.6x
@@ -1228,19 +1104,10 @@ html
 							include partials/score
 
 						.progressbars-bl.column-bh
-							.progressbar-pile-l
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'', text: '20%' }
-										include partials/progressbar					
-									.right-ll(style="width: 35%")
-										- el = { class:'is-striped', text: '' }
-										include partials/progressbar			
-
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'is-grey is-average', text: '16%' }
-										include partials/progressbar
+								- el = { class: '' }
+								- svgbar1 = { text: '30%', percent: '150%', class: '' }
+								- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+								include partials/svgbars
 
 						.multiply-bl.column-bh
 							.multiply-e 0.6x
@@ -1251,19 +1118,10 @@ html
 							include partials/score
 
 						.progressbars-bl.column-bh
-							.progressbar-pile-l
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'', text: '20%' }
-										include partials/progressbar					
-									.right-ll(style="width: 35%")
-										- el = { class:'is-striped', text: '' }
-										include partials/progressbar			
-
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'is-grey is-average', text: '16%' }
-										include partials/progressbar
+								- el = { class: '' }
+								- svgbar1 = { text: '30%', percent: '150%', class: '' }
+								- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+								include partials/svgbars
 
 						.multiply-bl.column-bh
 							.multiply-e 0.6x
@@ -1274,19 +1132,10 @@ html
 							include partials/score
 
 						.progressbars-bl.column-bh
-							.progressbar-pile-l
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'', text: '20%' }
-										include partials/progressbar					
-									.right-ll(style="width: 35%")
-										- el = { class:'is-striped', text: '' }
-										include partials/progressbar			
-
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'is-grey is-average', text: '16%' }
-										include partials/progressbar
+								- el = { class: '' }
+								- svgbar1 = { text: '30%', percent: '150%', class: '' }
+								- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+								include partials/svgbars
 
 						.multiply-bl.column-bh
 							.multiply-e 0.6x
@@ -1297,19 +1146,10 @@ html
 							include partials/score
 
 						.progressbars-bl.column-bh
-							.progressbar-pile-l
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'', text: '20%' }
-										include partials/progressbar					
-									.right-ll(style="width: 35%")
-										- el = { class:'is-striped', text: '' }
-										include partials/progressbar			
-
-								.progressbars-l.cf
-									.left-ll
-										- el = { class:'is-grey is-average', text: '16%' }
-										include partials/progressbar
+								- el = { class: '' }
+								- svgbar1 = { text: '30%', percent: '150%', class: '' }
+								- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+								include partials/svgbars
 
 						.multiply-bl.column-bh
 							.multiply-e 0.6x
@@ -1340,19 +1180,10 @@ html
 									include partials/score
 
 								.progressbars-bl.column-bh
-									.progressbar-pile-l
-										.progressbars-l.cf
-											.left-ll
-												- el = { class:'', text: '20%' }
-												include partials/progressbar					
-											.right-ll(style="width: 35%")
-												- el = { class:'is-striped', text: '' }
-												include partials/progressbar			
-
-										.progressbars-l.cf
-											.left-ll
-												- el = { class:'is-grey is-average', text: '16%' }
-												include partials/progressbar
+									- el = { class: '' }
+									- svgbar1 = { text: '30%', percent: '150%', class: '' }
+									- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+									include partials/svgbars
 
 								.multiply-bl.column-bh
 									.multiply-e 0.6x
@@ -1363,19 +1194,10 @@ html
 									include partials/score
 
 								.progressbars-bl.column-bh
-									.progressbar-pile-l
-										.progressbars-l.cf
-											.left-ll
-												- el = { class:'', text: '20%' }
-												include partials/progressbar					
-											.right-ll(style="width: 35%")
-												- el = { class:'is-striped', text: '' }
-												include partials/progressbar			
-
-										.progressbars-l.cf
-											.left-ll
-												- el = { class:'is-grey is-average', text: '16%' }
-												include partials/progressbar
+									- el = { class: '' }
+									- svgbar1 = { text: '30%', percent: '150%', class: '' }
+									- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+									include partials/svgbars
 
 								.multiply-bl.column-bh
 									.multiply-e 0.6x
@@ -1386,19 +1208,10 @@ html
 									include partials/score
 
 								.progressbars-bl.column-bh
-									.progressbar-pile-l
-										.progressbars-l.cf
-											.left-ll
-												- el = { class:'', text: '20%' }
-												include partials/progressbar					
-											.right-ll(style="width: 35%")
-												- el = { class:'is-striped', text: '' }
-												include partials/progressbar			
-
-										.progressbars-l.cf
-											.left-ll
-												- el = { class:'is-grey is-average', text: '16%' }
-												include partials/progressbar
+									- el = { class: '' }
+									- svgbar1 = { text: '30%', percent: '150%', class: '' }
+									- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+									include partials/svgbars
 
 								.multiply-bl.column-bh
 									.multiply-e 0.6x
@@ -1409,19 +1222,10 @@ html
 									include partials/score
 
 								.progressbars-bl.column-bh
-									.progressbar-pile-l
-										.progressbars-l.cf
-											.left-ll
-												- el = { class:'', text: '20%' }
-												include partials/progressbar					
-											.right-ll(style="width: 35%")
-												- el = { class:'is-striped', text: '' }
-												include partials/progressbar			
-
-										.progressbars-l.cf
-											.left-ll
-												- el = { class:'is-grey is-average', text: '16%' }
-												include partials/progressbar
+									- el = { class: '' }
+									- svgbar1 = { text: '30%', percent: '150%', class: '' }
+									- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+									include partials/svgbars
 
 								.multiply-bl.column-bh
 									.multiply-e 0.6x
@@ -1432,19 +1236,10 @@ html
 									include partials/score
 
 								.progressbars-bl.column-bh
-									.progressbar-pile-l
-										.progressbars-l.cf
-											.left-ll
-												- el = { class:'', text: '20%' }
-												include partials/progressbar					
-											.right-ll(style="width: 35%")
-												- el = { class:'is-striped', text: '' }
-												include partials/progressbar			
-
-										.progressbars-l.cf
-											.left-ll
-												- el = { class:'is-grey is-average', text: '16%' }
-												include partials/progressbar
+									- el = { class: '' }
+									- svgbar1 = { text: '30%', percent: '150%', class: '' }
+									- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+									include partials/svgbars
 
 								.multiply-bl.column-bh
 									.multiply-e 0.6x
