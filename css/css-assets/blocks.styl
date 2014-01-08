@@ -1,6 +1,46 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+/* acd8c9c668e57ee90593410adec4b8c6 */
+.terms-block-b
+	background-color #273d55
+	text-align center
+	padding 21px 0
+	position relative
+
+	&.is-open
+		> .terms-bl
+			max-height 135px
+			height auto
+		
+	> .header-be
+		font-size 20px
+		color #c7cbd2
+		font-weight 200
+		letter-spacing 0
+	> .terms-bl
+		height 25px
+		overflow hidden
+		line-height 25px
+		// width 200px
+		// margin 0 auto
+		margin-top 16px
+
+	iconColor = #a5b0b9
+	.terms-block-b--cross-icon-bh
+		position absolute
+		ne 16px
+		rect 20px
+		fill iconColor
+
+		&:hover
+			fill lighten(iconColor, 10)
+			cursor pointer
+
+	.term-e 
+		+ .term-e
+			margin-left 4px
+
 /* 3648c6de7617651f11ac6af054f02c2d */
 .college-footer-b
 	background-color rgba(#e7e7e7, .34)
@@ -52,18 +92,38 @@
 	padding-top 30px
 	position relative
 
-	.baseline-bh
+	> .baseline-bh
 		position absolute
 		left (100/3)%
 		top 50%
 		margin-top - 11px
 	
-	.date-bh
+	> .date-bh
 		margin-left 40px
 
-	.export-bh
+	> .export-bh
 		float right
 		margin-right 40px
+
+/* 916d92f513be5496b49f168a07f9dde4 */
+.tweet-header-b
+	@extend .followers-header-b
+
+	> .header-bh
+		margin-left 40px
+		float left
+
+	> .date-bh
+		margin-left 60px
+
+	> .baseline-bh
+		right 167px
+		left auto
+		
+
+		
+		
+
 
 
 /* 1627a810777655d87836a18e1ad993ed */
@@ -543,6 +603,7 @@ bgColor = #1e394f
 	text-align center
 	color white
 	background url('http://placekitten.com/75/75') no-repeat center center
+	position relative
 
 	/* 91f28e51a4cffb32caebcda1cbff41fe */
 	&.is-number
@@ -552,6 +613,20 @@ bgColor = #1e394f
 		line-height 60px
 		font-weight 600
 		openSans()
+
+	/* cdeb25bb27099cc9d30dba3b4270f374 */
+	iconSize = 36px
+	&.is-icon
+		background transparent
+		.icon
+			fill white
+			position absolute
+			top 50%
+			l 50%
+			margin-top  - (iconSize/2)
+			margin-left - (iconSize/2)
+			rect iconSize
+			
 
 /* 5e50955e8ae19f7e87c097ef0840e455 */
 .header-tab-b

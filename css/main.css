@@ -1944,6 +1944,13 @@ a,
 .c-black10-bg-g.is-hoverable:hover {
   background-color: 'c-black10-hover';
 }
+.term-e {
+  color: #29dcb8;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 0;
+  display: inline-block;
+}
 .btn-e {
   border-width: 1px;
   border-style: solid;
@@ -2133,6 +2140,43 @@ a,
   background-color: #fff;
   cursor: pointer;
 }
+.terms-block-b {
+  background-color: #273d55;
+  text-align: center;
+  padding: 21px 0;
+  position: relative;
+}
+.terms-block-b.is-open > .terms-bl {
+  max-height: 135px;
+  height: auto;
+}
+.terms-block-b > .header-be {
+  font-size: 20px;
+  color: #c7cbd2;
+  font-weight: 200;
+  letter-spacing: 0;
+}
+.terms-block-b > .terms-bl {
+  height: 25px;
+  overflow: hidden;
+  line-height: 25px;
+  margin-top: 16px;
+}
+.terms-block-b .terms-block-b--cross-icon-bh {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  fill: #a5b0b9;
+}
+.terms-block-b .terms-block-b--cross-icon-bh:hover {
+  fill: #c2c9cf;
+  cursor: pointer;
+}
+.terms-block-b .term-e + .term-e {
+  margin-left: 4px;
+}
 .college-footer-b {
   background-color: rgba(231,231,231,0.34);
   padding: 23px 41px;
@@ -2176,24 +2220,39 @@ a,
   cursor: pointer;
   border-bottom: 1px solid;
 }
-.followers-header-b {
+.followers-header-b,
+.tweet-header-b {
   background-color: rgba(68,84,105,0.37);
   height: 81px;
   padding-top: 30px;
   position: relative;
 }
-.followers-header-b .baseline-bh {
+.followers-header-b > .baseline-bh,
+.tweet-header-b > .baseline-bh {
   position: absolute;
   left: 33.333333333333336%;
   top: 50%;
   margin-top: -11px;
 }
-.followers-header-b .date-bh {
+.followers-header-b > .date-bh,
+.tweet-header-b > .date-bh {
   margin-left: 40px;
 }
-.followers-header-b .export-bh {
+.followers-header-b > .export-bh,
+.tweet-header-b > .export-bh {
   float: right;
   margin-right: 40px;
+}
+.tweet-header-b > .header-bh {
+  margin-left: 40px;
+  float: left;
+}
+.tweet-header-b > .date-bh {
+  margin-left: 60px;
+}
+.tweet-header-b > .baseline-bh {
+  right: 167px;
+  left: auto;
 }
 .named-dropdown-b > .name-bl,
 .named-dropdown-b > .dropdown-bl {
@@ -2692,7 +2751,9 @@ a,
   text-align: center;
   color: #fff;
   background: url("http://placekitten.com/75/75") no-repeat center center;
+  position: relative;
 /* 91f28e51a4cffb32caebcda1cbff41fe */
+/* cdeb25bb27099cc9d30dba3b4270f374 */
 }
 .tab-circle-b.is-number {
   background: transparent;
@@ -2702,6 +2763,19 @@ a,
   line-height: 60px;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
+}
+.tab-circle-b.is-icon {
+  background: transparent;
+}
+.tab-circle-b.is-icon .icon {
+  fill: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -18px;
+  margin-left: -18px;
+  width: 36px;
+  height: 36px;
 }
 .header-tab-b,
 .header-tab-user-b {
