@@ -1944,6 +1944,24 @@ a,
 .c-black10-bg-g.is-hoverable:hover {
   background-color: 'c-black10-hover';
 }
+.btn-e {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  color: #fff;
+  font-size: 20px;
+  display: inline-block;
+  height: 37px;
+  line-height: 37px;
+  padding: 0 20px;
+  font-weight: 200;
+  letter-spacing: 0;
+}
+.btn-e.is-hoverable:hover {
+  background-color: #fff;
+  color: #586575;
+  cursor: pointer;
+}
 .header-btn-e {
   color: #fff;
   font-size: 16px;
