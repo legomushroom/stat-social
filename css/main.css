@@ -2303,6 +2303,20 @@ a,
 .table-line-header-b > .score-bl {
   width: 37.666666666666664%;
   text-align: left;
+  position: relative;
+}
+.table-line-b > .score-bl > .icon-bll,
+.table-line-header-b > .score-bl > .icon-bll {
+  position: absolute;
+  left: 70%;
+  top: 50%;
+  margin-top: -2px;
+}
+.table-line-b > .score-bl .score-bl--social-icon-bh,
+.table-line-header-b > .score-bl .score-bl--social-icon-bh {
+  fill: rgba(114,138,146,0.55);
+  width: 44px;
+  height: 44px;
 }
 .table-line-b > .score-bl.is-left-padding,
 .table-line-header-b > .score-bl.is-left-padding {

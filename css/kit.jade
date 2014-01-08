@@ -1029,6 +1029,34 @@ html
 				.multiply-bl.column-bh
 					.multiply-e 0.6x
 
+			.hash-e d479c2b2e6b44fd4fd2428ada35a8e87
+			.table-line-b.cf.is-brands2
+				.score-bl.column-bh
+					- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+					include partials/score
+
+					.icon-bll
+						- el = { path:'facebook2-icon', class: 'score-bl--social-icon-bh' }
+						include partials/icon
+
+				.progressbars-bl.column-bh
+					.progressbar-pile-l
+						.progressbars-l.cf
+							.left-ll
+								- el = { class:'', text: '20%' }
+								include partials/progressbar					
+							.right-ll(style="width: 35%")
+								- el = { class:'is-striped', text: '' }
+								include partials/progressbar			
+
+						.progressbars-l.cf
+							.left-ll
+								- el = { class:'is-grey is-average', text: '16%' }
+								include partials/progressbar
+
+				.multiply-bl.column-bh
+					.multiply-e 0.6x
+
 			.hash-e 7989f331c08538b349d72c0be93f4788
 			.table-b
 				.table-line-header-b.is-brands2
@@ -1162,7 +1190,7 @@ html
 			.hash-e 67580467bd5a1d2bbef32dd764a7d1bd
 			.table-n-header-l
 				.header-ll
-					- el = { class: '', iconPath: 'income-icon' }
+					- el = { class: '', textClass: 'is-check', iconPath: 'income-icon' }
 					include partials/report-block-header
 				.table-ll
 					.table-b

@@ -1,5 +1,5 @@
 .report-block-header-b.cf(class="#{el.class}")
-	- el = { path: el.iconPath }
+	- el.path = el.iconPath
 	include icon
 
-	.text-be Income
+	.text-be(class="#{el.textClass || ''}") Income
