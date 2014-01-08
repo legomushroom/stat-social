@@ -2140,6 +2140,9 @@ a,
   background-color: #fff;
   cursor: pointer;
 }
+.pie-graph-b {
+  width: 200px;
+}
 .svg-bargraph-b {
   position: relative;
   height: 30px;

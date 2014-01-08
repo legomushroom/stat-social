@@ -718,6 +718,20 @@ html
 			- svgbar1 = { text: '30%', percent: '150%', class: '' }
 			- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
 			include partials/svgbars
+
+			.hash-e	1f6ae71e1a5e12c00650eefc7b9a3b6d
+			.pie-graph-b
+				#svg
+				ul(data-pie-id='svg')
+					li(style="color: #ccc", data-value='60') Water Buffalo (60)
+					li(style="color: green", data-value='20') Bison (20)
+					li(style="color: orange", data-value='12') Sheep (12)
+					li(style="color: yellow", data-value='32', data-text='Goats {{percent}} ({{value}} total)') Goat (32)
+					li(style="color: purple", data-value='50') Shetland Pony (50)
+					
+
+
+
 			
 
 			//- DEPRECATED ------------------------------------------------------
@@ -1257,11 +1271,11 @@ html
 				.text-be.aterics-bh Data for this section was sourced only from people who disclosed on their social-media profiles (possibly outside Twitter) which universities they had attended. As such, the sample may not be representative.
 
 
-
-
-
-
-
+	script(src="../js/vendor/jquery.js")
+	script(src="../js/vendor/snap.svg.js")
+	script(src="../js/vendor/pizza.js")
+	script
+		Pizza.init();
 
 
 
