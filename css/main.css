@@ -1944,6 +1944,18 @@ a,
 .c-black10-bg-g.is-hoverable:hover {
   background-color: 'c-black10-hover';
 }
+.legend-circle-e {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.legend-circle-e svg {
+  width: 100%;
+  height: 100%;
+  fill: #9adffc;
+  float: left;
+}
 .term-e {
   color: #29dcb8;
   font-size: 20px;
