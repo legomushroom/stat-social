@@ -751,7 +751,7 @@ html
 
 
 			.hash-e	1f6ae71e1a5e12c00650eefc7b9a3b6d
-			.pie-graph-b
+			.pie-graph-b(style="width:170px")
 				#svg.pie-graph-b--pie-bh
 				ul.legend-pile-l(data-pie-id='svg')
 					- el = { class: 'is-hoverable', text: '1%', color: '#9adffc', value: '10' }
@@ -777,6 +777,14 @@ html
 					- el = { class: 'is-hoverable', text: '16%', color: '#278bb3', value: '12' }
 					- legendLabel = { class: '', text: 'Other' } 
 					include partials/legend-line
+
+			.hash-e	6aeadca45acd961bbb02b4a0f841699c
+			div(style="width:350px")
+				#svg-fa27b03eb776ff69c12b0ebf736495ee.pie-graph-b--pie-bh
+				ul(data-pie-id='svg-fa27b03eb776ff69c12b0ebf736495ee', data-options='{"donut":"true","mode":"donut-path"}')
+					li(data-color="#f9c77f", data-value="70")
+					li(data-color="#ff6d6a", data-value="10")
+					li(data-color="#3ebbee", data-value="6")
 
 
 			//- DEPRECATED ------------------------------------------------------
@@ -1304,7 +1312,7 @@ html
 									.multiply-e 0.6x
 
 			.hash-e 177aa510e0ef4bd424c5428b9ebd4058
-			.table-b
+			.table-b(style="width:170px")
 				.table-line-header-b.is-small-height.is-brands2
 					.column-bh.is-one
 						- el = { class: 'is-hoverable', text: 'bracket' }
@@ -1337,6 +1345,131 @@ html
 							- el = { class: 'is-hoverable', text: '16%', color: '#278bb3', value: '12' }
 							- legendLabel = { class: '', text: 'Other' } 
 							include partials/legend-line
+
+			.hash-e 358db06bee18fc591d400f5cf9118e35
+			.tables-fork-l.cf
+				.left-ll
+					.table-b
+						.table-line-header-b.is-small-height.is-brands2
+							.score-bl.is-left-padding.column-bh
+								- el = { class: 'is-hoverable', text: 'bracket' }
+								include partials/header-label
+							.progressbars-bl.column-bh 		
+								- el = { class: 'is-hoverable', text: 'followers vs. baseline' }
+								include partials/header-label
+							.multiply-bl.column-bh
+								- el = { class: 'is-hoverable', text: 'muliply' }
+								include partials/header-label
+
+						.table-body-b
+							.table-line-b.cf.is-brands2
+								.score-bl.column-bh
+									- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+									include partials/score
+
+								.progressbars-bl.column-bh
+									- el = { class: '' }
+									- svgbar1 = { text: '30%', percent: '150%', class: '' }
+									- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+									include partials/svgbars
+
+								.multiply-bl.column-bh
+									.multiply-e 0.6x
+
+							.table-line-b.cf.is-brands2
+								.score-bl.column-bh
+									- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+									include partials/score
+
+								.progressbars-bl.column-bh
+									- el = { class: '' }
+									- svgbar1 = { text: '30%', percent: '150%', class: '' }
+									- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+									include partials/svgbars
+
+								.multiply-bl.column-bh
+									.multiply-e 0.6x
+
+							.table-line-b.cf.is-brands2
+								.score-bl.column-bh
+									- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+									include partials/score
+
+								.progressbars-bl.column-bh
+									- el = { class: '' }
+									- svgbar1 = { text: '30%', percent: '150%', class: '' }
+									- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+									include partials/svgbars
+
+								.multiply-bl.column-bh
+									.multiply-e 0.6x
+
+							.table-line-b.cf.is-brands2
+								.score-bl.column-bh
+									- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+									include partials/score
+
+								.progressbars-bl.column-bh
+									- el = { class: '' }
+									- svgbar1 = { text: '30%', percent: '150%', class: '' }
+									- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+									include partials/svgbars
+
+								.multiply-bl.column-bh
+									.multiply-e 0.6x
+
+							.table-line-b.cf.is-brands2
+								.score-bl.column-bh
+									- el = { class:'is-plain-text', number: '790', text: 'automotive' }
+									include partials/score
+
+								.progressbars-bl.column-bh
+									- el = { class: '' }
+									- svgbar1 = { text: '30%', percent: '150%', class: '' }
+									- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+									include partials/svgbars
+
+								.multiply-bl.column-bh
+									.multiply-e 0.6x
+
+				.right-ll
+					.table-b
+						.table-line-header-b.is-small-height.is-brands2
+							.column-bh.is-one
+								- el = { class: 'is-hoverable', text: 'composition' }
+								include partials/header-label
+
+						.table-body-bl
+							.pie-graph-b
+								#svg2.pie-graph-b--pie-bh
+								ul.legend-pile-l(data-pie-id='svg2')
+									- el = { class: 'is-hoverable', text: '1%', color: '#9adffc', value: '10' }
+									- legendLabel = { class: '', text: 'California' } 
+									include partials/legend-line
+
+									- el = { class: 'is-hoverable', text: '7%', color: '#83d6f8', value: '7' }
+									- legendLabel = { class: '', text: 'Alabama' } 
+									include partials/legend-line
+
+									- el = { class: 'is-hoverable', text: '26%', color: '#69ccf5', value: '24' }
+									- legendLabel = { class: '', text: 'Florida' } 
+									include partials/legend-line
+
+									- el = { class: 'is-hoverable', text: '27%', color: '#35b1e4', value: '23' }
+									- legendLabel = { class: '', text: 'New York' } 
+									include partials/legend-line
+
+									- el = { class: 'is-hoverable', text: '23%', color: '#2897c4', value: '23' }
+									- legendLabel = { class: '', text: 'Texas' } 
+									include partials/legend-line
+
+									- el = { class: 'is-hoverable', text: '16%', color: '#278bb3', value: '12' }
+									- legendLabel = { class: '', text: 'Other' } 
+									include partials/legend-line
+
+							- el = { class:'is-hoverable m-t-x2-g is-block', text: ' North America' }
+							include partials/btn
+
 					
 
 			.hash-e 3648c6de7617651f11ac6af054f02c2d

@@ -6,16 +6,18 @@
 
     settings : {
       donut: false,
-      donut_inner_ratio: 0.7,   // between 0 and 1
-      percent_offset: 35,       // relative to radius
+      donut_inner_ratio: 0.615,   // between 0 and 1
+      percent_offset: 35,         // relative to radius
       stroke_color: '#333',
       stroke_width: 0,
-      show_text: false,       // show or hide the percentage on the chart.
+      show_text: false,           // show or hide the percentage on the chart.
       animation_speed: 500,
       always_show_text: false,
-      animation_type: 'elastic' // options: backin, backout, bounce, easein, 
-                                //          easeinout, easeout, linear
+      animation_type: 'elastic'   // options: backin, backout, bounce, easein, 
+                                  //          easeinout, easeout, linear
     },
+
+    DONUT_PATH_OFFSET: 200,
 
     init : function (scope, options) {
       var self = this;
@@ -26,12 +28,15 @@
       $.extend(true, this.settings, options)
 
       if (pies.length > 0) {
+
         pies.each(function () {
           return self.build($(this), options);
         });
       } else {
         this.build($(this.scope), options);
       }
+
+
 
       this.events();
     },
@@ -88,6 +93,8 @@
       var self = this;
 
       var legend = legends, graph;
+      this.settings.percent_offset = ~~(legend.width()/10);
+      
 
       legend.data('settings', $.extend({}, self.settings, options, legend.data('options')));
       self.data(legend, options || {});
@@ -208,8 +215,9 @@
             var visible_text = Math.ceil(percent) + '%';
           }
 
-          var text = path.paper.text(cx + (r + settings.percent_offset) * Math.sin(start_angle + (angles[i] / 2)),
-               cy - (r + settings.percent_offset) * Math.cos(start_angle + (angles[i] / 2)), visible_text);
+          var xCenter = cx + (r - settings.percent_offset) * Math.sin(start_angle + (angles[i] / 2));
+          var yCenter = cy - (r - settings.percent_offset) * Math.cos(start_angle + (angles[i] / 2));
+          var text = path.paper.text(cx + (r + settings.percent_offset) * Math.sin(start_angle + (angles[i] / 2)), cy - (r + settings.percent_offset) * Math.cos(start_angle + (angles[i] / 2)), visible_text);
         }
 
         var left_offset = text.getBBox().width / 2;
@@ -236,6 +244,7 @@
             startDegrees:start_angle, endDegrees:end_angle,
             innerRadius: (r * settings.donut_inner_ratio), outerRadius:r
           });
+
         } else {
           path.attr({d:d});
         }
@@ -252,7 +261,67 @@
 
         // The next wedge begins where this one ends
         start_angle = end_angle;
+
+        if (settings.mode === 'donut-path'){
+
+          if (i === 0){
+            var consumerPath = svg.path();
+            var left  = cx;
+            var top   = cy;
+            left *= .5;
+            top  *= .5;
+            consumerPath.attr({ 
+              d: 'M' + 2.5*cx + ' ' + 2*cy+ ', L' + 1.5*cx + ' '+ 2*cy + ' , L' + xCenter + ' ' + yCenter,
+              stroke: 'white',
+              'stroke-width': '1px',
+              'fill': 'none'
+            });
+            consumerPath.node.setAttribute('marker-mid', 'url(#path-marker-circle)');
+            consumerPath.node.setAttribute('marker-start', 'url(#path-marker-circle-start)');
+            consumerPath.node.setAttribute('marker-end', 'url(#path-marker-circle)');
+
+          }
+
+          if (i === 1){
+              var businessPath = svg.path();
+              var left  = cx;
+              var top   = cy;
+              left *= .5;
+              top  *= .5;
+              businessPath.attr({ 
+                d: 'M-' + ((this.DONUT_PATH_OFFSET/2) + settings.percent_offset - 10) + ' 50, L10 50 , L' + xCenter + ' ' + yCenter,
+                stroke: 'white',
+                'stroke-width': '1px',
+                'fill': 'none'
+              });
+              businessPath.node.setAttribute('marker-mid', 'url(#path-marker-circle)');
+              businessPath.node.setAttribute('marker-start', 'url(#path-marker-circle-start)');
+              businessPath.node.setAttribute('marker-end', 'url(#path-marker-circle)');
+            }
+
+          if (i === 2){
+            var privatePath = svg.path();
+            var left  = cx;
+            var top   = cy;
+            left *= .5;
+            top  *= .5;
+            privatePath.attr({ 
+              d: 'M' + 2.5*cx + ' 20, L' + 1.5*cx + ' 20 , L' + xCenter + ' ' + yCenter,
+              stroke: 'white',
+              'stroke-width': '1px',
+              'fill': 'none'
+            });
+            privatePath.node.setAttribute('marker-mid', 'url(#path-marker-circle)');
+            privatePath.node.setAttribute('marker-start', 'url(#path-marker-circle-start)');
+            privatePath.node.setAttribute('marker-end', 'url(#path-marker-circle)');
+
+          }
+
+          }
+
+
       }
+    
 
       return [legend, svg.node];
     },
@@ -312,14 +381,17 @@
         svg = Snap(width, height);
       }
 
-      svg.node.setAttribute('width', width + settings.percent_offset);
+      var offsetX = (settings.mode === 'donut-path') ? this.DONUT_PATH_OFFSET : 0;
+
+
+      svg.node.setAttribute('width', width + settings.percent_offset + offsetX);
       svg.node.setAttribute('height', height + settings.percent_offset);
       svg.node.setAttribute('viewBox', '-' + settings.percent_offset + ' -' + settings.percent_offset + ' ' + 
         (width + (settings.percent_offset * 1.5)) + ' ' + 
         (height + (settings.percent_offset * 1.5)));
-
       return svg;
     },
+
 
     // http://stackoverflow.com/questions/11479185/svg-donut-slice-as-path-element-annular-sector
     annular_sector : function (path, options) {

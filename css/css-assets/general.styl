@@ -41,6 +41,10 @@ body
 .m-t-de-1-g
 	margin-top -1px
 
+.margin-center-g
+	margin-left auto
+	margin-right auto
+
 // COLORS
 .c-grey1-g
 	color c-grey1
@@ -119,7 +123,7 @@ metrics()
 	long  = width height
 	for property, j in long
 		for i in 1..maxSize
-			.{property}-x{i}-gm, .{short[j]}-x{i}-gm
+			.{property}-x{i}-g, .{short[j]}-x{i}-g
 				{property} i*gs
 	
 	maxSize = 20
@@ -131,7 +135,7 @@ metrics()
 			longSide  = -left -right -top -bottom ''
 			for prop, x in longSide
 
-				.{property}{prop}-x{i}-gm, .{short[j]}{shortSide[x]}-x{i}-gm
+				.{property}{prop}-x{i}-g, .{short[j]}{shortSide[x]}-x{i}-g
 					{property}{prop} i*gs
 
 

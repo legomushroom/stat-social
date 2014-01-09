@@ -1,9 +1,17 @@
 <svg id="svg-source" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; margin-left: -100%" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+	<marker id="path-marker-circle" viewBox="0 0 24 24" refX="12" refY="12" markerUnits="strokeWidth" markerWidth="12" markerHeight="12" fill="white" orient="auto">
+		<circle cx="12" cy="12" r="12"></circle>
+	</marker>
+
+	<marker id="path-marker-circle-start" viewBox="0 0 25 25" refX="12" refY="12" markerUnits="strokeWidth" markerWidth="12" markerHeight="12" fill="white" orient="auto">
+		<circle cx="12" cy="12" r="12"></circle>
+	</marker>
+
+
 	<pattern id="striped-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
     <path d="M-4 12L12 -4ZM12 6L6 12ZM-4 2L2 -4" stroke="white" stroke-opacity=".4" stroke-width="1"></path>
 	</pattern>
-
 
 	<g id="calendar-icon">
 		<path d="M28.17,0H3.83C1.718,0,0,1.715,0,3.822v24.356C0,30.286,1.718,32,3.83,32h24.34c2.111,0,3.83-1.714,3.83-3.821V3.822
