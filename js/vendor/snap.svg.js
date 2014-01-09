@@ -3684,6 +3684,52 @@ function gradientRadial(defs, cx, cy, r, fx, fy) {
         return el;
     };
     /*\
+     * Paper.use2
+     [ method ]
+     *
+     * Draws a rectangle
+     **
+     - x (number) x coordinate of the top left corner
+     - y (number) y coordinate of the top left corner
+     - width (number) width
+     - height (number) height
+     - rx (number) #optional horizontal radius for rounded corners, default is 0
+     - ry (number) #optional vertical radius for rounded corners, default is rx or 0
+     = (object) the `rect` element
+     **
+     > Usage
+     | // regular rectangle
+     | var c = paper.rect(10, 10, 50, 50);
+     | // rectangle with rounded corners
+     | var c = paper.rect(40, 40, 50, 50, 10);
+    \*/
+    proto.use2 = function (id) {
+        var el = make("use", this.node);
+        el.attr({
+          'xlink:href': id
+        })
+        // if (ry == null) {
+        //     ry = rx;
+        // }
+        // if (is(x, "object") && "x" in x) {
+        //     el.attr(x);
+        // } else if (x != null) {
+        //     el.attr({
+        //         x: x,
+        //         y: y,
+        //         width: w,
+        //         height: h
+        //     });
+        //     if (rx != null) {
+        //         el.attr({
+        //             rx: rx,
+        //             ry: ry
+        //         });
+        //     }
+        // }
+        return el;
+    };
+    /*\
      * Paper.circle
      [ method ]
      **

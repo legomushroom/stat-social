@@ -36,8 +36,6 @@
         this.build($(this.scope), options);
       }
 
-
-
       this.events();
     },
 
@@ -134,6 +132,49 @@
           graph = parts[1];
 
       return $(this.identifier(legend)).html(graph);
+    },
+
+    createElement: function(name, attrs){
+      var elem, tag;
+
+      tag = name;
+      elem = document.createElementNS(this.ns, tag);
+      if (attrs === Object(attrs)) {
+        this.setAttributes(elem, attrs);
+      }
+      return elem;
+    },
+
+    setAttribute:function(k, v){
+      return this.setAttribute(k, v);
+    },
+
+    removeAttribe: function(k){
+      return this.removeAttribute(k);
+    },
+
+    setAttributes: function(elem, attrs){
+      var attrName, attrValue;
+
+        for (attrName in attrs) {
+          attrValue = attrs[attrName];
+          if (attrs.hasOwnProperty(attrName)) {
+            this.setAttribute.call(elem, attrName, attrValue);
+          }
+        }
+        return this;
+    },
+
+    removeAttributes: function(elem, attrs){
+      var attrName, attrValue;
+
+      for (attrName in attrs) {
+        attrValue = attrs[attrName];
+        if (attrs.hasOwnProperty(attrName)) {
+          this.removeAttribute.call(elem, attrName);
+        }
+      }
+      return this;
     },
 
     pie : function (legend) {
@@ -269,7 +310,7 @@
           if (i === 0){
             var consumerPath = svg.path();
             consumerPath.attr({ 
-              d: 'M' + ((paperWidth/2) + cx) + ' ' + 2*cy+ ', L' + 1.5*cx + ' '+ 2*cy + ' , L' + xCenter + ' ' + yCenter,
+              d: 'M' + ((paperWidth/2) + cx) + ' ' + 2*cy+ ', L' + ((paperWidth/4) + cx) + ' '+ 2*cy + ' , L' + xCenter + ' ' + yCenter,
               stroke: 'white',
               'stroke-width': '1px',
               'fill': 'none'
@@ -277,6 +318,7 @@
             consumerPath.node.setAttribute('marker-mid',   'url(#path-marker-circle)');
             consumerPath.node.setAttribute('marker-start', 'url(#path-marker-circle-start)');
             consumerPath.node.setAttribute('marker-end',   'url(#path-marker-circle)');
+
 
           }
 
@@ -291,6 +333,28 @@
               businessPath.node.setAttribute('marker-mid', 'url(#path-marker-circle)');
               businessPath.node.setAttribute('marker-start', 'url(#path-marker-circle-start)');
               businessPath.node.setAttribute('marker-end', 'url(#path-marker-circle)');
+
+              var icon = svg.path();
+              icon.attr({
+                d: 'M23.418,11h-4.944V8c0-1.247,1.392-2,1.979-2c0.585,0,2.966,0,2.966,0V0l-4.094,0.001c-5.503,0-6.756,4.089-6.756,6.706L12.538,11H8.582v6h3.956c0,7.132,0,15,0,15h5.936c0,0,0-7.835,0-15h3.955L23.418,11z',
+                fill: '#445469'
+              });
+
+              var txt = svg.text(0,0,'Business');
+              txt.attr({
+                'font-family': 'Open sans',
+                'font-weight': 600,
+                'font-size':  17.5,
+                fill: '#445469'
+              });
+
+              var txt2 = svg.text(0,40,visible_text);
+              txt2.attr({
+                'font-family': 'Open sans',
+                'font-size':  17.5,
+                fill: '#445469'
+              });
+
             }
 
           if (i === 2){
