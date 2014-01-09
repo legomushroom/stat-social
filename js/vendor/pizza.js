@@ -10,7 +10,7 @@
       percent_offset: 35,       // relative to radius
       stroke_color: '#333',
       stroke_width: 0,
-      show_text: true,       // show or hide the percentage on the chart.
+      show_text: false,       // show or hide the percentage on the chart.
       animation_speed: 500,
       always_show_text: false,
       animation_type: 'elastic' // options: backin, backout, bounce, easein, 
@@ -106,14 +106,14 @@
           data.push({
             value: options.data[segment.index()],
             text: segment.data('text'), 
-            color: segment.css('color'),
+            color: segment.data('color'),
             segment: segment
           });
         } else {
           data.push({
             value: segment.data('value'),
             text: segment.data('text'), 
-            color: segment.css('color'),
+            color: segment.data('color'),
             segment: segment
           });
         }

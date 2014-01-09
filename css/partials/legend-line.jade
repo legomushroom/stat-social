@@ -1,0 +1,8 @@
+li.legend-line-b(class="#{el.class}", data-color="#{el.color}", data-value="#{el.value}")
+	.right-bl !{el.text}
+	
+	- color = el.color
+	- el = legendLabel
+	- el.color = color
+	include legend-label
+

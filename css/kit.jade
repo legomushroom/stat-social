@@ -5,8 +5,8 @@ html
 		title stat social
 		link(rel="stylesheet", type="text/css", href="main.css")
 		link(rel="stylesheet", type="text/css", href="assets/kit.css")
-		link(href='http://fonts.googleapis.com/css?family=PT+Sans', rel='stylesheet', type='text/css')
-		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700', rel='stylesheet', type='text/css')
+		//- link(href='http://fonts.googleapis.com/css?family=PT+Sans', rel='stylesheet', type='text/css')
+		//- link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700', rel='stylesheet', type='text/css')
 	body
 		include icons.svg
 		.main-kl
@@ -267,10 +267,8 @@ html
 				.header-ke Elements
 				
 				.hash-e	b3044e2de680ec5af4ff8820322551be
-				.legend-circle-e
-					svg
-						rect(width="100%", height="100%")
-
+				include partials/legend-circle
+					
 				.hash-e ace9dbb0b4ae04bd624d0ee427e904ce
 				- el = { class:'', text: ' North America' }
 				include partials/btn
@@ -410,6 +408,31 @@ html
 
 			.section-kl
 				.header-ke Blocks
+
+				.hash-e	f63b2b6affc1d7652fcd552280004a39
+				- el = { class: '', color: '', text: 'California' } 
+				include partials/legend-label
+
+				.hash-e	b340dd6580044b2ee07cecd93867f1d2
+				- el = { class: '', text: '1%', color: 'purple', value: '20' }
+				- legendLabel = { class: '', text: 'California' } 
+				include partials/legend-line
+
+				.hash-e	27479f6152b26f43030ff29721d3fdbf
+				ul.legend-pile-l
+					- el = { class: '', text: '1%', color: 'purple', value: '20' }
+					- legendLabel = { class: '', text: 'California' } 
+					include partials/legend-line
+
+					- el = { class: '', text: '2%', color: 'orange', value: '20' }
+					- legendLabel = { class: '', text: 'California' } 
+					include partials/legend-line
+
+					- el = { class: '', text: '3%', color: 'white', value: '20' }
+					- legendLabel = { class: '', text: 'California' } 
+					include partials/legend-line
+
+
 
 				.hash-e acd8c9c668e57ee90593410adec4b8c6
 				.terms-block-b
@@ -729,18 +752,32 @@ html
 
 			.hash-e	1f6ae71e1a5e12c00650eefc7b9a3b6d
 			.pie-graph-b
-				#svg
-				ul(data-pie-id='svg')
-					li(style="color: #ccc", data-value='60') Water Buffalo (60)
-					li(style="color: green", data-value='20') Bison (20)
-					li(style="color: orange", data-value='12') Sheep (12)
-					li(style="color: yellow", data-value='32', data-text='Goats {{percent}} ({{value}} total)') Goat (32)
-					li(style="color: purple", data-value='50') Shetland Pony (50)
-					
+				#svg.pie-graph-b--pie-bh
+				ul.legend-pile-l(data-pie-id='svg')
+					- el = { class: 'is-hoverable', text: '1%', color: '#9adffc', value: '10' }
+					- legendLabel = { class: '', text: 'California' } 
+					include partials/legend-line
 
+					- el = { class: 'is-hoverable', text: '7%', color: '#83d6f8', value: '7' }
+					- legendLabel = { class: '', text: 'Alabama' } 
+					include partials/legend-line
 
+					- el = { class: 'is-hoverable', text: '26%', color: '#69ccf5', value: '24' }
+					- legendLabel = { class: '', text: 'Florida' } 
+					include partials/legend-line
 
-			
+					- el = { class: 'is-hoverable', text: '27%', color: '#35b1e4', value: '23' }
+					- legendLabel = { class: '', text: 'New York' } 
+					include partials/legend-line
+
+					- el = { class: 'is-hoverable', text: '23%', color: '#2897c4', value: '23' }
+					- legendLabel = { class: '', text: 'Texas' } 
+					include partials/legend-line
+
+					- el = { class: 'is-hoverable', text: '16%', color: '#278bb3', value: '12' }
+					- legendLabel = { class: '', text: 'Other' } 
+					include partials/legend-line
+
 
 			//- DEPRECATED ------------------------------------------------------
 			.deprecated-kg
@@ -1265,6 +1302,42 @@ html
 
 								.multiply-bl.column-bh
 									.multiply-e 0.6x
+
+			.hash-e 177aa510e0ef4bd424c5428b9ebd4058
+			.table-b
+				.table-line-header-b.is-small-height.is-brands2
+					.column-bh.is-one
+						- el = { class: 'is-hoverable', text: 'bracket' }
+						include partials/header-label
+
+				.table-body-bl
+					.pie-graph-b
+						#svg1.pie-graph-b--pie-bh
+						ul.legend-pile-l(data-pie-id='svg1')
+							- el = { class: 'is-hoverable', text: '1%', color: '#9adffc', value: '10' }
+							- legendLabel = { class: '', text: 'California' } 
+							include partials/legend-line
+
+							- el = { class: 'is-hoverable', text: '7%', color: '#83d6f8', value: '7' }
+							- legendLabel = { class: '', text: 'Alabama' } 
+							include partials/legend-line
+
+							- el = { class: 'is-hoverable', text: '26%', color: '#69ccf5', value: '24' }
+							- legendLabel = { class: '', text: 'Florida' } 
+							include partials/legend-line
+
+							- el = { class: 'is-hoverable', text: '27%', color: '#35b1e4', value: '23' }
+							- legendLabel = { class: '', text: 'New York' } 
+							include partials/legend-line
+
+							- el = { class: 'is-hoverable', text: '23%', color: '#2897c4', value: '23' }
+							- legendLabel = { class: '', text: 'Texas' } 
+							include partials/legend-line
+
+							- el = { class: 'is-hoverable', text: '16%', color: '#278bb3', value: '12' }
+							- legendLabel = { class: '', text: 'Other' } 
+							include partials/legend-line
+					
 
 			.hash-e 3648c6de7617651f11ac6af054f02c2d
 			.college-footer-b

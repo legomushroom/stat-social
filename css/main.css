@@ -1949,11 +1949,11 @@ a,
   height: 14px;
   border-radius: 50%;
   overflow: hidden;
+  fill: #9adffc;
 }
 .legend-circle-e svg {
   width: 100%;
   height: 100%;
-  fill: #9adffc;
   float: left;
 }
 .term-e {
@@ -2152,8 +2152,36 @@ a,
   background-color: #fff;
   cursor: pointer;
 }
-.pie-graph-b {
-  width: 200px;
+.legend-line-b {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.legend-line-b.is-hoverable:hover {
+  cursor: pointer;
+}
+.legend-line-b > .right-bl {
+  float: right;
+  font-size: 18px;
+  color: #445469;
+  letter-spacing: 0;
+}
+.legend-label-b {
+  display: inline-block;
+}
+.legend-label-b > .text-be {
+  margin-left: 18px;
+  font-size: 18px;
+  color: #445469;
+  letter-spacing: 0;
+}
+.legend-label-b .legend-circle-e {
+  float: left;
+  margin-top: 2px;
+}
+.pie-graph-b .pie-graph-b--pie-bh {
+  width: 75%;
 }
 .svg-bargraph-b {
   position: relative;
@@ -2413,6 +2441,10 @@ a,
   float: left;
   text-align: center;
   min-height: 1px;
+}
+.table-line-b .column-bh.is-one,
+.table-line-header-b .column-bh.is-one {
+  width: 100%;
 }
 .table-line-b .column-bh > .header-label-e,
 .table-line-header-b .column-bh > .header-label-e {
@@ -3020,6 +3052,9 @@ a,
 }
 .header-tab-user-b > .line-thrue-be {
   left: 20px;
+}
+.legend-pile-l .legend-line-b + .legend-line-b {
+  margin-top: 8px;
 }
 .table-n-header-l > .header-ll {
   margin-bottom: 42px;

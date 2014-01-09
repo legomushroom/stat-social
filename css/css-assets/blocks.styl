@@ -1,9 +1,46 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+/* b340dd6580044b2ee07cecd93867f1d2 */
+.legend-line-b
+	list-style none
+	display block
+	margin 0
+	padding 0
+
+	&.is-hoverable
+		&:hover
+			cursor pointer
+
+	> .right-bl
+		float right
+		font-size 18px
+		color #445469
+		letter-spacing 0
+
+/* f63b2b6affc1d7652fcd552280004a39 */
+.legend-label-b
+	display inline-block
+
+	> .text-be
+		margin-left 18px
+		font-size 18px
+		color #445469
+		letter-spacing 0
+
+	.legend-circle-e
+		float left
+		margin-top 2px
+
+
 /* 1f6ae71e1a5e12c00650eefc7b9a3b6d */
 .pie-graph-b
-	width 200px
+	// width 170px
+
+	.pie-graph-b--pie-bh
+		width 75%
+		// margin 0 auto
+		// margin-left - 12.5%
 
 .svg-bargraph-b
 	position relative
@@ -272,6 +309,10 @@
 		float left
 		text-align center
 		min-height 1px
+
+		&.is-one
+			width 100%
+			
 		> .header-label-e
 			margin-top 10px
 
