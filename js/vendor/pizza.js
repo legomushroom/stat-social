@@ -94,7 +94,7 @@
 
       var legend = legends, graph;
       this.settings.percent_offset = ~~(legend.width()/10);
-      
+
 
       legend.data('settings', $.extend({}, self.settings, options, legend.data('options')));
       self.data(legend, options || {});
@@ -264,32 +264,26 @@
 
         if (settings.mode === 'donut-path'){
 
+          var paperWidth = parseInt(svg.attr('width'),10); 
+
           if (i === 0){
             var consumerPath = svg.path();
-            var left  = cx;
-            var top   = cy;
-            left *= .5;
-            top  *= .5;
             consumerPath.attr({ 
-              d: 'M' + 2.5*cx + ' ' + 2*cy+ ', L' + 1.5*cx + ' '+ 2*cy + ' , L' + xCenter + ' ' + yCenter,
+              d: 'M' + ((paperWidth/2) + cx) + ' ' + 2*cy+ ', L' + 1.5*cx + ' '+ 2*cy + ' , L' + xCenter + ' ' + yCenter,
               stroke: 'white',
               'stroke-width': '1px',
               'fill': 'none'
             });
-            consumerPath.node.setAttribute('marker-mid', 'url(#path-marker-circle)');
+            consumerPath.node.setAttribute('marker-mid',   'url(#path-marker-circle)');
             consumerPath.node.setAttribute('marker-start', 'url(#path-marker-circle-start)');
-            consumerPath.node.setAttribute('marker-end', 'url(#path-marker-circle)');
+            consumerPath.node.setAttribute('marker-end',   'url(#path-marker-circle)');
 
           }
 
           if (i === 1){
               var businessPath = svg.path();
-              var left  = cx;
-              var top   = cy;
-              left *= .5;
-              top  *= .5;
               businessPath.attr({ 
-                d: 'M-' + ((this.DONUT_PATH_OFFSET/2) + settings.percent_offset - 10) + ' 50, L10 50 , L' + xCenter + ' ' + yCenter,
+                d: 'M-' + ((this.DONUT_PATH_OFFSET/2) + settings.percent_offset - 5) + ' 50, L10 50 , L' + xCenter + ' ' + yCenter,
                 stroke: 'white',
                 'stroke-width': '1px',
                 'fill': 'none'
@@ -301,12 +295,8 @@
 
           if (i === 2){
             var privatePath = svg.path();
-            var left  = cx;
-            var top   = cy;
-            left *= .5;
-            top  *= .5;
             privatePath.attr({ 
-              d: 'M' + 2.5*cx + ' 20, L' + 1.5*cx + ' 20 , L' + xCenter + ' ' + yCenter,
+              d: 'M' + ((paperWidth/2) + cx) + ' 0, L' + 1.5*cx + ' 0 , L' + xCenter + ' ' + yCenter,
               stroke: 'white',
               'stroke-width': '1px',
               'fill': 'none'
