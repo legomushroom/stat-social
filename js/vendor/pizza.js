@@ -361,7 +361,7 @@
           })
         }else{
           if (settings.content.match(/https?/gi) ){
-            var addition = circleHole/10;
+            var addition = circleHole/9;
             var image = svg.image(settings.content, cx-circleHole-(addition/2), cy-circleHole-(addition/2), 2*circleHole+addition, 2*circleHole+addition )
           }
         }
