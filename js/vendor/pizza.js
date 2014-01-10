@@ -47,6 +47,7 @@
       }, 500));
 
       $(this.scope).off('.pizza').on('mouseenter.pizza mouseleave.pizza touchstart.pizza', '[data-pie-id] li', function (e) {
+
         var parent = $(this).parent(),
             path = Snap($('#' + parent.data('pie-id') + ' path[data-id="s' + $(this).index() + '"]')[0]),
             text = Snap($(path.node).parent()
@@ -285,12 +286,12 @@
         }
       // MODE IS CIRCLE
       } else{
-        var r = ((base / 2) * 0.85);
+        var r = ((base / 2) * 0.575),
+            cx = cy = base/2;
 
         var baseCircle = this.checkExistence({
           svg: svg,
           id: 'base-circle'
-          // type: 'circle'
         });
 
         baseCircle.attr({
@@ -299,11 +300,12 @@
         });
 
         this.annular_sector(baseCircle.node, {
-          centerX:base/2, centerY:base/2,
+          centerX:cx, centerY:cy,
           startDegrees:0, endDegrees:31.4155,
           innerRadius: (r*.35), outerRadius:r
         });
 
+        this.animate(baseCircle, cx, cy, settings);
 
         var innerCircle = this.checkExistence({
           svg: svg,
@@ -313,30 +315,73 @@
         innerCircle.attr({
           fill: data[1].color,
           r: r/2
-        });
+        });        
 
         var percent = data[1].value;
 
-        var holePercent = 35/100;
+        var holePercent = 27.5/100;
         var circleHole = (r*holePercent);
         var invertedGole = 1-holePercent;
         percent *= invertedGole;
         var progress = r*(percent/100);
-
-
         this.annular_sector(innerCircle.node, {
-          centerX:base/2, centerY:base/2,
+          centerX:cx, centerY:cy,
           startDegrees:0, endDegrees:31.4155,
           innerRadius: circleHole, outerRadius:circleHole + progress
         });
+        this.animate(innerCircle, cx, cy, settings);
 
+        var circle = this.checkExistence({
+          svg: svg,
+          id: 'base-additional-circle',
+          type: 'circle'
+        });
+
+        circle.attr({
+          stroke: 'white',
+          'stroke-width': 1,
+          r: circleHole,
+          fill: 'none',
+          transform: 'translate('+cx+','+cy+')'
+        });
+
+        if (settings.content === 'icon'){
+          Snap.load('../css/i/script.svg', function (d) {
+            var paper = Snap(svg.node)
+            var icon = d.select('g')
+            var iconBase = 32;
+            var scale = 1.75;
+            var radius = r*settings.donut_inner_ratio * .7;
+            var iconSize = radius*.75;
+            var iconScale = iconSize/iconBase;
+            var fontSize = iconSize/4.25;
+            paper.append(icon);
+            icon.attr({
+              fill: 'white',
+              transform: 'translate('+(cx-(iconSize/2))+','+(cy-(iconSize/2))+'), scale('+iconScale+')',
+            });
+            // self.animate(icon, cx, cy, settings);
+          })
+        }else{
+          if (settings.content.match(/https?/gi) ){
+            console.log('load image');
+          }
+        }
 
       }
 
-      
-
       return [legend, svg.node];
     },
+
+    // bindContext: function(func, context){
+    //   var bindArgs = Array.prototype.slice.call(arguments,2)
+    //   function wrapper(){
+    //     var args = Array.prototype.slice.call(arguments);
+    //     var unshiftArgs = bindArgs.concat(args);
+    //     return func.apply(context, unshiftArgs);
+    //   }
+    //   return wrapper;
+    // },
 
     drawDonutPath: function (i, settings, svg, cx, cy, xCenter, yCenter, visible_text, r) {
       
@@ -607,41 +652,51 @@
 
       el.hover(function (e) {
         var path = Snap(e.target),
-            text = Snap($(path.node).parent()
-              .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0]);
+            textNode = $(path.node).parent()
+              .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0];
+        
+        if (textNode != null){
+          var text = Snap(textNode);    
 
-        path.animate({
-          transform: 's1.05 1.05 ' + cx + ' ' + cy
-        }, settings.animation_speed, mina[settings.animation_type]);
-
-        text.touchend(function () {
-          path.animate({
-            transform: 's1.05 1.05 ' + cx + ' ' + cy
-          }, settings.animation_speed, mina[settings.animation_type]);
-        });
-
-        if (settings.show_text) {
-          text.animate({
-            opacity: 1
-          }, settings.animation_speed);
           text.touchend(function () {
+            path.animate({
+              transform: 's1.05 1.05 ' + cx + ' ' + cy
+            }, settings.animation_speed, mina[settings.animation_type]);
+          });
+
+          if (settings.show_text) {
             text.animate({
               opacity: 1
             }, settings.animation_speed);
-          });
+            text.touchend(function () {
+              text.animate({
+                opacity: 1
+              }, settings.animation_speed);
+            });
+          }
+
         }
+        
+        path.animate({
+          transform: 's1.05 1.05 ' + cx + ' ' + cy
+        }, settings.animation_speed, mina[settings.animation_type]);
+      
       }, function (e) {
         var path = Snap(e.target),
-            text = Snap($(path.node).parent()
-              .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0]);
+            textNode = $(path.node).parent()
+              .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0];
+
+        if (textNode != null){
+          var text = Snap(textNode);    
+          text.animate({
+            opacity: 0
+          }, settings.animation_speed);
+        }  
 
         path.animate({
           transform: 's1 1 ' + cx + ' ' + cy
         }, settings.animation_speed, mina[settings.animation_type]);
-
-        text.animate({
-          opacity: 0
-        }, settings.animation_speed);
+        
       });
     },
 
