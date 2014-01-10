@@ -1,6 +1,6 @@
 <svg id="svg-source" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; margin-left: -100%" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-	<marker id="path-marker-circle" viewBox="0 0 24 24" refX="12" refY="12" markerUnits="strokeWidth" markerWidth="12" markerHeight="12" fill="white" orient="auto">
+	<marker id="path-marker-circle" viewBox="0 0 25 25" refX="12" refY="12" markerUnits="strokeWidth" markerWidth="12" markerHeight="12" fill="white" orient="auto">
 		<circle cx="12" cy="12" r="12"></circle>
 	</marker>
 

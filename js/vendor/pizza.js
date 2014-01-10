@@ -289,10 +289,15 @@
         var r = ((base / 2) * 0.575),
             cx = cy = base/2;
 
+        var paperWidth  = parseInt(svg.attr('width'),10);
+        var paperHeight = parseInt(svg.attr('height'),10);
+
         var baseCircle = this.checkExistence({
           svg: svg,
           id: 'base-circle'
         });
+
+        var innerRadius = .275;
 
         baseCircle.attr({
           fill: data[0].color,
@@ -302,48 +307,26 @@
         this.annular_sector(baseCircle.node, {
           centerX:cx, centerY:cy,
           startDegrees:0, endDegrees:31.4155,
-          innerRadius: (r*.35), outerRadius:r
+          innerRadius: (r*innerRadius), outerRadius:r
         });
 
         this.animate(baseCircle, cx, cy, settings);
 
-        var innerCircle = this.checkExistence({
-          svg: svg,
-          id: 'inner-circle'
-        });
-
-        innerCircle.attr({
-          fill: data[1].color,
-          r: r/2
-        });        
+             
 
         var percent = data[1].value;
 
-        var holePercent = 27.5/100;
+        var holePercent = innerRadius;
         var circleHole = (r*holePercent);
-        var invertedGole = 1-holePercent;
-        percent *= invertedGole;
+        var invertedHole = 1-holePercent;
+        percent *= invertedHole;
+        
         var progress = r*(percent/100);
-        this.annular_sector(innerCircle.node, {
-          centerX:cx, centerY:cy,
-          startDegrees:0, endDegrees:31.4155,
-          innerRadius: circleHole, outerRadius:circleHole + progress
-        });
-        this.animate(innerCircle, cx, cy, settings);
+        
 
-        var circle = this.checkExistence({
-          svg: svg,
-          id: 'base-additional-circle',
-          type: 'circle'
-        });
-
-        circle.attr({
-          stroke: 'white',
-          'stroke-width': 1,
-          r: circleHole,
-          fill: 'none',
-          transform: 'translate('+cx+','+cy+')'
-        });
+        var innerProgress = (circleHole + progress);
+        var outerCenter = ((r - innerProgress)/2) + innerProgress
+        var innerCenter = (innerProgress/2);
 
         if (settings.content === 'icon'){
           Snap.load('../css/i/script.svg', function (d) {
@@ -360,13 +343,180 @@
               fill: 'white',
               transform: 'translate('+(cx-(iconSize/2))+','+(cy-(iconSize/2))+'), scale('+iconScale+')',
             });
-            // self.animate(icon, cx, cy, settings);
+
+            var circle = self.checkExistence({
+              svg: svg,
+              id: 'base-additional-circle',
+              type: 'circle'
+            });
+
+            circle.attr({
+              stroke: 'white',
+              'stroke-width': 1,
+              r: circleHole,
+              fill: 'none',
+              transform: 'translate('+cx+','+cy+')'
+            });
+
           })
         }else{
           if (settings.content.match(/https?/gi) ){
-            console.log('load image');
+            var addition = circleHole/10;
+            var image = svg.image(settings.content, cx-circleHole-(addition/2), cy-circleHole-(addition/2), 2*circleHole+addition, 2*circleHole+addition )
           }
         }
+
+        var innerCircle = this.checkExistence({
+          svg: svg,
+          id: 'inner-circle'
+        });
+
+        innerCircle.attr({
+          fill: data[1].color
+        });   
+
+
+        this.annular_sector(innerCircle.node, {
+          centerX:cx, centerY:cy,
+          startDegrees:0, endDegrees:31.4155,
+          innerRadius: circleHole, outerRadius:innerProgress
+        });
+        this.animate(innerCircle, cx, cy, settings);
+
+
+        var topPath = this.checkExistence({
+            svg: svg,
+            id: 'top-path'
+          });
+
+        var startX = cx;
+        var startY = paperHeight/7;
+
+          topPath.attr({ 
+            d: 'M' + startX + ' '+ startY +', L' + startX + ' '+(cy-circleHole),
+            stroke: 'white',
+            'stroke-width': '1px',
+            'fill': 'none'
+          });
+          topPath.node.setAttribute('marker-start', 'url(#path-marker-circle-start)');
+
+        var topTxt = this.checkExistence({
+            svg: svg,
+            id: 'top-text1',
+            type: 'text',
+            params: [startX-95, startY-15, settings.textMain]
+          });
+          topTxt.attr({
+            'font-family': 'Open sans',
+            'font-weight': 600,
+            'font-size':  18,
+            fill: '#445469',
+            x: startX-95,
+            y: startY-15,
+          });
+
+
+
+        var startX = - (this.DONUT_PATH_OFFSET/2);
+        var startY = cy - paperHeight/10;
+
+        var leftPath = this.checkExistence({
+            svg: svg,
+            id: 'left-path'
+          });
+
+        leftPath.attr({ 
+          d: 'M' + startX + ' ' + startY + ', L' + (cx - r - (paperWidth/14)) + ' '+ startY + ' , L' + (cx-outerCenter) + ' ' + cy,
+          stroke: 'white',
+          'stroke-width': '1px',
+          'fill': 'none'
+        });
+        leftPath.node.setAttribute('marker-start', 'url(#path-marker-circle-start)');
+        leftPath.node.setAttribute('marker-end', 'url(#path-marker-circle)');
+        leftPath.node.setAttribute('marker-mid', 'url(#path-marker-circle)');
+
+        var leftText = this.checkExistence({
+            svg: svg,
+            id: 'left-text1',
+            type: 'text',
+            params: [0,0,settings.textLeft]
+          });
+          leftText.attr({
+            'font-family': 'Open sans',
+            'font-weight': 600,
+            'font-size':  18,
+            fill: '#445469',
+            x: startX-30,
+            y: startY-30,
+          });
+
+
+        var leftText2 = this.checkExistence({
+            svg: svg,
+            id: 'left-text2',
+            type: 'text',
+            params: [0,0,settings.textLeft2]
+          });
+          leftText2.attr({
+            'font-family': 'Open sans',
+            'font-weight': 100,
+            'font-size':  20,
+            fill: '#445469',
+            x: startX+25,
+            y: startY-7,
+          });
+
+        var startX = cx + (paperWidth/2);
+        var startY = cy + (paperWidth/5);
+
+        var rightPath = this.checkExistence({
+            svg: svg,
+            id: 'right-path'
+          });
+
+        rightPath.attr({ 
+          d: 'M' + startX + ' ' + startY + ', L' + (cx + r + 5) + ' '+ startY + ' , L' + (cx+innerCenter) + ' ' + (cy+innerCenter),
+          stroke: 'white',
+          'stroke-width': '1px',
+          'fill': 'none'
+        });
+
+        rightPath.node.setAttribute('marker-start', 'url(#path-marker-circle-start)');
+        rightPath.node.setAttribute('marker-end', 'url(#path-marker-circle)');
+        rightPath.node.setAttribute('marker-mid', 'url(#path-marker-circle)');
+
+        var rightText = this.checkExistence({
+            svg: svg,
+            id: 'right-text1',
+            type: 'text',
+            params: [0,0,settings.textRight]
+          });
+          rightText.attr({
+            'font-family': 'Open sans',
+            'font-weight': 600,
+            'font-size':  18,
+            fill: '#445469',
+            x: startX-180,
+            y: startY-30,
+          });
+
+
+        var rightText2 = this.checkExistence({
+            svg: svg,
+            id: 'right-text2',
+            type: 'text',
+            params: [0,0,settings.textRight2]
+          });
+          rightText2.attr({
+            'font-family': 'Open sans',
+            'font-weight': 100,
+            'font-size':  20,
+            fill: '#445469',
+            x: startX-120,
+            y: startY-7,
+          });
+
+
 
       }
 
@@ -713,6 +863,7 @@
       }
 
       var offsetX = ((settings.mode === 'donut-path') || (settings.mode === 'circle')) ? this.DONUT_PATH_OFFSET : 0;
+
 
 
       svg.node.setAttribute('width', width + settings.percent_offset + offsetX);
