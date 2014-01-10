@@ -3060,9 +3060,6 @@ a,
 .header-tab-user-b > .line-thrue-be {
   left: 20px;
 }
-svg {
-  outline: 1px solid #ff0;
-}
 .tables-fork-l > .left-ll,
 .tables-fork-l > .right-ll {
   float: left;
