@@ -1,0 +1,29 @@
+// BASIC PAGE STYLES
+@import '../assets/imports.styl'
+
+sidebarWidth = 324px
+
+#sidebar-l
+	min-height 100%
+	width sidebarWidth
+	float left
+	position relative
+	overflow hidden
+
+	> .top-ll
+		float left
+	
+	marginHackSize = 999999999px
+	> .bottom-ll
+		clear both
+		color white
+		background rgba(c-blue1,.7)
+		display block
+		margin-bottom 	- marginHackSize
+		padding-bottom 		marginHackSize
+			
+
+#main
+	margin-left sidebarWidth
+	min-height 100%
+	width 100%

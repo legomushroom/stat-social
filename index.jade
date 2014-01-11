@@ -2,13 +2,71 @@
 html
 	head
 		meta(charset='UTF-8')
-		title doc
+		title stat social
+		link(rel="stylesheet", type="text/css", href="css/main.css")
+		link(href='http://fonts.googleapis.com/css?family=PT+Sans', rel='stylesheet', type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700', rel='stylesheet', type='text/css')
 	
 	body
-		section(role="main")#main
+		#sidebar-l.cf(role="navigation")
+			.top-ll
+				.sidebar-logo-e STAT SOCIAL
+				
+				- el = { class: 'is-blue', headerText: '@Sergey_Valiukh', bottomText: 'Sergey Valiukh' }
+				include css/partials/header-tab-user
+
+				.sidebar-menu-section-l
+					- el = { class: 'is-green-mark--onhover', iconPath: 'demographics-icon', text: 'Demographics'}
+					include css/partials/sidebar-menu-header
+					- el = { class: 'is-red-mark--onhover', iconPath: 'geo-icon', text: 'Geo-Location'}
+					include css/partials/sidebar-menu-header
+					- el = { class: 'is-orange-mark--onhover', iconPath: 'education-icon', text: 'Career/Education'}
+					include css/partials/sidebar-menu-header
+					- el = { class: 'is-blue-mark--onhover', iconPath: 'social-icon', text: 'Social Media Use'}
+					include css/partials/sidebar-menu-header
+
+					
+				.sidebar-menu-section-l
+					- el = { class: 'is-green-mark--onhover', iconPath: 'interests-icon', text: 'Interests'}
+					include css/partials/sidebar-menu-header
+					- el = { itemClass: 'is-open', class: 'is-red-mark--oncheck is-check', iconPath: 'brands-icon', text: 'Brands'}
+					include css/partials/sidebar-menu-header
+						- el = { class: 'is-green-mark--onhover', iconPath: 'automotive-icon', text: 'Automotive'}
+						include css/partials/sidebar-menu-header-sub
+						- el = { class: 'is-green-mark--oncheck', iconPath: 'education-icon', text: 'Education'}
+						include css/partials/sidebar-menu-header-sub
+						- el = { class: 'is-green-mark--onhover', iconPath: 'energy-icon', text: 'Energy, Utilities & Waste'}
+						include css/partials/sidebar-menu-header-sub
+						- el = { itemClass: 'is-open', class: 'is-green-mark--oncheck is-check', iconPath: 'entertainment-icon', text: 'Entertainment'}
+						include css/partials/sidebar-menu-header-sub
+							- el = { class: 'is-green-mark--onhover is-sub2', iconPath: 'automotive-icon', text: 'Art & Culture'}
+							include css/partials/sidebar-menu-header-sub
+							- el = { class: 'is-green-mark--oncheck is-sub2', iconPath: 'automotive-icon', text: 'Dance'}
+							include css/partials/sidebar-menu-header-sub
+							- el = { itemClass: 'is-open', class: 'is-green-mark--oncheck is-check is-sub2', iconPath: 'automotive-icon', text: 'Movie Theatres'}
+							include css/partials/sidebar-menu-header-sub
+								- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Art & Culture'}
+								include css/partials/sidebar-menu-header-sub
+								- el = { class: 'is-green-mark--oncheck is-sub3 is-check', iconPath: 'automotive-icon', text: 'Dance'}
+								include css/partials/sidebar-menu-header-sub
+								- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Movie Theatres'}
+								include css/partials/sidebar-menu-header-sub
+
+					- el = { class: 'is-orange-mark--onhover', iconPath: 'celebrities-icon', text: 'Celebrities'}
+					include css/partials/sidebar-menu-header
+					- el = { class: 'is-blue-mark--onhover', iconPath: 'tv-icon', text: 'TV Shows'}
+					include css/partials/sidebar-menu-header
+
+			.bottom-ll
+
+		#main(role="main")
+			#header(role="navigation")
 
 
-
+		script
+			var url ='css/icons.svg';
+			var c=new XMLHttpRequest(); c.open('GET', url, false); c.setRequestHeader('Content-Type', 'text/xml'); c.send();
+			document.body.insertBefore(c.responseXML.firstChild, document.body.firstChild)
 
 
 

@@ -5,8 +5,6 @@ body {
   margin-bottom: 200px;
   background: c-bg;
   padding: 0 80px;
-  background: url("../i/bg.jpg") repeat;
-  background-size: 1200px;
   min-height: 100%;
   overflow: hidden;
 }

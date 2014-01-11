@@ -130,6 +130,9 @@ table {
 a.is-hoverable:hover {
   text-decoration: underline;
 }
+html {
+  height: 100%;
+}
 body,
 html {
   min-width: 100%;
@@ -142,8 +145,12 @@ html {
 body {
   background-color: c-bg;
   font-family: 'Open Sans', sans-serif;
-  letter-spacing: 1px;
   background: #d8d8d8;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url("i/bg.jpg") repeat;
+  background-size: 1200px;
 }
 ::selection{
 		background-color: #ff6d6a;
@@ -2817,7 +2824,6 @@ a,
   height: 67px;
   padding: 12px 8px;
   position: relative;
-  padding-right: 4px;
   background: rgba(18,37,61,0.7);
 /* 89a64cab9779a3f80167d765346da7dc */
 /* 2c93e10d29f23bbaa0844ef81feb5a51 */
@@ -3400,4 +3406,27 @@ a,
 .icon.is-hoverable:hover {
   fill: #ff5451;
   cursor: pointer;
+}
+#sidebar-l {
+  min-height: 100%;
+  width: 324px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+#sidebar-l > .top-ll {
+  float: left;
+}
+#sidebar-l > .bottom-ll {
+  clear: both;
+  color: #fff;
+  background: rgba(18,37,61,0.7);
+  display: block;
+  margin-bottom: -999999999px;
+  padding-bottom: 999999999px;
+}
+#main {
+  margin-left: 324px;
+  min-height: 100%;
+  width: 100%;
 }
