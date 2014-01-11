@@ -2202,7 +2202,10 @@ a,
 .social-composition-b {
   font-size: 18px;
   line-height: 22px;
-  color: #445469;
+  color: rgba(68,84,105,0.75);
+}
+.social-composition-b .svg-bargraph-b.is-average:after {
+  top: 4px;
 }
 .social-composition-b > .left-bl > .graph-bll {
   width: 55%;

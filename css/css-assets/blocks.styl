@@ -39,7 +39,13 @@
 	@extend .identified-audience-b
 	font-size 18px
 	line-height 22px
-	color #445469
+	color rgba(#445469,.75)
+
+	.svg-bargraph-b
+		&.is-average
+			// 4!
+			&:after
+				top 4px
 
 	> .left-bl
 		> .graph-bll

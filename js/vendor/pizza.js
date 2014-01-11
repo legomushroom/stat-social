@@ -137,7 +137,7 @@
 
     checkExistence:function(o){
       var existingPath = $((o.type || 'path')+'[data-id="'+o.id+'"]', o.svg.node);
-      
+
       if (existingPath.length > 0) {
         var path = Snap(existingPath[0]);
       } else {
@@ -366,7 +366,14 @@
               svg: svg,
               id: 'twitter-image',
               type: 'image',
-              params: [settings.content, cx-circleHole-(addition/2), cy-circleHole-(addition/2), 2*circleHole+addition, 2*circleHole+addition]
+              params: [settings.content,0,0,0,0]
+            });
+
+            image.attr({
+              x:  cx-circleHole-(addition/2),
+              y:  cy-circleHole-(addition/2),
+              width: 2*circleHole+addition,
+              height: 2*circleHole+addition
             });
           }
         }
