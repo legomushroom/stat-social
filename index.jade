@@ -59,8 +59,38 @@ html
 
 			.bottom-ll
 
-		#main(role="main")
+		#main-l(role="main")
 			#header(role="navigation")
+				.followers-header-b
+					- el = { class: 'export-bh is-hoverable', text: 'Export' }
+					include css/partials/header-btn
+
+					.header-btn-n-icon-b.date-bh
+						- el = { class: 'is-hoverable', text: 'date: 04/01/2013' }
+						include css/partials/header-btn
+						.icon-bl
+							- el = { class: 'is-white is-hoverable', path: 'calendar-icon' }
+							include css/partials/icon
+
+					.named-dropdown-b.baseline-bh
+						.name-bl
+							- el = { class: '', text: 'baseline:' }
+							include css/partials/header-btn
+						.dropdown-bl
+							- el = { class: 'is-hoverable', text: 'Twitter', headerBtnClass: 'is-thin' }
+							include css/partials/dropdown
+
+				.fork-l.cf
+					- el = { class: 'fork-item-l one-of-3-l', headerText: 'IDENTIFIED FOLLOWERS', bottomText: 'Consumers', circleText:'94%' }
+					include css/partials/header-tab
+
+					- el = { class: 'fork-item-l one-of-3-l is-orange', headerText: 'FOLLOWERS', bottomText: 'Per tweeter', circleText:'400' }
+					include css/partials/header-tab
+
+					- el = { class: 'fork-item-l one-of-3-l is-green', headerText: 'TWITTER PULL', bottomText: 'People', circleText:'10k' }
+					include css/partials/header-tab
+
+		include css/partials/footer
 
 
 		script

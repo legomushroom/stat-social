@@ -860,7 +860,8 @@ bgColor = #1e394f
 	border-radius 50%
 	text-align center
 	color white
-	background url('http://placekitten.com/75/75') no-repeat center center
+	background url('https://pbs.twimg.com/profile_images/378800000858075549/nvy-OAxF_bigger.png') no-repeat center center
+	background-size 100% auto
 	position relative
 
 	/* 91f28e51a4cffb32caebcda1cbff41fe */
@@ -994,19 +995,20 @@ bgColor = #1e394f
 	padding-left 0
 	overflow hidden
 	box-shadow none
-
+	
+	paddingLeft = 30px
 	> .header-text-be
 		color white
-		font-weight 200
-		padding-left 70px
+		font-weight 100
+		padding-left paddingLeft
 		font-size 20px
 		top 12px
 	> .bottom-text-be
-		padding-left 70px
+		padding-left paddingLeft
 		bottom 13px
 		font-weight 100
-		letter-spacing 0
 		ptSans()
+
 		&:before
 			content: '@'
 			opacity 0
