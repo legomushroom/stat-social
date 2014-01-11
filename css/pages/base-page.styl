@@ -2,39 +2,155 @@
 @import '../assets/imports.styl'
 
 sidebarWidth = 324px
-	
+.main-l
+	width: 100%;
+	min-height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-pack: start;
+	-moz-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
 
 marginHackSize = 999999999px
 #sidebar-l
-	min-height 100%
 	width sidebarWidth
-	float left
-	position relative
+	min-height 100%
+	position: relative;
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
 	overflow hidden
 
-	> .top-ll
-		float left
-		width 100%
-	
-	> .bottom-ll
-		height 100%
-		clear both
-		color white
-		background rgba(c-blue1,.7)
-		display block
-		margin-bottom 	- marginHackSize
-		padding-bottom 		marginHackSize
-			
+	> .flex-ll
+		height: 100%;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-box-pack: start;
+		-moz-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: flex-start;
+		-ms-flex-line-pack: start;
+		align-content: flex-start;
+		-webkit-box-align: stretch;
+		-moz-box-align: stretch;
+		-webkit-align-items: stretch;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+
+		> .top-lll
+			-webkit-box-ordinal-group: 1;
+			-moz-box-ordinal-group: 1;
+			-webkit-order: 0;
+			-ms-flex-order: 0;
+			order: 0;
+			-webkit-box-flex: 0;
+			-moz-box-flex: 0;
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+			-webkit-align-self: auto;
+			-ms-flex-item-align: auto;
+			align-self: auto;
+
+		> .bottom-lll
+			-webkit-box-ordinal-group: 1;
+			-moz-box-ordinal-group: 1;
+			-webkit-order: 0;
+			-ms-flex-order: 0;
+			order: 0;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-webkit-flex: 1 0 auto;
+			-ms-flex: 1 0 auto;
+			flex: 1 0 auto;
+			-webkit-align-self: auto;
+			-ms-flex-item-align: auto;
+			align-self: auto;
+			background rgba(c-blue1,.7)
+			margin-bottom  - marginHackSize
+			padding-bottom 	 marginHackSize
+
 
 #main-l
-	margin-left sidebarWidth
 	min-height 100%
+	position relative
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
 
-	#header-l
-		max-height 174px
 
-	> .content-ll
-		.page-section-l
-			float left
+/*
+	Legacy Firefox implementation treats all flex containers
+	as inline-block elements.
+*/
+
+@-moz-document url-prefix() {
+	.main-l, #sidebar-l > .flex-ll {
+		width: 100%;
+		-moz-box-sizing: border-box;
+	}
+}
+
+
+
+
 
 

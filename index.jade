@@ -8,125 +8,125 @@ html
 		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700', rel='stylesheet', type='text/css')
 	
 	body
-		.main-layout
-		#sidebar-l.cf(role="navigation")
-			.top-ll
-				.sidebar-logo-e STAT SOCIAL
-				
-				- el = { class: 'is-blue', headerText: '@mailtolego', bottomText: 'Oleg Solomka' }
-				include css/partials/header-tab-user
+		.main-l
+			#sidebar-l.cf(role="navigation")
+				.flex-ll
+					.top-lll
+						.sidebar-logo-e STAT SOCIAL
+						
+						- el = { class: 'is-blue', headerText: '@mailtolego', bottomText: 'Oleg Solomka' }
+						include css/partials/header-tab-user
 
-				.sidebar-menu-section-l
-					- el = { class: 'is-green-mark--onhover', iconPath: 'demographics-icon', text: 'Demographics'}
-					include css/partials/sidebar-menu-header
-					- el = { class: 'is-red-mark--onhover', iconPath: 'geo-icon', text: 'Geo-Location'}
-					include css/partials/sidebar-menu-header
-					- el = { class: 'is-orange-mark--onhover', iconPath: 'education-icon', text: 'Career/Education'}
-					include css/partials/sidebar-menu-header
-					- el = { class: 'is-blue-mark--onhover', iconPath: 'social-icon', text: 'Social Media Use'}
-					include css/partials/sidebar-menu-header
+						.sidebar-menu-section-l
+							- el = { class: 'is-green-mark--onhover', iconPath: 'demographics-icon', text: 'Demographics'}
+							include css/partials/sidebar-menu-header
+							- el = { class: 'is-red-mark--onhover', iconPath: 'geo-icon', text: 'Geo-Location'}
+							include css/partials/sidebar-menu-header
+							- el = { class: 'is-orange-mark--onhover', iconPath: 'education-icon', text: 'Career/Education'}
+							include css/partials/sidebar-menu-header
+							- el = { class: 'is-blue-mark--onhover', iconPath: 'social-icon', text: 'Social Media Use'}
+							include css/partials/sidebar-menu-header
 
-					
-				.sidebar-menu-section-l
-					- el = { class: 'is-green-mark--onhover', iconPath: 'interests-icon', text: 'Interests'}
-					include css/partials/sidebar-menu-header
-					- el = { itemClass: 'is-open', class: 'is-red-mark--oncheck is-check', iconPath: 'brands-icon', text: 'Brands'}
-					include css/partials/sidebar-menu-header
-						- el = { class: 'is-green-mark--onhover', iconPath: 'automotive-icon', text: 'Automotive'}
-						include css/partials/sidebar-menu-header-sub
-						- el = { class: 'is-green-mark--oncheck', iconPath: 'education-icon', text: 'Education'}
-						include css/partials/sidebar-menu-header-sub
-						- el = { class: 'is-green-mark--onhover', iconPath: 'energy-icon', text: 'Energy, Utilities & Waste'}
-						include css/partials/sidebar-menu-header-sub
-						- el = { itemClass: 'is-open', class: 'is-green-mark--oncheck is-check', iconPath: 'entertainment-icon', text: 'Entertainment'}
-						include css/partials/sidebar-menu-header-sub
-							- el = { class: 'is-green-mark--onhover is-sub2', iconPath: 'automotive-icon', text: 'Art & Culture'}
-							include css/partials/sidebar-menu-header-sub
-							- el = { class: 'is-green-mark--oncheck is-sub2', iconPath: 'automotive-icon', text: 'Dance'}
-							include css/partials/sidebar-menu-header-sub
-							- el = { itemClass: 'is-open', class: 'is-green-mark--oncheck is-check is-sub2', iconPath: 'automotive-icon', text: 'Movie Theatres'}
-							include css/partials/sidebar-menu-header-sub
-								- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Art & Culture'}
+						.sidebar-menu-section-l
+							- el = { class: 'is-green-mark--onhover', iconPath: 'interests-icon', text: 'Interests'}
+							include css/partials/sidebar-menu-header
+							- el = { itemClass: 'is-open', class: 'is-red-mark--oncheck is-check', iconPath: 'brands-icon', text: 'Brands'}
+							include css/partials/sidebar-menu-header
+								- el = { class: 'is-green-mark--onhover', iconPath: 'automotive-icon', text: 'Automotive'}
 								include css/partials/sidebar-menu-header-sub
-								- el = { class: 'is-green-mark--oncheck is-sub3 is-check', iconPath: 'automotive-icon', text: 'Dance'}
+								- el = { class: 'is-green-mark--oncheck', iconPath: 'education-icon', text: 'Education'}
 								include css/partials/sidebar-menu-header-sub
-								- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Movie Theatres'}
+								- el = { class: 'is-green-mark--onhover', iconPath: 'energy-icon', text: 'Energy, Utilities & Waste'}
 								include css/partials/sidebar-menu-header-sub
+								- el = { itemClass: 'is-open', class: 'is-green-mark--oncheck is-check', iconPath: 'entertainment-icon', text: 'Entertainment'}
+								include css/partials/sidebar-menu-header-sub
+									- el = { class: 'is-green-mark--onhover is-sub2', iconPath: 'automotive-icon', text: 'Art & Culture'}
+									include css/partials/sidebar-menu-header-sub
+									- el = { class: 'is-green-mark--oncheck is-sub2', iconPath: 'automotive-icon', text: 'Dance'}
+									include css/partials/sidebar-menu-header-sub
+									- el = { itemClass: 'is-open', class: 'is-green-mark--oncheck is-check is-sub2', iconPath: 'automotive-icon', text: 'Movie Theatres'}
+									include css/partials/sidebar-menu-header-sub
+										- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Art & Culture'}
+										include css/partials/sidebar-menu-header-sub
+										- el = { class: 'is-green-mark--oncheck is-sub3 is-check', iconPath: 'automotive-icon', text: 'Dance'}
+										include css/partials/sidebar-menu-header-sub
+										- el = { class: 'is-green-mark--onhover is-sub3', iconPath: 'automotive-icon', text: 'Movie Theatres'}
+										include css/partials/sidebar-menu-header-sub
 
-					- el = { class: 'is-orange-mark--onhover', iconPath: 'celebrities-icon', text: 'Celebrities'}
-					include css/partials/sidebar-menu-header
-					- el = { class: 'is-blue-mark--onhover', iconPath: 'tv-icon', text: 'TV Shows'}
-					include css/partials/sidebar-menu-header
+							- el = { class: 'is-orange-mark--onhover', iconPath: 'celebrities-icon', text: 'Celebrities'}
+							include css/partials/sidebar-menu-header
+							- el = { class: 'is-blue-mark--onhover', iconPath: 'tv-icon', text: 'TV Shows'}
+							include css/partials/sidebar-menu-header
 
-			.bottom-ll
+					.bottom-lll
 
-		#main-l.cf
-			#header-l(role="navigation")
-				.followers-header-b
-					- el = { class: 'export-bh is-hoverable', text: 'Export' }
-					include css/partials/header-btn
-
-					.header-btn-n-icon-b.date-bh
-						- el = { class: 'is-hoverable', text: 'date: 04/01/2013' }
+			#main-l.cf
+				#header-ll(role="navigation")
+					.followers-header-b
+						- el = { class: 'export-bh is-hoverable', text: 'Export' }
 						include css/partials/header-btn
-						.icon-bl
-							- el = { class: 'is-white is-hoverable', path: 'calendar-icon' }
-							include css/partials/icon
 
-					.named-dropdown-b.baseline-bh
-						.name-bl
-							- el = { class: '', text: 'baseline:' }
+						.header-btn-n-icon-b.date-bh
+							- el = { class: 'is-hoverable', text: 'date: 04/01/2013' }
 							include css/partials/header-btn
-						.dropdown-bl
-							- el = { class: 'is-hoverable', text: 'Twitter', headerBtnClass: 'is-thin' }
-							include css/partials/dropdown
+							.icon-bl
+								- el = { class: 'is-white is-hoverable', path: 'calendar-icon' }
+								include css/partials/icon
 
-				.fork-l.cf
-					- el = { class: 'fork-item-l one-of-3-l', headerText: 'IDENTIFIED FOLLOWERS', bottomText: 'Consumers', circleText:'94%' }
-					include css/partials/header-tab
+						.named-dropdown-b.baseline-bh
+							.name-bl
+								- el = { class: '', text: 'baseline:' }
+								include css/partials/header-btn
+							.dropdown-bl
+								- el = { class: 'is-hoverable', text: 'Twitter', headerBtnClass: 'is-thin' }
+								include css/partials/dropdown
 
-					- el = { class: 'fork-item-l one-of-3-l is-orange', headerText: 'FOLLOWERS', bottomText: 'Per tweeter', circleText:'400' }
-					include css/partials/header-tab
+					.fork-l.cf
+						- el = { class: 'fork-item-l one-of-3-l', headerText: 'IDENTIFIED FOLLOWERS', bottomText: 'consumers', circleText:'94%' }
+						include css/partials/header-tab
 
-					- el = { class: 'fork-item-l one-of-3-l is-green', headerText: 'TWITTER PULL', bottomText: 'People', circleText:'10k' }
-					include css/partials/header-tab
+						- el = { class: 'fork-item-l one-of-3-l is-orange', headerText: 'FOLLOWERS', bottomText: 'per tweeter', circleText:'400' }
+						include css/partials/header-tab
 
-			.content-ll(role="main")
-				.page-section-l
-					.social-composition-b.cf
-						.left-bl
-							.graph-bll
-								#svg-b7308571352ab86ef1e438d4369b1f39.pie-graph-b--pie-bh
-								ul(data-pie-id='svg-b7308571352ab86ef1e438d4369b1f39', data-options='{"mode":"circle","content": "https://pbs.twimg.com/profile_images/378800000858075549/nvy-OAxF.png", "textMain": "@mailtolego", "textLeft":"their followers", "textLeft2":"200,000", "textRight":"its followers", "textRight2":"170"}')
-									//- THE ORDER IS SIGNIFICANT
-									li(data-color="#6cead1")
-									li(data-color="#29dcb8", data-value="35")
+						- el = { class: 'fork-item-l one-of-3-l is-green', headerText: 'TWITTER PULL', bottomText: 'people', circleText:'10k' }
+						include css/partials/header-tab
 
-							.footer-bll
-								- el = { class: 'is-two' }
-								- svgbar1 = { text: '200k', percent: '150%', class: 'is-green', afterText: '5x = Twitter pull' }
-								- svgbar2 = { text: '40k', percent: '', class: 'is-grey is-average' }
-								include css/partials/svgbars
+				.content-ll(role="main")
+					.page-section-l
+						.social-composition-b.cf
+							.left-bl
+								.graph-bll
+									#svg-b7308571352ab86ef1e438d4369b1f39.pie-graph-b--pie-bh
+									ul(data-pie-id='svg-b7308571352ab86ef1e438d4369b1f39', data-options='{"mode":"circle","content": "https://pbs.twimg.com/profile_images/378800000858075549/nvy-OAxF.png", "textMain": "@mailtolego", "textLeft":"their followers", "textLeft2":"200,000", "textRight":"its followers", "textRight2":"170"}')
+										//- THE ORDER IS SIGNIFICANT
+										li(data-color="#6cead1")
+										li(data-color="#29dcb8", data-value="35")
 
-						.right-bl Twitter Pull measures how many second-degree followers @Sergey_Valiukh has compared to the average Twitter account. This metric gives a better idea of a user’s clout on Twitter than is possible from considering just the number of followers, as it takes into account how influential those followers are. Thus it is possible to have a high Twitter Pull though relatively few followers, if those followers themselves are by and large big shots on Twitter, with great followings of their own. Twitter Pull is expressed as a quotient: e.g., a pull of 3x means three times more second-degree followers than the average Twitter account. 
+								.footer-bll
+									- el = { class: 'is-two' }
+									- svgbar1 = { text: '200k', percent: '150%', class: 'is-green', afterText: '5x = Twitter pull' }
+									- svgbar2 = { text: '40k', percent: '', class: 'is-grey is-average' }
+									include css/partials/svgbars
 
-				.page-section-l
-					.social-composition-b.cf
-						.left-bl
-							.graph-bll
-								#svg-56b5d596f67a7f3128964e16ed491c9e.pie-graph-b--pie-bh
-								ul(data-pie-id='svg-56b5d596f67a7f3128964e16ed491c9e', data-options='{"mode":"circle","content": "https://pbs.twimg.com/profile_images/378800000858075549/nvy-OAxF.png", "textMain": "@mailtolego", "textLeft":"their followers", "textLeft2":"200,000", "textRight":"its followers", "textRight2":"170"}')
-									//- THE ORDER IS SIGNIFICANT
-									li(data-color="#6cead1")
-									li(data-color="#29dcb8", data-value="35")
+							.right-bl Twitter Pull measures how many second-degree followers @Sergey_Valiukh has compared to the average Twitter account. This metric gives a better idea of a user’s clout on Twitter than is possible from considering just the number of followers, as it takes into account how influential those followers are. Thus it is possible to have a high Twitter Pull though relatively few followers, if those followers themselves are by and large big shots on Twitter, with great followings of their own. Twitter Pull is expressed as a quotient: e.g., a pull of 3x means three times more second-degree followers than the average Twitter account. 
 
-							.footer-bll
-								- el = { class: 'is-two' }
-								- svgbar1 = { text: '200k', percent: '150%', class: 'is-green', afterText: '5x = Twitter pull' }
-								- svgbar2 = { text: '40k', percent: '', class: 'is-grey is-average' }
-								include css/partials/svgbars
+					.page-section-l
+						.social-composition-b.cf
+							.left-bl
+								.graph-bll
+									#svg-56b5d596f67a7f3128964e16ed491c9e.pie-graph-b--pie-bh
+									ul(data-pie-id='svg-56b5d596f67a7f3128964e16ed491c9e', data-options='{"mode":"circle","content": "https://pbs.twimg.com/profile_images/378800000858075549/nvy-OAxF.png", "textMain": "@mailtolego", "textLeft":"their followers", "textLeft2":"200,000", "textRight":"its followers", "textRight2":"170"}')
+										//- THE ORDER IS SIGNIFICANT
+										li(data-color="#6cead1")
+										li(data-color="#29dcb8", data-value="35")
 
-						.right-bl Twitter Pull measures how many second-degree followers @Sergey_Valiukh has compared to the average Twitter account. This metric gives a better idea of a user’s clout on Twitter than is possible from considering just the number of followers, as it takes into account how influential those followers are. Thus it is possible to have a high Twitter Pull though relatively few followers, if those followers themselves are by and large big shots on Twitter, with great followings of their own. Twitter Pull is expressed as a quotient: e.g., a pull of 3x means three times more second-degree followers than the average Twitter account. 
+								.footer-bll
+									- el = { class: 'is-two' }
+									- svgbar1 = { text: '200k', percent: '150%', class: 'is-green', afterText: '5x = Twitter pull' }
+									- svgbar2 = { text: '40k', percent: '', class: 'is-grey is-average' }
+									include css/partials/svgbars
+
+							.right-bl Twitter Pull measures how many second-degree followers @Sergey_Valiukh has compared to the average Twitter account. This metric gives a better idea of a user’s clout on Twitter than is possible from considering just the number of followers, as it takes into account how influential those followers are. Thus it is possible to have a high Twitter Pull though relatively few followers, if those followers themselves are by and large big shots on Twitter, with great followings of their own. Twitter Pull is expressed as a quotient: e.g., a pull of 3x means three times more second-degree followers than the average Twitter account. 
 
 
 		include css/partials/footer
