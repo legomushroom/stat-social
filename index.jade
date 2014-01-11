@@ -8,11 +8,12 @@ html
 		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700', rel='stylesheet', type='text/css')
 	
 	body
+		.main-layout
 		#sidebar-l.cf(role="navigation")
 			.top-ll
 				.sidebar-logo-e STAT SOCIAL
 				
-				- el = { class: 'is-blue', headerText: '@Sergey_Valiukh', bottomText: 'Sergey Valiukh' }
+				- el = { class: 'is-blue', headerText: '@mailtolego', bottomText: 'Oleg Solomka' }
 				include css/partials/header-tab-user
 
 				.sidebar-menu-section-l
@@ -59,8 +60,8 @@ html
 
 			.bottom-ll
 
-		#main-l(role="main")
-			#header(role="navigation")
+		#main-l.cf
+			#header-l(role="navigation")
 				.followers-header-b
 					- el = { class: 'export-bh is-hoverable', text: 'Export' }
 					include css/partials/header-btn
@@ -90,7 +91,52 @@ html
 					- el = { class: 'fork-item-l one-of-3-l is-green', headerText: 'TWITTER PULL', bottomText: 'People', circleText:'10k' }
 					include css/partials/header-tab
 
+			.content-ll(role="main")
+				.page-section-l
+					.social-composition-b.cf
+						.left-bl
+							.graph-bll
+								#svg-b7308571352ab86ef1e438d4369b1f39.pie-graph-b--pie-bh
+								ul(data-pie-id='svg-b7308571352ab86ef1e438d4369b1f39', data-options='{"mode":"circle","content": "https://pbs.twimg.com/profile_images/378800000858075549/nvy-OAxF.png", "textMain": "@mailtolego", "textLeft":"their followers", "textLeft2":"200,000", "textRight":"its followers", "textRight2":"170"}')
+									//- THE ORDER IS SIGNIFICANT
+									li(data-color="#6cead1")
+									li(data-color="#29dcb8", data-value="35")
+
+							.footer-bll
+								- el = { class: 'is-two' }
+								- svgbar1 = { text: '200k', percent: '150%', class: 'is-green', afterText: '5x = Twitter pull' }
+								- svgbar2 = { text: '40k', percent: '', class: 'is-grey is-average' }
+								include css/partials/svgbars
+
+						.right-bl Twitter Pull measures how many second-degree followers @Sergey_Valiukh has compared to the average Twitter account. This metric gives a better idea of a user’s clout on Twitter than is possible from considering just the number of followers, as it takes into account how influential those followers are. Thus it is possible to have a high Twitter Pull though relatively few followers, if those followers themselves are by and large big shots on Twitter, with great followings of their own. Twitter Pull is expressed as a quotient: e.g., a pull of 3x means three times more second-degree followers than the average Twitter account. 
+
+				.page-section-l
+					.social-composition-b.cf
+						.left-bl
+							.graph-bll
+								#svg-56b5d596f67a7f3128964e16ed491c9e.pie-graph-b--pie-bh
+								ul(data-pie-id='svg-56b5d596f67a7f3128964e16ed491c9e', data-options='{"mode":"circle","content": "https://pbs.twimg.com/profile_images/378800000858075549/nvy-OAxF.png", "textMain": "@mailtolego", "textLeft":"their followers", "textLeft2":"200,000", "textRight":"its followers", "textRight2":"170"}')
+									//- THE ORDER IS SIGNIFICANT
+									li(data-color="#6cead1")
+									li(data-color="#29dcb8", data-value="35")
+
+							.footer-bll
+								- el = { class: 'is-two' }
+								- svgbar1 = { text: '200k', percent: '150%', class: 'is-green', afterText: '5x = Twitter pull' }
+								- svgbar2 = { text: '40k', percent: '', class: 'is-grey is-average' }
+								include css/partials/svgbars
+
+						.right-bl Twitter Pull measures how many second-degree followers @Sergey_Valiukh has compared to the average Twitter account. This metric gives a better idea of a user’s clout on Twitter than is possible from considering just the number of followers, as it takes into account how influential those followers are. Thus it is possible to have a high Twitter Pull though relatively few followers, if those followers themselves are by and large big shots on Twitter, with great followings of their own. Twitter Pull is expressed as a quotient: e.g., a pull of 3x means three times more second-degree followers than the average Twitter account. 
+
+
 		include css/partials/footer
+
+
+		script(src="js/vendor/jquery.js")
+		script(src="js/vendor/snap.svg.js")
+		script(src="js/vendor/pizza.js")
+		script
+			Pizza.init();
 
 
 		script

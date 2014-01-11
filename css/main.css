@@ -3419,6 +3419,7 @@ a,
   width: 100%;
 }
 #sidebar-l > .bottom-ll {
+  height: 100%;
   clear: both;
   color: #fff;
   background: rgba(18,37,61,0.7);
@@ -3429,4 +3430,10 @@ a,
 #main-l {
   margin-left: 324px;
   min-height: 100%;
+}
+#main-l #header-l {
+  max-height: 174px;
+}
+#main-l > .content-ll .page-section-l {
+  float: left;
 }

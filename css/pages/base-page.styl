@@ -2,7 +2,9 @@
 @import '../assets/imports.styl'
 
 sidebarWidth = 324px
+	
 
+marginHackSize = 999999999px
 #sidebar-l
 	min-height 100%
 	width sidebarWidth
@@ -14,8 +16,8 @@ sidebarWidth = 324px
 		float left
 		width 100%
 	
-	marginHackSize = 999999999px
 	> .bottom-ll
+		height 100%
 		clear both
 		color white
 		background rgba(c-blue1,.7)
@@ -27,4 +29,12 @@ sidebarWidth = 324px
 #main-l
 	margin-left sidebarWidth
 	min-height 100%
-	
+
+	#header-l
+		max-height 174px
+
+	> .content-ll
+		.page-section-l
+			float left
+
+
