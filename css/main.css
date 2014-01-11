@@ -2160,6 +2160,112 @@ a,
   background-color: #fff;
   cursor: pointer;
 }
+.identified-audience-b,
+.social-composition-b {
+  letter-spacing: 0;
+  font-size: 16px;
+  color: #274057;
+  line-height: 19px;
+  padding: 40px 0;
+}
+.identified-audience-b > .left-bl,
+.social-composition-b > .left-bl,
+.identified-audience-b > .right-bl,
+.social-composition-b > .right-bl {
+  float: left;
+}
+.identified-audience-b > .left-bl,
+.social-composition-b > .left-bl {
+  width: 66.66666666666667%;
+  padding-left: 30px;
+}
+.identified-audience-b > .left-bl > .graph-bll,
+.social-composition-b > .left-bl > .graph-bll {
+  width: 50%;
+}
+.identified-audience-b > .left-bl > .footer-bll,
+.social-composition-b > .left-bl > .footer-bll {
+  font-weight: 100;
+  padding-right: 20%;
+  margin-top: 18px;
+}
+.identified-audience-b > .right-bl,
+.social-composition-b > .right-bl {
+  width: 33.333333333333336%;
+  padding-right: 20px;
+  padding-top: 25px;
+}
+.identified-audience-b > .right-bl p + p,
+.social-composition-b > .right-bl p + p {
+  margin-top: 20px;
+}
+.social-composition-b {
+  font-size: 18px;
+  line-height: 22px;
+  color: #445469;
+}
+.connections-b {
+  text-align: center;
+  padding: 80px 40px;
+}
+.connections-b .connections-footer-b {
+  width: 50%;
+  text-align: left;
+  margin-top: 54px;
+  margin-left: 5%;
+}
+.connections-footer-b .progressbar-pile-l {
+  display: inline-block;
+}
+.connections-footer-b > .mul-be {
+  color: #ffe9ca;
+}
+.connections-net-b {
+  padding-left: 80px;
+}
+.connections-net-b > .left-bl,
+.connections-net-b > .right-bl {
+  display: inline-block;
+  vertical-align: top;
+}
+.connections-net-b > .left-bl .social-net-b {
+  margin: 0 auto;
+}
+.connections-net-b > .right-bl {
+  font-size: 18px;
+  color: #274057;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 300;
+  padding-left: 102px;
+  padding-top: 36px;
+  text-align: left;
+}
+.connections-net-b > .right-bl > .about-ble {
+  width: 283px;
+}
+.social-net-b {
+  background: url("i/social-net.png") no-repeat center center;
+  background-size: 100% auto;
+  width: 223px;
+  height: 223px;
+  position: relative;
+}
+.social-net-b > .avatar-be {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  background: url("http://placekitten.com/g/75/75") no-repeat center center;
+  width: 27.5%;
+  height: 27.5%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  margin-left: -13.75%;
+  margin-top: -13.75%;
+  display: block;
+}
 .legend-line-b {
   list-style: none;
   display: block;
@@ -2196,6 +2302,8 @@ a,
   height: 30px;
   fill: #2997c4;
 /* 3b75ff5b211c22a36dc9c88995cf9cf2 */
+/* d446c8ea4c5edb2256f04a7c05d2bf2f */
+/* d590d264d24baa20070fa2fe7b97c66d */
 /* 8d291bad4675df8002e34cece6c51302 */
 }
 .svg-bargraph-b > .progress-bl,
@@ -2222,14 +2330,45 @@ a,
   z-index: 1;
   top: 0;
   left: 0;
+  color: #64cbf7;
+}
+.svg-bargraph-b > .extra-bl > .wrap-bll {
+  position: relative;
+  color: inherit;
+}
+.svg-bargraph-b > .extra-bl > .wrap-bll:before {
+  content: attr(data-text);
+  position: absolute;
+  right: -10px;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  top: 3px;
+  color: inherit;
+  font-size: 22px;
+  font-weight: 300;
 }
 .svg-bargraph-b.is-grey {
   fill: #8ea2a8;
 }
+.svg-bargraph-b.is-orange {
+  fill: #ffc778;
+}
+.svg-bargraph-b.is-orange > .extra-bl {
+  color: #ffe9ca;
+}
+.svg-bargraph-b.is-green {
+  fill: #29dcb8;
+}
+.svg-bargraph-b.is-green > .extra-bl {
+  color: #acf2e4;
+}
 .svg-bargraph-b.is-average:after {
   content: 'average';
   position: absolute;
-  top: 8px;
+  top: 6px;
   right: 8px;
   z-index: 3;
   color: #fff;
@@ -3061,6 +3200,9 @@ a,
 .header-tab-user-b > .line-thrue-be {
   left: 20px;
 }
+.page-section-l {
+  background-color: rgba(215,238,220,0.22);
+}
 .tables-fork-l > .left-ll,
 .tables-fork-l > .right-ll {
   float: left;
@@ -3126,9 +3268,13 @@ a,
 }
 .progressbar-pile-l {
   width: 50%;
+/* 2d92b44eef44420c94a2f4f54286e940 */
 }
 .progressbar-pile-l > .progressbar-ll + .progressbar-ll {
   margin-top: 8px;
+}
+.progressbar-pile-l.is-two > .progressbar-ll + .progressbar-ll {
+  margin-top: 28px;
 }
 .tags-l {
   text-align: right;

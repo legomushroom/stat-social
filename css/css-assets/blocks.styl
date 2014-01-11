@@ -1,6 +1,110 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+/* 7a92bbd3477e5fc27c0c97ead99bd3ee */
+.identified-audience-b
+	letter-spacing 0
+	font-size 16px
+	color #274057
+	line-height 19px
+	padding 40px 0
+
+	> .left-bl, > .right-bl
+		float left
+		// hl green
+	> .left-bl
+		width 2*(100/3)%
+		padding-left 30px
+
+		> .graph-bll
+			width 50%
+		> .footer-bll
+			font-weight 100
+			padding-right 20%
+			margin-top 18px
+
+	> .right-bl
+		width (100/3)%
+		padding-right 20px
+		padding-top 25px
+
+		p 
+			// 4!
+			& + p
+				margin-top 20px
+
+
+/* 67b33e87ed79c719dd8389caf1301c2c */
+.social-composition-b
+	@extend .identified-audience-b
+	font-size 18px
+	line-height 22px
+	color #445469
+
+
+/* 5914d020b8499ff70819be8e05932f32 */
+.connections-b
+	text-align center
+	padding 80px 40px
+
+	.connections-footer-b
+		width 50%
+		text-align left
+		margin-top 54px
+		margin-left 5%
+
+/* ca4277ce3161ee7f3abb71b5f32d4d90 */
+.connections-footer-b
+	.progressbar-pile-l
+		display inline-block
+
+	> .mul-be
+		color #ffe9ca
+
+/* b757d2e05ee91aa3547357a64063dd7b */
+.connections-net-b
+	padding-left 80px
+	
+	> .left-bl, > .right-bl
+		display inline-block
+		vertical-align top
+
+	> .left-bl
+		.social-net-b
+			margin 0 auto
+
+	> .right-bl
+		font-size 18px
+		color #274057
+		line-height 22px
+		letter-spacing 0
+		font-weight 300
+		padding-left 102px
+		padding-top  36px
+		text-align left
+
+		> .about-ble
+			width 283px
+
+/* 764bd60fe7d6806413b30e468a8466c9 */
+.social-net-b
+	background url('i/social-net.png') no-repeat center center
+	background-size 100% auto
+	rect 223px
+	position relative
+	
+	size = 27.5%
+	> .avatar-be
+		border 1px solid white
+		background url('http://placekitten.com/g/75/75') no-repeat center center
+		rect size
+		position absolute
+		nw 50%
+		border-radius 50%
+		margin-left -(size/2)
+		margin-top  -(size/2)
+		display block
+
 /* b340dd6580044b2ee07cecd93867f1d2 */
 .legend-line-b
 	list-style none
@@ -69,17 +173,46 @@
 		width 100%
 		z-index 1
 		nw 0
-	
+		color #64cbf7
+
+		> .wrap-bll
+			position relative
+			color inherit
+			// 4!
+			&:before
+				content: attr(data-text)
+				position absolute
+				right -10px
+				crossTransform translateX(100%)
+				top 3px
+				color inherit
+				font-size 22px
+				font-weight 300
+
 	/* 3b75ff5b211c22a36dc9c88995cf9cf2 */
 	&.is-grey
 		fill #8ea2a8
+
+	/* d446c8ea4c5edb2256f04a7c05d2bf2f */
+	&.is-orange
+		fill c-orange
+
+		> .extra-bl
+			color #ffe9ca
+
+	/* d590d264d24baa20070fa2fe7b97c66d */
+	&.is-green
+		fill c-green
+
+		> .extra-bl
+			color lighten(c-green, 30);
 	
 	/* 8d291bad4675df8002e34cece6c51302 */
 	&.is-average
 		&:after
 			content 'average'
 			position absolute
-			t 8px
+			t 6px
 			r 8px
 			z-index 3
 			color white
@@ -780,7 +913,7 @@ bgColor = #1e394f
 	/* 766dfcc19fb177a6f7f8cca6aa9c33d5 */
 	&.is-blue
 		background-color c-blue4
-		
+
 		> .arrow-be
 			border-top-color c-blue4
 

@@ -409,6 +409,11 @@ html
 			.section-kl
 				.header-ke Blocks
 
+
+				.hash-e 682286dbb8e937140bfbdf568d500820
+				.page-section-l(style="height: 200px")
+
+
 				.hash-e	f63b2b6affc1d7652fcd552280004a39
 				- el = { class: '', color: '', text: 'California' } 
 				include partials/legend-label
@@ -742,8 +747,29 @@ html
 				- el = { text: '20%', percent: '150%', class: 'is-grey' }
 				include partials/svgbar
 
+			.hash-e	d446c8ea4c5edb2256f04a7c05d2bf2f
+			div(style="width:200px")
+				- el = { text: '20%', percent: '150%', class: 'is-orange' }
+				include partials/svgbar
+
+			.hash-e	d590d264d24baa20070fa2fe7b97c66d
+			div(style="width:200px")
+				- el = { text: '20%', percent: '150%', class: 'is-green', afterText: '5x = Twitter pull' }
+				include partials/svgbar
+
+			.hash-e	704028a3536927d57e15d83416f45771
+			div(style="width:200px")
+				- el = { text: '20%', percent: '150%', class: 'is-orange', afterText: '1.3x' }
+				include partials/svgbar
+
 			.hash-e	193c04bc08d7974d02c9a8b4c855ddc0
 			- el = { class: '' }
+			- svgbar1 = { text: '30%', percent: '150%', class: '' }
+			- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
+			include partials/svgbars
+
+			.hash-e	2d92b44eef44420c94a2f4f54286e940
+			- el = { class: 'is-two' }
 			- svgbar1 = { text: '30%', percent: '150%', class: '' }
 			- svgbar2 = { text: '20%', percent: '', class: 'is-grey is-average' }
 			include partials/svgbars
@@ -803,6 +829,122 @@ html
 					//- THE ORDER IS SIGNIFICANT
 					li(data-color="#6cead1")
 					li(data-color="#29dcb8", data-value="50")
+
+			.hash-e	764bd60fe7d6806413b30e468a8466c9
+			include partials/social-net
+
+			.hash-e	b757d2e05ee91aa3547357a64063dd7b
+			- el = { class: '', text: 'The average Twitter account has around 200 followers. While @Sergey_Valiukh has 182 followers, each of those followers, on average, has about 400 followers.' }
+			include partials/connections-net
+
+			.hash-e	7a92bbd3477e5fc27c0c97ead99bd3ee
+			.identified-audience-b.cf
+				.left-bl
+					.graph-bll
+						#svg-6f7d91e59f50d399b11beb05603c09e5.pie-graph-b--pie-bh
+						ul(data-pie-id='svg-6f7d91e59f50d399b11beb05603c09e5', data-options='{"donut":"true","mode":"donut-path","text": "IDENTIFIED TWEETERS"}')
+							//- THE ORDER IS SIGNIFICANT
+							li(data-color="#f9c77f", data-value="75")
+							li(data-color="#ff6d6a", data-value="5")
+							li(data-color="#3ebbee", data-value="20")
+
+					.footer-bll *The data and metrics presented in this report apply to only those followers of this account that are herein classified as Consumers.
+
+				.right-bl 
+					P We have classified the followers of this account—except those completely unidentifiable—into Consumers, Businesses, and Private accounts. Unidentifiable accounts either are strictly anonymous or belong to spammers.
+					p 
+						.bold-g.i-g Consumer:
+						| account that can be tied to a person, with an identifiable name, address, and traceable activity elsewhere online.
+
+					p 
+						.bold-g.i-g Business:
+						| official account of a brand or other business, government, or institutional entity: 
+
+					p e.g., @NBA, @US_FDA, @metmuseum
+					p
+						.bold-g.i-g Private: 
+						| account whose privacy settings are so strict that no information can be gleaned about its user.
+
+			.hash-e	67b33e87ed79c719dd8389caf1301c2c
+			.social-composition-b.cf
+				.left-bl
+					.graph-bll
+						#svg-132f573e4ced94046408cfcbb5d70cdc.pie-graph-b--pie-bh
+						ul(data-pie-id='svg-132f573e4ced94046408cfcbb5d70cdc', data-options='{"mode":"circle","content": "https://pbs.twimg.com/profile_images/378800000858075549/nvy-OAxF.png", "textMain": "@mailtolego", "textLeft":"their followers", "textLeft2":"200,000", "textRight":"its followers", "textRight2":"170"}')
+							//- THE ORDER IS SIGNIFICANT
+							li(data-color="#6cead1")
+							li(data-color="#29dcb8", data-value="50")
+
+					.footer-bll
+						- el = { class: 'is-two' }
+						- svgbar1 = { text: '200k', percent: '150%', class: 'is-green', afterText: '5x = Twitter pull' }
+						- svgbar2 = { text: '40k', percent: '', class: 'is-grey is-average' }
+						include partials/svgbars
+
+
+				.right-bl Twitter Pull measures how many second-degree followers @Sergey_Valiukh has compared to the average Twitter account. This metric gives a better idea of a user’s clout on Twitter than is possible from considering just the number of followers, as it takes into account how influential those followers are. Thus it is possible to have a high Twitter Pull though relatively few followers, if those followers themselves are by and large big shots on Twitter, with great followings of their own. Twitter Pull is expressed as a quotient: e.g., a pull of 3x means three times more second-degree followers than the average Twitter account. 
+
+			.hash-e	f421c03396d0b143c7ee402b8efb56b2
+			.page-section-l
+				.social-composition-b.cf
+					.left-bl
+						.graph-bll
+							#svg-7d43292793f96584ed72ff9c3409d8a9.pie-graph-b--pie-bh
+							ul(data-pie-id='svg-7d43292793f96584ed72ff9c3409d8a9', data-options='{"mode":"circle","content": "https://pbs.twimg.com/profile_images/378800000858075549/nvy-OAxF.png", "textMain": "@mailtolego", "textLeft":"their followers", "textLeft2":"200,000", "textRight":"its followers", "textRight2":"170"}')
+								//- THE ORDER IS SIGNIFICANT
+								li(data-color="#6cead1")
+								li(data-color="#29dcb8", data-value="35")
+
+						.footer-bll
+							- el = { class: 'is-two' }
+							- svgbar1 = { text: '200k', percent: '150%', class: 'is-green', afterText: '5x = Twitter pull' }
+							- svgbar2 = { text: '40k', percent: '', class: 'is-grey is-average' }
+							include partials/svgbars
+
+					.right-bl Twitter Pull measures how many second-degree followers @Sergey_Valiukh has compared to the average Twitter account. This metric gives a better idea of a user’s clout on Twitter than is possible from considering just the number of followers, as it takes into account how influential those followers are. Thus it is possible to have a high Twitter Pull though relatively few followers, if those followers themselves are by and large big shots on Twitter, with great followings of their own. Twitter Pull is expressed as a quotient: e.g., a pull of 3x means three times more second-degree followers than the average Twitter account. 
+
+
+
+			.hash-e	cd87bcaeb9711aad3f9cdaf244c3b62a
+			.page-section-l
+				.identified-audience-b.cf
+					.left-bl
+						.graph-bll
+							#svg-f420a11a5985f711eeeb3b0b3663313a.pie-graph-b--pie-bh
+							ul(data-pie-id='svg-f420a11a5985f711eeeb3b0b3663313a', data-options='{"donut":"true","mode":"donut-path","text": "IDENTIFIED TWEETERS"}')
+								//- THE ORDER IS SIGNIFICANT
+								li(data-color="#f9c77f", data-value="75")
+								li(data-color="#ff6d6a", data-value="5")
+								li(data-color="#3ebbee", data-value="20")
+
+						.footer-bll *The data and metrics presented in this report apply to only those followers of this account that are herein classified as Consumers.
+
+					.right-bl 
+						P We have classified the followers of this account—except those completely unidentifiable—into Consumers, Businesses, and Private accounts. Unidentifiable accounts either are strictly anonymous or belong to spammers.
+						p 
+							.bold-g.i-g Consumer:
+							| account that can be tied to a person, with an identifiable name, address, and traceable activity elsewhere online.
+
+						p 
+							.bold-g.i-g Business:
+							| official account of a brand or other business, government, or institutional entity: 
+
+						p e.g., @NBA, @US_FDA, @metmuseum
+						p
+							.bold-g.i-g Private: 
+							| account whose privacy settings are so strict that no information can be gleaned about its user.
+
+			.hash-e 5914d020b8499ff70819be8e05932f32
+			.page-section-l
+				.connections-b
+					- el = { class: '', text: 'The average Twitter account has around 200 followers. While @Sergey_Valiukh has 182 followers, each of those followers, on average, has about 400 followers.' }
+					include partials/connections-net
+
+					.connections-footer-b
+						- el = { class: 'is-two' }
+						- svgbar1 = { text: '569', percent: '150%', class: 'is-orange', afterText: '1.3x' }
+						- svgbar2 = { text: '200', percent: '', class: 'is-grey is-average' }
+						include partials/svgbars
 
 
 			//- DEPRECATED ------------------------------------------------------

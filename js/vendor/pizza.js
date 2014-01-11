@@ -286,7 +286,7 @@
         }
       // MODE IS CIRCLE
       } else{
-        var r = ((base / 2) * 0.575),
+        var r = ((base / 2) * 0.7),
             cx = cy = base/2;
 
         var paperWidth  = parseInt(svg.attr('width'),10);
