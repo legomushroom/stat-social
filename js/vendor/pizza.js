@@ -286,7 +286,7 @@
         }
       // MODE IS CIRCLE
       } else{
-        var r = ((base / 2) * 0.7),
+        var r = ((base / 2) * 0.65),
             cx = cy = base/2;
 
         var paperWidth  = parseInt(svg.attr('width'),10);
@@ -395,7 +395,7 @@
           });
 
         var startX = cx;
-        var startY = paperHeight/7;
+        var startY = paperHeight/15;
 
           topPath.attr({ 
             d: 'M' + startX + ' '+ startY +', L' + startX + ' '+(cy-circleHole),

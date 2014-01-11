@@ -2204,6 +2204,12 @@ a,
   line-height: 22px;
   color: #445469;
 }
+.social-composition-b > .left-bl > .graph-bll {
+  width: 55%;
+}
+.social-composition-b > .right-bl {
+  padding-top: 0;
+}
 .connections-b {
   text-align: center;
   padding: 80px 40px;
@@ -2368,7 +2374,7 @@ a,
 .svg-bargraph-b.is-average:after {
   content: 'average';
   position: absolute;
-  top: 6px;
+  top: 8px;
   right: 8px;
   z-index: 3;
   color: #fff;
