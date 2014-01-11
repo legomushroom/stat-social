@@ -362,7 +362,12 @@
         }else{
           if (settings.content.match(/https?/gi) ){
             var addition = circleHole/9;
-            var image = svg.image(settings.content, cx-circleHole-(addition/2), cy-circleHole-(addition/2), 2*circleHole+addition, 2*circleHole+addition )
+            var image = this.checkExistence({
+              svg: svg,
+              id: 'twitter-image',
+              type: 'image',
+              params: [settings.content, cx-circleHole-(addition/2), cy-circleHole-(addition/2), 2*circleHole+addition, 2*circleHole+addition]
+            });
           }
         }
 

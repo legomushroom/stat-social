@@ -2868,6 +2868,7 @@ a,
   border-radius: 50%;
   text-align: center;
   color: #fff;
+  background: url("http://placekitten.com/75/75") no-repeat center center;
   position: relative;
 /* 91f28e51a4cffb32caebcda1cbff41fe */
 /* cdeb25bb27099cc9d30dba3b4270f374 */
@@ -2953,7 +2954,7 @@ a,
 }
 .header-tab-b.is-blue .tab-circle-b,
 .header-tab-user-b.is-blue .tab-circle-b {
-  background-color: c-blue;
+  background-color: #2997c4;
 }
 .header-tab-b > .header-text-be,
 .header-tab-user-b > .header-text-be,
